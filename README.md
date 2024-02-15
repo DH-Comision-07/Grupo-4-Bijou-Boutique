@@ -19,7 +19,7 @@ Conoce a nuestros colaboradores:
 
 Reseñas  
 
-1) Chaumet
+1) Chaumet.
 
 La página web de Chaumet presenta una estética elegante y sofisticada que se adapta a la naturaleza lujosa de la marca. El uso de imágenes de alta calidad, animaciones fluidas y un diseño limpio y minimalista crea una experiencia visual atractiva para los visitantes.
 
@@ -94,4 +94,4 @@ María Candela es una empresa más bien chica, de la Provincia de Mendoza, que v
 
 Lo que más nos llamo la atención de este E-commerce, fue principalmente la estética, la gama de colores que utiliza, y su distribución de elementos. La página web se destaca por su diseño intuitivo y accesible. La distribución de elementos es armoniosa, guiando a los visitantes de manera natural a través de las distintas secciones. La presentación clara de categorías y productos facilita la búsqueda.
 
-Fuente: www.mariacandelajoyas.com
+Fuente: www.mariacandelajoyas.com  
