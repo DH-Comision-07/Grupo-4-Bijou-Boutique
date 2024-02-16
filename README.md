@@ -96,7 +96,7 @@ Lo que más nos llamo la atención de este E-commerce, fue principalmente la est
 
 Fuente: www.mariacandelajoyas.com  
 
-Seguimiento y gestión del proyecto
+# Seguimiento y gestión del proyecto
 
 Para garantizar una comunicación fluida y un seguimiento transparente del proyecto, hemos implementado un sistema de gestión de tareas en Trello. En este espacio de trabajo virtual, podrán visualizar:
 
