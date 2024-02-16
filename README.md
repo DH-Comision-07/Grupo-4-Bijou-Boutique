@@ -95,3 +95,19 @@ María Candela es una empresa más bien chica, de la Provincia de Mendoza, que v
 Lo que más nos llamo la atención de este E-commerce, fue principalmente la estética, la gama de colores que utiliza, y su distribución de elementos. La página web se destaca por su diseño intuitivo y accesible. La distribución de elementos es armoniosa, guiando a los visitantes de manera natural a través de las distintas secciones. La presentación clara de categorías y productos facilita la búsqueda.
 
 Fuente: www.mariacandelajoyas.com  
+
+Seguimiento y gestión del proyecto
+
+Para garantizar una comunicación fluida y un seguimiento transparente del proyecto, hemos implementado un sistema de gestión de tareas en Trello. En este espacio de trabajo virtual, podrán visualizar:
+
+• Tareas asignadas a cada colaborador: Cada miembro del equipo tiene un tablero individual donde se detallan sus tareas específicas, fechas límite y estado de avance.
+
+• Avance de cada tarea: Se utiliza un sistema de tarjetas que se mueven entre diferentes columnas, reflejando el progreso de cada tarea desde su inicio hasta su finalización.
+
+• Comentarios y archivos adjuntos: La plataforma permite la comunicación directa entre los miembros del equipo dentro de cada tarjeta, facilitando la colaboración y el intercambio de información relevante.
+
+• Visión general del proyecto: El tablero principal de Trello ofrece una vista panorámica del proyecto, permitiendo a todos los involucrados tener una comprensión clara del estado general y del progreso individual de las tareas.
+
+Acceso al espacio de trabajo:
+
+Para acceder al espacio de trabajo de Trello, les invitamos a seguir este enlace: https://trello.com/w/espaciodetrabajo58274772
