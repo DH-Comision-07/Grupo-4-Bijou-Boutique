@@ -15,11 +15,11 @@ llevar a cabo el orden de nuestras tareas.
 
 Continuar haciendo: 
 
-- Seguir con la buena  predisposición respecto a los horarios establecidos, asegurando así un flujo de trabajo constante y predecible.
-- Se destacó la colaboración entre compañeros, donde cada uno estuvo dispuesto a ofrecer ayuda y apoyo a los demás en todo momento.
-- La disposición para brindar colaboración en cualquier momento fue notable, lo que facilitó la resolución rápida de problemas y el avance eficiente en las tareas asignadas.
+-  Seguir con la buena  predisposición respecto a los horarios establecidos, asegurando así un flujo de trabajo constante y predecible.
+-  Se destacó la colaboración entre compañeros, donde cada uno estuvo dispuesto a ofrecer ayuda y apoyo a los demás en todo momento.
+-  La disposición para brindar colaboración en cualquier momento fue notable, lo que facilitó la resolución rápida de problemas y el avance eficiente en las tareas asignadas.
 
-- Seguir manteniendo el manejo de tiempo en la finalizacion de sprints, ya que intentamos
+-  Seguir manteniendo el manejo de tiempo en la finalizacion de sprints, ya que intentamos
 siempre tener todo listo lo antes posible y no dejar tareas para ultima hora.
 
-- Completamos todas las tareas requeridas, hubo comunicación fluida y colaboración por parte de todos
+-  Completamos todas las tareas requeridas, hubo comunicación fluida y colaboración por parte de todos
