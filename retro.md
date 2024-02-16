@@ -23,3 +23,7 @@ Continuar haciendo:
 siempre tener todo listo lo antes posible y no dejar tareas para ultima hora.
 
 -  Completamos todas las tareas requeridas, hubo comunicación fluida y colaboración por parte de todos
+
+Hacer menos:
+
+- Achicar nuestra comunicacion via WhatssApp para poder centrarnos mas en Trello, Discord u otras apps de organizacion a la hora de presentar cambios del proyecto al grupo.
