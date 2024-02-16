@@ -11,3 +11,10 @@ Hacer mas:
 llevar a cabo el orden de nuestras tareas.
 
 - Implementacion mas agil de GitHub.
+
+Continuar haciendo:
+
+-Seguir manteniendo el manejo de tiempo en la finalizacion de sprints, ya que intentamos
+siempre tener todo listo lo antes posible y no dejar tareas para ultima hora.
+
+-Completamos todas las tareas requeridas, hubo comunicación fluida y colaboración por parte de todos
