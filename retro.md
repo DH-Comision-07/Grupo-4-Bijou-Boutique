@@ -27,3 +27,7 @@ siempre tener todo listo lo antes posible y no dejar tareas para ultima hora.
 Hacer menos:
 
 - Achicar nuestra comunicacion via WhatssApp para poder centrarnos mas en Trello, Discord u otras apps de organizacion a la hora de presentar cambios del proyecto al grupo.
+
+Dejar de hacer:
+- Ser tan extensos en nuestras reuniones abarcando temas secundarios a nuestro trabajo
+original.
