@@ -16,7 +16,7 @@ Conoce a nuestros colaboradores:
 - Hola! Soy Danilo Palermo. Soy miembro de Bijou Boutique. Esperamos de todo corazon, poder brindarles a todos la mejor atencion posible!
 - ¡Hola! Soy Dafne Molina, parte de Bijou Boutique. Como equipo, nos comprometemos a ofrecerte productos de calidad, superar expectativas y brindar la mejor atención posible.
 - Hola! mi nombre es Andrés Urbano y soy parte del grupo de colaboradores. Nos caracterizamos por producir productos de calidad y con un buen diseño en cada una de nuestras joyas que agregaran belleza a tu mundo.
-- Me llamo Christofher Yabbara nuevo integrante de la Joyeria Bijou Boutique, nos encargremos de satisfacer tus caprichos de lujo mas desaeados!
+- Me llamo Christofher Yabbara nuevo integrante de la Joyeria Bijou Boutique, nos encargaremos de satisfacer tus caprichos de lujo mas desaeados!
 
 Reseñas  
 
