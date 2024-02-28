@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2,
+  h3 {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  header{
+    background-color: var(--yellow);
+  }
+  
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+  }
+  
+  nav .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+  
+  .form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .comprador-vendedor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .comprador-vendedor input {
+    margin: 10px 10px 10px 20px;
+  
+  }
+  
+  
+  
+  .controls {
+    width: 100%;
+    color: #666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid rgb(202, 162, 130);
+  }
+  
+  .intereses input {
+    margin: 10px 0 10px 20px;
+  }
+  
+  .intereses label {
+    margin-left: 2vh;
+  }
+  
+  .submit {
+    margin-top: 30px;
+    color: white;
+    background-color: #1259c3;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .reset {
+    background-color: #c31212;
+  }
+  
+  
+  .login .submit:hover {
+    background-color: #0022AA;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.02);
+  }
+  
+  .forgot {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .forgot:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media screen and (min-width: 300px) and (max-width: 640px) {
+    .container-register {
+        padding: 10px;
+    }
+  
+    .form{
+        padding: 10px;
+        margin-top: 0;
+    }
+  
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+  
+    nav .logo{
+        display: inline-block;
+        
+    }
+  
+  }
+    
