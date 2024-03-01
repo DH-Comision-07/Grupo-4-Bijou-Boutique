@@ -31,3 +31,9 @@ Hacer menos:
 Dejar de hacer:
 - Ser tan extensos en nuestras reuniones abarcando temas secundarios a nuestro trabajo
 original.
+
+Retrospectiva Sprint 3
+
+Empezar a hacer:
+
+- Dividir en partes más chicas las tareas
