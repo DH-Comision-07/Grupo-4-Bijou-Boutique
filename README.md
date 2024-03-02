@@ -116,4 +116,3 @@ Acceso al espacio de trabajo:
 Para acceder al espacio de trabajo de Trello, les invitamos a seguir este enlace: https://trello.com/w/espaciodetrabajo58274772
 
 
-prueba 
