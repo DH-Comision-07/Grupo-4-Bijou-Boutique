@@ -34,10 +34,3 @@ original.
 
 Retrospectiva Sprint 3
 
-Empezar a hacer:
-
-- Dividir en partes más chicas las tareas
-
-Hacer más:
-- Ir actualizando nuestro trabajo con información dada en clases.
-  
