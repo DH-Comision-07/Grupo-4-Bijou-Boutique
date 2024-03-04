@@ -37,3 +37,4 @@ Retrospectiva Sprint 3
 Empezar a hacer:
 
 - Dividir en partes más chicas las tareas
+- Proponernos a hacer una daily/weekly
