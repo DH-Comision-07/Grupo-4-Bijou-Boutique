@@ -49,7 +49,7 @@ Seguir haciendo
 
 Hacer menos
 - Avisar con más tiempo si alguno no esta disponible o con menos tiempo
-- Achicar el uso de wpp para usar mas Trello
+- Achicar el uso de wpp para usar mas Trello y así tener una organización y un proyecto más sólido.
 
 Dejar de hacer
 - No dejar las cosas para último momento
