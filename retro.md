@@ -38,7 +38,3 @@ Empezar a hacer:
 
 - Dividir en partes más chicas las tareas
 - Proponernos a hacer una daily/weekly
-
-Hacer mas:
-- Ir actualizando nuestro trabajo con informacion dada en clase
-
