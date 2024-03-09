@@ -7,7 +7,9 @@ const registerRoutes = require("../src/routers/register.routes");
 
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("./public"));
+
+app.set('view engine', 'ejs');
 
 app.use("/", homeRoutes);
 app.use("/carrito", carritoRoutes);

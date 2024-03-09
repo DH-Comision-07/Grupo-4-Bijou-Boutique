@@ -1,9 +1,7 @@
-const path = require("path");
-
 const productDetailController = {
   productDetail: (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../views/productDetail.ejs"));
-  },
+    return res.render("productDetail");
+  }
 };
 
 module.exports = productDetailController;
