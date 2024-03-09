@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = process.env.PORT || 3030;
 
 app.use(express.static("public"));
 
@@ -25,7 +24,7 @@ app.get("/carrito", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
 });
 
-app.listen(port, () =>
-  console.log(`Proyecto corriendo exitosamente en puerto ${port}`)
-);
+const port = 3030;
+app.listen(port, (req,res) => console.log(`http://localhost:${port}`));
+
 
