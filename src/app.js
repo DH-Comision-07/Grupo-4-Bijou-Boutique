@@ -1,30 +1,19 @@
 const express = require("express");
-const path = require("path");
+const homeRoutes = require("../src/routers/home.routes");
+const carritoRoutes = require("../src/routers/carrito.routes");
+const productRoutes = require("../src/routers/productDetail.routes");
+const loginRoutes = require("../src/routers/login.routes");
+const registerRoutes = require("../src/routers/register.routes");
+
 const app = express();
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/home.html"));
-});
-
-app.get("/productDetail", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
-});
-
-app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/register.html"));
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/login.html"));
-});
-
-app.get("/carrito", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
-});
+app.use("/", homeRoutes);
+app.use("/carrito", carritoRoutes);
+app.use("/productDetail", productRoutes);
+app.use("/login", loginRoutes);
+app.use("/register", registerRoutes);
 
 const port = 3030;
-app.listen(port, (req,res) => console.log(`http://localhost:${port}`));
-
-
+app.listen(port, (req, res) => console.log(`http://localhost:${port}`));
