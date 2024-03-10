@@ -7,7 +7,8 @@ const registerRoutes = require("../src/routers/register.routes");
 
 const app = express();
 
-app.use(express.static("./public"));
+const path = require('path');
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.set('view engine', 'ejs');
 
