@@ -46,6 +46,7 @@ main {
 nav {
     background-color: #070f63;
     color: #fff;
+    padding-bottom: 10px;
 }
 
 nav ul {
@@ -72,7 +73,6 @@ nav a {
 nav a:hover {
     color: #ebd065;
     text-decoration: underline;
-    font-size: 18px;
 }
 
 
@@ -232,8 +232,8 @@ nav a:hover {
 }
 
 .footer__section i:hover {
-    font-size: 26px;
     color: #ebd065;
+    cursor: pointer;
 }
 
 
