@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/register.css">
-    <title>Document</title>
+    <title>Bijou Boutique</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#"><img src="/images/bijou-boutique.png" alt="" class="logo"></a>
-        </nav>
-    </header>
+    <%- include("partials/header.ejs") %>
+
     <main class="container-register">
         <div class="form">
             <form>
@@ -48,5 +45,7 @@
         </div>
 
     </main>
+
+    <%- include("partials/footer.ejs") %>
 </body>
 </html>

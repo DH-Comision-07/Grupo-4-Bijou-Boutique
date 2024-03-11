@@ -31,3 +31,25 @@ Hacer menos:
 Dejar de hacer:
 - Ser tan extensos en nuestras reuniones abarcando temas secundarios a nuestro trabajo
 original.
+
+Retrospectiva Sprint 3
+
+Empezar a hacer:
+
+- Dividir en partes más chicas las tareas
+- Proponernos a hacer una daily/weekly
+
+Hacer más
+- Ayudarnos mutuamente para estar todos al día
+- Ir actualizando nuestro trabajo con información dada en clases
+
+Seguir haciendo
+- Seguir sumando enfasis en trello
+- Buena comunicación activa
+
+Hacer menos
+- Avisar con más tiempo si alguno no esta disponible o con menos tiempo
+- Achicar el uso de wpp para usar mas Trello y así tener una organización y un proyecto más sólido.
+
+Dejar de hacer
+- No dejar las cosas para último momento
