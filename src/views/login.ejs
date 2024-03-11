@@ -9,19 +9,19 @@
 <body>
     <%- include("partials/header.ejs") %>
     
-    <main class="container-register">
-        <div class="form">
-            <form>
-                <h2 class=" title">Iniciar sesión </h2>
-                <input class="controls" id="user" type="text" placeholder="Nombre de usuario">
-                <input class="controls" id="pass" type="password" placeholder="Contraseña">
-                
-                <a class="register-link" href="/register"><h5 class=" title">¿No tienes cuenta aún? Click aquí!</h5></a>
-                
-                <input class="submit" type="submit">
-            </form>
+    <div class="login-container">
+        <div class="login-form">
+          <img src="/images/logo3.png" alt="" class="logo">
+          <form>
+            <label for="email" class="label">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Email" class="input input-email"><br>
+    
+            <label for="password" class="label">Password:</label><br>
+            <input type="password" id="password" name="passwsord" placeholder="*********" class="input input-password"><br>
+          </form>
+          <button class="secondary-button signup-button">Registrarse</button>
         </div>
-    </main>
+      </div>
 
     <%- include("partials/footer.ejs") %>
 </body>
