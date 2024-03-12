@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -111,8 +111,7 @@
   }
     
    
-    
-=======
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 .login-container {
@@ -181,4 +180,3 @@ button {
   font-size: 18px;
   padding: 12px 20px;
 }
->>>>>>> 2cb8f047a19919eb4d32554f1013720cf66a6d2a
