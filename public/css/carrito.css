@@ -22,7 +22,7 @@ main {
     max-width: 100%;
     background-color: #fff;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 100px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -39,7 +39,7 @@ h2 {
     background-color: #fafafa;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 100px;
 }
 
 .producto {
@@ -86,7 +86,7 @@ input[type="number"], input[type="text"], input[type="email"], input[type="month
     color: #ffffff;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px; 
@@ -249,6 +249,4 @@ input[type="number"], input[type="text"], input[type="email"], input[type="month
         box-shadow: 0px 8px 12px rgba(0,0,0,0.3); 
     }
 
-    
-    
-    }      
+}
