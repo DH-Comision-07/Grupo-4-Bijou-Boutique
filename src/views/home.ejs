@@ -12,12 +12,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="logo-container">
-
-      <a href="/"><img src="/images/bijou-boutique.png" alt="Logo de la tienda" /></a>
+        <a href="/"
+          ><img src="/images/bijou-boutique.png" alt="Logo de la tienda"
+        /></a>
       </div>
 
       <div class="icons-container">
@@ -40,14 +51,46 @@
         <li><a href="#">Acero Quirúrgico</a></li>
       </ul>
     </nav>
+
     <main>
       <section class="main-section">
-        <img src="/images/joyeria.jpg" alt="Imagen grande" />
+        <img src="/images/joyas.jpg" alt="Imagen grande" />
         <div class="image-info">
           <p>
             Información sobre el producto...
             <a href="#" class="read-more-link">Leer más</a>
           </p>
+        </div>
+      </section>
+
+      <section class="item-especial">
+        <div class="flexible">
+          <div class="itemFlex1">
+            <img src="/images/reloj.jpg" alt="imgFlex" />
+          </div>
+          <div class="itemFlex2">
+            <h4>Modelo iconico</h4>
+            <h3>Modelo Exclusivo: Alpine Eagle</h3>
+            <div class="separator"></div>
+            <p>
+              Descubre la sofisticación en cada momento con nuestro reloj
+              elegante. Con un diseño moderno y funcionalidades avanzadas, este
+              reloj es la elección perfecta para ocasiones especiales y tu día a
+              día. Conoce la combinación única de estilo y precisión que te
+              ofrece este exclusivo reloj de Bijou Boutique.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel-section">
+        <h2>Explora Nuestros Productos Destacados</h2>
+        <div class="slick-carousel">
+          <div><img src="/images/joyas.jpg" alt="Producto 1" /></div>
+          <div><img src="/images/joyas.jpg" alt="Producto 2" /></div>
+          <div><img src="/images/joyas.jpg" alt="Producto 3" /></div>
+          <div><img src="/images/joyas.jpg" alt="Producto 4" /></div>
+          <div><img src="/images/joyas.jpg" alt="Producto 5" /></div>
         </div>
       </section>
 
@@ -139,5 +182,19 @@
         <p>Copyright © 1999-2024 Bijou Boutique S.R.L.</p>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slick-carousel").slick({
+          autoplay: true,
+          dots: true,
+          arrows: true,
+          infinite: true,
+          slidesToShow: 1, // Cambia a 1 para mostrar solo una imagen
+          slidesToScroll: 1,
+        });
+      });
+    </script>
   </body>
 </html>
