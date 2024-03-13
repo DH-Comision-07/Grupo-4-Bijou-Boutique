@@ -125,7 +125,7 @@ body{
     font-size: 16px;
     background-color: rgb(247,247,247);
     border:1px solid rgb(12,27,84);
-    border-radius: 5px;
+    border-radius: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -139,7 +139,7 @@ body{
     font-size: 16px;
     background-color: rgb(247,247,247);
     border:1px solid rgb(12,27,84);
-    border-radius: 5px;
+    border-radius: 100px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -161,7 +161,7 @@ body{
 
 .carrito__stock{
     border: 1px solid rgb(12,27,84);
-    border-radius: 5px;
+    border-radius: 100px;
     background-color: rgb(12,27,84);
     color: white;
     display: inline;
@@ -177,7 +177,7 @@ body{
     font-size: 16px;
     border:1px solid rgb(12,27,84);
     color: rgb(12,27,84);
-    border-radius: 5px;
+    border-radius: 100px;
     margin-bottom: 8px;
 }
 
@@ -204,7 +204,7 @@ body{
     font-size: 14px;
     border:1px solid rgb(12,27,84);
     color: rgb(12,27,84);
-    border-radius: 5px;
+    border-radius: 100px;
 }
 
 .envios__boton{
@@ -213,7 +213,7 @@ body{
     font-size: 14px;
     border:1px solid rgb(247,247,247);
     color: rgb(247,247,247);
-    border-radius: 5px;
+    border-radius: 100px;
     margin-bottom: 8px;
 }
 
