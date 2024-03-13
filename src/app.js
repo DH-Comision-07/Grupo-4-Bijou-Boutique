@@ -11,10 +11,8 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.set("view engine", "ejs");
 
 app.use("/", indexRoutes);
-app.use("/carrito", productRoutes);
-app.use("/productDetail", productRoutes);
-app.use("/login", userRoutes);
-app.use("/register", userRoutes);
+app.use("/", productRoutes);
+app.use("/", userRoutes);
 
 const port = 3030;
 app.listen(port, (req, res) => console.log(`http://localhost:${port}`));
