@@ -1,191 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Para asegurar que el footer siempre esté en la parte inferior */
+}
 
-.login-container {
+main {
+  flex-grow: 1; /* Para que el contenido principal ocupe todo el espacio disponible */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.login-form {
-  padding: 20px;
-  background-color: rgb(247, 247, 247);
-  border-radius: 08px;
+h2 {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+header {
+  background-color: var(--yellow);
+}
+
+nav {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 300px;
-  font-family: 'Quicksand', sans-serif;
-  margin: 0 auto;
+  align-items: center;
+  background-color: #ebebeb;
 }
 
-
-.logo {
-  display: flex;
-  justify-content: 150px;
-  align-items: 150px;
-  width: 300px;
+nav .logo {
+  width: 200px;
   height: auto;
   margin-bottom: 20px;
 }
 
-.label {
-  font-weight: bold;
-  font-size: 16px;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Para centrar el formulario */
+  margin-top: 50px; /* Ajusta este valor según sea necesario */
+  margin-bottom: 50px; /* Ajusta este valor según sea necesario */
+  width: 400px; /* Ajusta el ancho del formulario según sea necesario */
 }
 
-.input {
-  width: 95%;
-  padding: 05px;
-  margin-bottom: 10px;
+.controls {
+  width: 100%;
+  color: #666;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 14px;
+  outline: none;
   border: 1px solid rgb(202, 162, 130);
-  border-radius: 90px;
-  font-size: 16px;
-  font-family: 'Quicksand', sans-serif;
 }
 
-.secondary-button {
-  background-color: rgb(202, 162, 130);
-  color: rgb(255, 255, 255);
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  padding: 12px 20px;
-  border-radius: 90px;
-  transition: background-color 0.3s ease;
+.submit {
+  margin-top: 20px;
+  color: white;
+  background-color: #001a3f;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
-.secondary-button:hover {
-  background-color: rgb(12, 27, 84);
+.submit:hover {
+  background-color: #000409;
 }
 
-h1 {
-  font-size: 24px;
+.register-link {
+  text-decoration: none;
+  color: #666;
+  margin-top: 10px;
 }
 
-button {
-  font-size: 18px;
-  padding: 12px 20px;
+.register-link:hover {
+  text-decoration: underline;
+  color: #252424;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  html, body {
-    height: 100%;
+footer {
+  background-color: #252424;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
 }
-  
-  main {
-    display: flex;
-    align-items: center;
-    flex: 1; 
-    flex-direction: column; 
-    justify-content: space-between;
-    min-height: 100vh; 
-  }
-  
-  h2{
-    margin-bottom: 20px;
-    color: #666;
-  }
-  
-  header{
-    background-color: var(--yellow);
-  }
-  
-  nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ebebeb;
-  }
-  
-  nav .logo {
-    width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    width: 600px;
-  }
-  
-  .form form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .controls {
-    width: 100%;
-    color: #666;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    border: 1px solid rgb(202, 162, 130);
-  }
-
-  .register-link{
-    color: #666;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .register-link:hover{
-    color: #202020;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .submit {
-    margin-top: 30px;
-    color: white;
-    background-color: #1259c3;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .reset {
-    background-color: #c31212;
-  }
-  
-  
-  .submit:hover {
-    background-color: #0022AA;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.02);
-  }
-  
-  
-  @media screen and (min-width: 300px) and (max-width: 640px) {
-  
-    .form{
-        padding: 10px;
-        margin-top: 0;
-    }
-  
-    nav{
-        display: flex;
-        justify-content: center;
-    }
-  
-    nav .logo{
-        display: inline-block;
-        
-    }
-  
-  }
-    
-
-    
-

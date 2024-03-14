@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #070f63;
+    background-color: #001a3f;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -13,6 +14,12 @@ header {
     padding: 20px;
     position: relative;
 }
+
+
+nav a {
+    color: #001a3f; /* Cambia el color de los links a azul zafiro */
+}
+
 
 main {
     background-color: white;
@@ -40,11 +47,11 @@ main {
 
 .icons-container i:hover {
     transform: scale(1.1);
-    color: #ebd065;
+    color: #9c7d03;
 }
 
 nav {
-    background-color: #070f63;
+    background-color: #001a3f;
     color: #fff;
     padding-bottom: 10px;
 }
@@ -71,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ebd065;
+    color: #9c7d03;
     text-decoration: underline;
 }
 
@@ -108,20 +115,28 @@ nav a:hover {
 }
 
 .read-more-link:hover {
-    color: #070f63;
+    color: #000000;
     text-decoration: underline;
     font-size: 18px;
 }
 
 /*----------SECCION NOVEDADES----------*/
 
-.news-section {
-    max-width: 800px;
-    margin: 20px auto;
+.ultimas-novedades {
+    text-align: center;
 }
 
-.news-section h2 {
-    text-align: center;
+.news-section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd; /* Nuevo: Borde inferior */
+}
+
+.news-item {
+    flex: 0 1 calc(50% - 10px);
+    margin: 0 20px;
+    margin-bottom: 30px;
+
 }
 
 .news-item {
@@ -139,22 +154,81 @@ nav a:hover {
 .news-item h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .news-item p {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .news-item a {
-    color: #007bff;
+    color: #001a3f;
     text-decoration: none;
-    font-weight: bold;
+    display: block; 
+    text-align: center;
+    margin-top: 10px; 
 }
 
 .news-item a:hover {
     text-decoration: underline;
+}
+
+/*----------SECCION ITEM ESPECIAL*/
+
+.item-especial {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    text-align: left;
+    height: 70vh; 
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.flexible {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.itemFlex1,
+.itemFlex2 {
+  flex: 1;
+}
+
+.itemFlex2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.itemFlex1 img {
+    width: 70%;
+}
+
+.itemFlex2 h3 {
+    margin-top: 0;
+}
+
+.itemFlex2 p {
+    margin-bottom: 20px;
+}
+
+.slick-slide img {
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto;
+}
+
+.carousel-section {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /*----------SECCION PRODUCTOS----------*/
@@ -169,26 +243,29 @@ nav a:hover {
     text-align: center;
 }
 
-.product-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .product {
-    width: 23%;
+    width: 24%; 
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin: 25px;
+    padding: 11px; 
+    margin-bottom: 22px;
+    box-sizing: border-box;
 }
 
 .product img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
+}
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product h3 {
@@ -203,7 +280,7 @@ nav a:hover {
 }
 
 .product a {
-    color: #007bff;
+    color: #001a3f;
     text-decoration: none;
     font-weight: bold;
 }
@@ -211,12 +288,15 @@ nav a:hover {
 .product a:hover {
     text-decoration: underline;
 }
+
 /*----------SECCION FOOTER----------*/
+
 .footer {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: #070f63;
+    background-color: #001a3f;
     color: #fff;
     padding: 20px 0;
 }
@@ -232,7 +312,7 @@ nav a:hover {
 }
 
 .footer__section i:hover {
-    color: #ebd065;
+    color: #9c7d03;
     cursor: pointer;
 }
 
