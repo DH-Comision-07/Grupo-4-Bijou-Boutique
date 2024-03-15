@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/register.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register.css" />
     <title>Bijou Boutique</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include("partials/header.ejs") %>
 
     <main class="container-register">
-        <div class="form">
-            <form>
-                <h2 class=" title">Registrar usuario</h2>
-                <input class="controls" id="name" type="text" placeholder="Nombre">
-                <input class="controls" id="surname" type="text" placeholder="Apellido">
-                <input class="controls" id="user" type="text" placeholder="Nombre de usuario">
-                <input class="controls" id="pass" type="password" placeholder="Contraseña">
-                <input class="controls" id="pass" type="password" placeholder="Confirmar contraseña">
-                <input class="controls" id="mail" type="email" placeholder="E-mail">
-                <h3>Fecha de nacimiento</h3>
-                <input class="controls" id="date" type="date" placeholder="mm/dd/yyyy">
-                <input class="controls" id="adress" type="text" placeholder="Domicilio">
+      <div class="form">
+        <form>
+          <h2 class="title">Registrar usuario</h2>
+          <input class="controls" id="name" type="text" placeholder="Nombre" />
+          <input
+            class="controls"
+            id="surname"
+            type="text"
+            placeholder="Apellido"
+          />
+          <input
+            class="controls"
+            id="user"
+            type="text"
+            placeholder="Nombre de usuario"
+          />
+          <input
+            class="controls"
+            id="pass"
+            type="password"
+            placeholder="Contraseña"
+          />
+          <input
+            class="controls"
+            id="pass"
+            type="password"
+            placeholder="Confirmar contraseña"
+          />
+          <input class="controls" id="mail" type="email" placeholder="E-mail" />
+          <h3>Fecha de nacimiento</h3>
+          <input
+            class="controls"
+            id="date"
+            type="date"
+            placeholder="mm/dd/yyyy"
+          />
+          <input
+            class="controls"
+            id="adress"
+            type="text"
+            placeholder="Domicilio"
+          />
 
-                <h3>Intereses</h3>
-                <div class="intereses">
-                    <input type="checkbox" value="Electro" id="interes1">
-                    <label for="interes1">Anillos</label><br>
-                    <input type="checkbox" value="Moda" id=interes2">
-                    <label for="interes2">Pulseras</label><br>
-                    <input type="checkbox" value="Hogar" id="interes3">
-                    <label for="interes3">Colgantes</label><br>
-                    <input type="checkbox" value="Jugueteria" id="interes4">
-                    <label for="interes4">Dijes</label><br>
-                    <input type="checkbox" value="Vida sana" id="interes5">
-                    <label for="interes5">Relojes</label><br>
-                    <input type="checkbox" value="Vida sana" id="interes5">
-                    <label for="interes5">Acero quirúrgico</label><br>
-                </div>
-                <input class="submit" type="submit">
-                <input class="submit reset" type="reset" onclick="alert('Datos reestablecidos')">
-            </form>
-
-        </div>
-
+          <h3>Intereses</h3>
+          <div class="intereses">
+            <input type="checkbox" value="Electro" id="interes1" />
+            <label for="interes1">Anillos</label><br />
+            <input type="checkbox" value="Moda" id=interes2">
+            <label for="interes2">Pulseras</label><br />
+            <input type="checkbox" value="Hogar" id="interes3" />
+            <label for="interes3">Colgantes</label><br />
+            <input type="checkbox" value="Jugueteria" id="interes4" />
+            <label for="interes4">Dijes</label><br />
+            <input type="checkbox" value="Vida sana" id="interes5" />
+            <label for="interes5">Relojes</label><br />
+            <input type="checkbox" value="Vida sana" id="interes5" />
+            <label for="interes5">Acero quirúrgico</label><br />
+          </div>
+          <input class="submit" type="submit" />
+          <input
+            class="submit reset"
+            type="reset"
+            onclick="alert('Datos reestablecidos')"
+          />
+        </form>
+      </div>
     </main>
 
     <%- include("partials/footer.ejs") %>
-</body>
+  </body>
 </html>

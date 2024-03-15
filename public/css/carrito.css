@@ -22,7 +22,7 @@ main {
     max-width: 100%;
     background-color: #fff;
     padding: 15px;
-    border-radius: 100px;
+    border-radius: 05px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -229,26 +229,24 @@ input[type="number"], input[type="text"], input[type="email"], input[type="month
         display: flex;
         align-items: center;
     } 
-      
+    
     .gallery {
         display: flex;
         justify-content: center; 
         gap: 10px; 
-      }
-      
-      .gallery img {
+    }
+    
+    .gallery img {
         cursor: pointer;
         width: 14.2em; 
         height: 15em;
         transition: transform 0.5s ease, box-shadow 0.5s ease; 
         box-shadow: 0px 4px 6px rgba(0,0,0,0.2); 
-      }
-      
-      .gallery img:hover, .img-divisora:hover {
+    }
+    
+    .gallery img:hover, .img-divisora:hover {
         transform: scale(1.0);
         box-shadow: 0px 8px 12px rgba(0,0,0,0.3); 
-      }
+    }
 
-      
-      
-    }      
+}
