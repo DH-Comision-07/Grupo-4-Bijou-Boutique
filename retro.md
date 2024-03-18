@@ -8,7 +8,7 @@ en conjunto antes de realizar cambios en el proyecto grupal.
 - Realizar obligatoriamente reuniones diarias aunque sea de 5 minutos para ponernos al tanto
 del progreso de cada uno en el Sprint.
 
-Hacer mas:
+Hacer más:
 - Agregarle mas info a Trello o a cualquier plataforma de organizacion que utilicemos para
 llevar a cabo el orden de nuestras tareas.
 - Implementacion mas agil de GitHub.
@@ -57,12 +57,12 @@ Comenzar a hacer:
 - Mejorar la nomenclatura tanto en commits, clases, metodos,etc.
 - Intentar manejarnos con fechas limite, para no extender el trabajo del Sprint y poder resolver las cosas con tiempo, con la finalidad de no entregar el trabajo sobre la hora.
 
-Hacer mas :
-
+Hacer más:
 - Intentar coordinar un poco mejor los horarios para poder hacer reuniones en las cuales logremos estar todos los integrantes del grupo conectados en simultaneo.
 - Intentar tener toda la info de las clases y ejercitacion super actualizada para que, a la hora de las dailys, todos estar en la misma sintonia de trabajo.
 
 
 Continuar haciendo:
-
 - Seguir utilizando trello de la manera que lo que lo venimos utilizamos.
+- Seguir manejando la comunicacion que manejamos, y la buena predisposicion entre todos para ayudarnos el uno al otro. 
+- Ser criticos a la hora de ayudar a un compañero y a la hora de recibir tambien criticas constructivas para mejorar el desempeño de trabajo.
