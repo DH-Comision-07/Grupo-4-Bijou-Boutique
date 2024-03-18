@@ -60,3 +60,9 @@ Comenzar a hacer:
 Hacer mas :
 
 - Intentar coordinar un poco mejor los horarios para poder hacer reuniones en las cuales logremos estar todos los integrantes del grupo conectados en simultaneo.
+- Intentar tener toda la info de las clases y ejercitacion super actualizada para que, a la hora de las dailys, todos estar en la misma sintonia de trabajo.
+
+
+Continuar haciendo:
+
+- Seguir utilizando trello de la manera que lo que lo venimos utilizamos.
