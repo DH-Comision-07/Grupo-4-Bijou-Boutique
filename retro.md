@@ -69,3 +69,6 @@ Continuar haciendo:
 
 Hacer menos:
 - Perder el foco de concentracion a la hora de una reunion. A veces intentamos abarcar muchos temas en lugar de centrarnos en solucionar de a uno a la vez.
+
+Dejar de hacer:
+- Ha pasado en el sprint 3, que alguno realizaba algún cambio en su repositorio local, y al ser un cambio minusculo, quiza no lo avisaba o no lo informaba. Si bien manejamos una excelente comunicación en el equipo, esto nos paso y queremos mejorarlo.
