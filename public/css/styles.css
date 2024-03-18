@@ -120,6 +120,10 @@ nav a:hover {
     font-size: 18px;
 }
 
+.explorer-title {
+    text-align: center;
+}
+
 /*----------SECCION NOVEDADES----------*/
 
 .ultimas-novedades {
