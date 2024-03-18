@@ -66,3 +66,6 @@ Continuar haciendo:
 - Seguir utilizando trello de la manera que lo que lo venimos utilizamos.
 - Seguir manejando la comunicacion que manejamos, y la buena predisposicion entre todos para ayudarnos el uno al otro. 
 - Ser criticos a la hora de ayudar a un compañero y a la hora de recibir tambien criticas constructivas para mejorar el desempeño de trabajo.
+
+Hacer menos:
+- Perder el foco de concentracion a la hora de una reunion. A veces intentamos abarcar muchos temas en lugar de centrarnos en solucionar de a uno a la vez.
