@@ -52,7 +52,7 @@ Dejar de hacer:
 
 Retrospectiva SPRINT 4
 
-- Comenzar a hacer:
-Ser mas especificos a la hora de designar tareas.
-Mejorar la nomenclatura tanto en commits, clases, metodos,etc.
+Comenzar a hacer:
+- Ser mas especificos a la hora de designar tareas.
+- Mejorar la nomenclatura tanto en commits, clases, metodos,etc.
 Intentar manejarnos con fechas limite, para no extender el trabajo del Sprint y poder resolver las cosas con tiempo, con la finalidad de no entregar el trabajo sobre la hora.
