@@ -10,6 +10,13 @@ const userController = {
   userCard: (req, res) => {
     res.render("userCard", { users : userService.getAll()});
   },
+  create:  (req, res) => {
+		res.render('register')
+	},
+  store: (req, res) => {
+		userService.save(req.body);
+		res.send(req.body)
+	},
 };
 
 module.exports = userController;
