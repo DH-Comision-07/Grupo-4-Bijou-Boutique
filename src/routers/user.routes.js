@@ -7,4 +7,7 @@ router.get("/register", userController.register);
 
 router.get("/userCard", userController.userCard);
 
+router.get('/create/', userControllerController.create); 
+router.post('/', userController.store);
+
 module.exports = router;
