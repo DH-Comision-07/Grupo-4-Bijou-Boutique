@@ -1,0 +1,64 @@
+[{
+    "id": 1,
+  "firstName": "Juan",
+  "lastName": "Pérez",
+  "email": "juan@example.com",
+  "password": "contraseña123",
+  "category": "usuario",
+  "image": "imagen1.jpg"
+},
+{
+    "id": 2,
+  "firstName": "María",
+  "lastName": "González",
+  "email": "maria@example.com",
+  "password": "clave456",
+  "category": "admin",
+  "image": "imagen2.jpg"
+},
+{
+    "id": 3,
+    "firstName": "Luis",
+    "lastName": "Martínez",
+    "email": "luis@example.com",
+    "password": "pass789",
+    "category": "usuario",
+    "image": "imagen3.jpg"
+},
+{
+    "id": 4,
+  "firstName": "Ana",
+  "lastName": "Sánchez",
+  "email": "ana@example.com",
+  "password": "secreto123",
+  "category": "admin",
+  "image": "imagen4.jpg"
+},
+{
+    "id": 5,
+    "firstName": "Pedro",
+    "lastName": "López",
+    "email": "pedro@example.com",
+    "password": "clave1234",
+    "category": "usuario",
+    "image": "imagen5.jpg"
+},
+{
+    "id": 6,
+  "firstName": "Laura",
+  "lastName": "Ramírez",
+  "email": "laura@example.com",
+  "password": "p455w0rd",
+  "category": "usuario",
+  "image": "imagen6.jpg"
+},
+{
+    "id": 7,
+  "firstName": "Carlos",
+  "lastName": "Hernández",
+  "email": "carlos@example.com",
+  "password": "contraseña12345",
+  "category": "admin",
+  "image": "imagen7.jpg"
+}
+]
