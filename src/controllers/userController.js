@@ -1,9 +1,14 @@
+const userService = require("../models/userService");
+
 const userController = {
   login: (req, res) => {
-    return res.render("login");
+    res.render("login");
   },
   register: (req, res) => {
-    return res.render("register");
+    res.render("register");
+  },
+  userCard: (req, res) => {
+    res.render("userCard", { users : userService.getAll()});
   },
 };
 

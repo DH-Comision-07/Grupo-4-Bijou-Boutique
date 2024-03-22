@@ -1,12 +1,17 @@
+const productService = require("../models/productService");
+
 const productController = {
   productDetail: (req, res) => {
-    return res.render("productDetail");
+    res.render("productDetail");
   },
   carrito: (req, res) => {
-    return res.render("carrito");
+    res.render("carrito");
   },
   formulario: (req, res) => {
-    return res.render("formulario");
+    res.render("formulario");
+  },
+  productCard: (req, res) => {
+    res.render("productCard", { products: productService.getAll() });
   },
 };
 

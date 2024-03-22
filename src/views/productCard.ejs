@@ -10,14 +10,17 @@
   <%- include("partials/header.ejs") %>
 
   <section class="product-section">
-    <% joyeria.forEach((joyas) =>{ %> 
+    <% products.forEach((product) =>{ %> 
 
     <article class="product-card">
-      <img src= <%= joyeria.image %> alt="Producto" class="product-image">
+      <img src= <%= product.image %> alt="Producto" class="product-image">
       <div class="product-details">
-        <h2 class="product-name"> <%= joyeria.name %></h2>
-        <p class="product-price"> <%= joyeria.price %> </p>
-        <p class="product-description"> <%= joyeria.description %> </p>
+        <h2 class="product-name"> <%= product.name %></h2>
+        
+        <div class="product-text">
+          <p class="product-price"> <%= product.price %> </p>
+          <p class="product-description"> <%= product.description %> </p>
+        </div>
       </div>
     </article>
     <% }) %>

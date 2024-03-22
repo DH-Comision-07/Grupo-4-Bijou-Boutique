@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/userCard.css" />
+    <title>Product Card</title>
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+
+  <section class="user-section">
+    <% users.forEach((user) =>{ %> 
+    <div class="user-card">
+        <img src="<%= user.image %>" alt="Profile Image">
+        <div class="user-info">
+            <h2><%= user.firstName %> <%= user.lastName %></h2>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Category:</strong> <%= user.category %></p>
+        </div>
+    </div>
+    <% }) %>
+  </section>
+  <%- include("partials/footer.ejs") %>
+</html>
