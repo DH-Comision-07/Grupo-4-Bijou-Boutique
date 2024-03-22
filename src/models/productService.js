@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const product = require("../models/products.json");
+const product = require("../models/products.json");
 
 const productService = {
   products: product,

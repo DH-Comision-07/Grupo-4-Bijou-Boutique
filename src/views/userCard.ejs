@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/userCard.css" />
+    <title>Product Card</title>
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+
+  <section class="product-section">
+    <% products.forEach((product) =>{ %> 
+
+    <article class="product-card">
+      <img src= <%= product.image %> alt="Producto" class="product-image">
+      <div class="product-details">
+        <h2 class="product-name"> <%= product.name %></h2>
+        
+        <div class="product-text">
+          <p class="product-price"> <%= product.price %> </p>
+          <p class="product-description"> <%= product.description %> </p>
+        </div>
+      </div>
+    </article>
+    <% }) %>
+  </section>
+  <%- include("partials/footer.ejs") %>
+</html>
