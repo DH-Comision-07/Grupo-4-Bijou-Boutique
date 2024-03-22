@@ -9,20 +9,16 @@
 <body>
   <%- include("partials/header.ejs") %>
 
-  <section class="product-section">
-    <% products.forEach((product) =>{ %> 
-
-    <article class="product-card">
-      <img src= <%= product.image %> alt="Producto" class="product-image">
-      <div class="product-details">
-        <h2 class="product-name"> <%= product.name %></h2>
-        
-        <div class="product-text">
-          <p class="product-price"> <%= product.price %> </p>
-          <p class="product-description"> <%= product.description %> </p>
+  <section class="user-section">
+    <% users.forEach((user) =>{ %> 
+    <div class="user-card">
+        <img src="<%= user.image %>" alt="Profile Image">
+        <div class="user-info">
+            <h2><%= user.firstName %> <%= user.lastName %></h2>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Category:</strong> <%= user.category %></p>
         </div>
-      </div>
-    </article>
+    </div>
     <% }) %>
   </section>
   <%- include("partials/footer.ejs") %>

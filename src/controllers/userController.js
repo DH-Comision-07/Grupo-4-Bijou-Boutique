@@ -1,4 +1,4 @@
-const productService = require("../models/productService");
+const userService = require("../models/userService");
 
 const userController = {
   login: (req, res) => {
@@ -8,7 +8,7 @@ const userController = {
     res.render("register");
   },
   userCard: (req, res) => {
-    res.render("userCard", { products: productService.getAll() });
+    res.render("userCard", { users : userService.getAll()});
   },
 };
 
