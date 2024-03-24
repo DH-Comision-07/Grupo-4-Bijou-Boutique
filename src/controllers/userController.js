@@ -11,11 +11,12 @@ const userController = {
     res.render("userCard", { users : userService.getAll()});
   },
   create:  (req, res) => {
-		res.render('register')
+		res.render('register/create');
 	},
   store: (req, res) => {
 		userService.save(req.body);
-		res.send(req.body)
+		res.send(req.body);
+    res.redirect('/login')
 	},
 };
 
