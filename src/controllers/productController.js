@@ -4,14 +4,19 @@ const productController = {
   productDetail: (req, res) => {
     res.render("productDetail");
   },
-  carrito: (req, res) => {
-    res.render("carrito");
+  cart: (req, res) => {
+    res.render("cart");
   },
-  formulario: (req, res) => {
-    res.render("formulario");
+  form: (req, res) => {
+    res.render("form");
   },
   productCard: (req, res) => {
     res.render("productCard", { products: productService.getAll() });
+  },
+  detail: (req, res) => {
+    res.render("productDetail", {
+      products: productService.getOne(req.params.id),
+    });
   },
 };
 

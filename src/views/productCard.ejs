@@ -9,21 +9,22 @@
 <body>
   <%- include("partials/header.ejs") %>
 
-  <section class="product-section">
-    <% products.forEach((product) =>{ %> 
-
-    <article class="product-card">
-      <img src= <%= product.image %> alt="Producto" class="product-image">
-      <div class="product-details">
-        <h2 class="product-name"> <%= product.name %></h2>
-        
-        <div class="product-text">
-          <p class="product-price"> <%= product.price %> </p>
-          <p class="product-description"> <%= product.description %> </p>
-        </div>
-      </div>
-    </article>
+  <% products.forEach(product => { %> 
+    <a href="/productDetail/<%= product.id %>">
+      <section class="product-section">
+          <article class="product-card">
+            <img src= <%= product.image %> alt="Producto" class="product-image">
+            <div class="product-details">
+              <h2 class="product-name"> <%= product.name %></h2>
+              
+              <div class="product-text">
+                <p class="product-price"> <%= product.price %> </p>
+                <p class="product-description"> <%= product.description %> </p>
+              </div>
+            </div>
+          </article>
+      </section>
+    </a>
     <% }) %>
-  </section>
   <%- include("partials/footer.ejs") %>
 </html>
