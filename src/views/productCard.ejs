@@ -9,11 +9,10 @@
 <body>
   <%- include("partials/header.ejs") %>
 
+  <section class="product-section">
   <% products.forEach(product => { %> 
-    <a href="/productDetail/<%= product.id %>">
-      <section class="product-section">
           <article class="product-card">
-            <img src= <%= product.image %> alt="Producto" class="product-image">
+            <img src= "/images/<%= product.image %>" alt="Producto" class="product-image">
             <div class="product-details">
               <h2 class="product-name"> <%= product.name %></h2>
               
@@ -23,8 +22,7 @@
               </div>
             </div>
           </article>
+        <% }) %>
       </section>
-    </a>
-    <% }) %>
   <%- include("partials/footer.ejs") %>
 </html>

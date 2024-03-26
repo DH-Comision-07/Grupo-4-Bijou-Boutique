@@ -7,8 +7,8 @@ const productController = {
   cart: (req, res) => {
     res.render("cart");
   },
-  form: (req, res) => {
-    res.render("form");
+  formulary: (req, res) => {
+    res.render("formulary");
   },
   productCard: (req, res) => {
     res.render("productCard", { products: productService.getAll() });

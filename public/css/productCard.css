@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start; /* Alinea las tarjetas en la parte superior */
+  align-items: flex-start;
   background-color: #f4f4f4;
 }
 
@@ -12,8 +12,8 @@
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  margin: 0.5em; /* Utiliza unidades relativas para el margen */
-  width: calc(25% - 1em); /* Calcula el ancho de la tarjeta */
+  margin: 0.5em;
+  width: calc(25% - 1em);
 }
 
 .product-card:hover{
@@ -44,28 +44,28 @@
 
 .product-description {
   margin: 5px 0;
-  font-size: 14px; /* Tamaño de fuente relativo */
+  font-size: 14px;
   color: #555;
 }
 
 @media (max-width: 1024px) {
   .product-section {
-    justify-content: flex-start; /* Cambia a alinear los productos al principio */
+    justify-content: flex-start;
   }
   
   .product-card {
-    width: calc(25% - 1em); /* Permite 4 tarjetas por fila */
+    width: calc(25% - 1em);
   }
 }
 
 @media (max-width: 768px) {
   .product-card {
-    width: calc(33.33% - 1em); /* Permite 3 tarjetas por fila */
+    width: calc(33.33% - 1em);
   }
 }
 
 @media (max-width: 480px) {
   .product-card {
-    width: calc(50% - 1em); /* Permite 2 tarjetas por fila */
+    width: calc(50% - 1em); 
   }
 }

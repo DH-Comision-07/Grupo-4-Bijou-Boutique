@@ -5,7 +5,7 @@
     "description": "Elegante anillo con incrustaciones de diamantes",
     "color": "Blanco",
     "price": "$15.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-oro.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Clásico collar de perlas cultivadas",
     "color": "Perlas",
     "price": "$45.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "collar-perlas.png"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Pulsera con piedras preciosas de zafiros",
     "color": "Azul",
     "price": "$38.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "pulsera-zafiros.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Elegantes aros de oro rosa con detalles en filigrana",
     "color": "Oro Rosa",
     "price": 900,
-    "image": "https://placehold.jp/150x150.png"
+    "image": "aros-oro-rosa.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Collar brillante con rubíes intensos",
     "color": "Rojo",
     "price": "$50.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "collar-rubies.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Aros colgantes con esmeraldas de calidad",
     "color": "Verde",
     "price": "$15.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "aros-esmeralda.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Anillo clásico de plata de ley",
     "color": "Plateado",
     "price": "20.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-ley.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Collar lujoso con diamantes y zafiros",
     "color": "Plateado y azul",
     "price": "$55.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "collar-diam-zafiros.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Collar elegante con perlas y zafiros",
     "color": "Blanco y Azul",
     "price": "$48.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "collar-perlas-zafiro.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Aros brillantes con diamantes incrustados",
     "color": "Transparente",
     "price": "$17.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "aros-diamantes.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Anillo con topacio azul vibrante",
     "color": "Azul Claro",
     "price": "12.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-topacio.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "description": "Aros con piedras preciosas de amatista",
     "color": "Púrpura",
     "price": "$23.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "aros-amatista.jpg"
   },
   {
     "id": 13,
@@ -101,15 +101,7 @@
     "description": "Anillo elegante de oro blanco con detalles intrincados",
     "color": "Oro Blanco",
     "price": "$50.000",
-    "image": "https://placehold.jp/150x150.png"
-  },
-  {
-    "id": 14,
-    "name": "Pulsera de Jade",
-    "description": "Pulsera con cuentas de jade verde",
-    "color": "Verde Jade",
-    "price": "$18.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-blanco.jpg"
   },
   {
     "id": 15,
@@ -117,7 +109,7 @@
     "description": "Anillo exclusivo con rubí birmano auténtico",
     "color": "Rojo Profundo",
     "price": "$48.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-birmano.jpg"
   },
   {
     "id": 16,
@@ -125,14 +117,14 @@
     "description": "Collar elegante de oro rosa con diamantes incrustados",
     "color": "Oro Rosa y Transparente",
     "price": "$70.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "collar-rosa-diamantes.jpg"
   },
   {
-    "id": "17",
+    "id": 17,
     "name": "Anillo de Diamante Negro",
     "description": "Anillo elegante con diamante negro central",
     "color": "Negro",
     "price": "$38.000",
-    "image": "https://placehold.jp/150x150.png"
+    "image": "anillo-diamante-negro.jpg"
   }
 ]

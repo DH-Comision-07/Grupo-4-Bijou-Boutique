@@ -2,7 +2,7 @@
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Espacio entre el logo y los campos del formulario */
+    margin-bottom: 20px; 
 }
 
 .logo-container img {
