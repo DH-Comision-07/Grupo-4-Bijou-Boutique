@@ -1,102 +1,311 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
-  }
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color:rgb(247,247,247);
+  font-size: 12px;
+}
+
+.header__1{
+  text-align: center;
+  background-color: rgb(12,27,84);
+  margin-bottom: 5px;
+}
+
+.header__2{
+  display: flex;
+  padding: 3px;
+}
+
+.header__categorias{
+  padding: 3px;
+  font-size: 12px;
+  background-color: rgb(202,162,130);
+  border-top: 2px solid gb(247,247,247);
+  border-bottom: 2px solid gb(247,247,247);
+  color: white;
+  width: 100%;
+}
+
+.header__img{
+  width: 5%;
+}
+
+.fa-bag-shopping{
+  padding: 3px;
+  font-size: 10px;
+  background-color: rgb(202,162,130);
+  border-top: 2px solid gb(247,247,247);
+  border-bottom: 2px solid gb(247,247,247);
+  color: white;
+}
+
+.producto__img{
+  padding: 3px;
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+.fotoPrincipal{
+  width: 100%;
+}
+
+.producto__general{
+  padding: 3px;
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+.info__nombre{
+  font-weight: 400;
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.info__precio{
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(12,27,84);
+  margin: 25px 0;
+}
+
+.pago__1{
+  font-weight: 400;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.fa-credit-card{
+  color: rgb(12,27,84);
+  margin-right: 5px;
+}
+
+.pago__2{
+  font-weight: 400;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.fa-tag{
+  color: rgb(12,27,84);
+  margin-right: 5px;
+}
+
+.pago__3{
+  font-weight: 400;
+  font-size: 12px;
+  margin: 15px 0;
+ 
+}
+
+.fa-truck{
+  color: rgb(12,27,84);
+  margin-right: 5px;
+}
+
+.elegir{
+  display: flex;
+  border-top: 1px solid rgb(202,162,130);
+  border-bottom: 1px solid rgb(202,162,130);
+  justify-content: space-around;
+}
+
+.talle{
+  font-size: 16px;
+  background-color: rgb(247,247,247);
+  border:1px solid rgb(12,27,84);
+  border-radius: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.talle:hover{
+  background-color: rgb(12,27,84);
+  color: rgb(247,247,247);
+}
+
+.cantidad{
+  font-size: 16px;
+  background-color: rgb(247,247,247);
+  border:1px solid rgb(12,27,84);
+  border-radius: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cantidad:hover{
+  background-color: rgb(12,27,84);
+  color: rgb(247,247,247);
+}
+
+.carrito{
+  text-align: center;
+}
+
+.carrito__descrip{
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.carrito__stock{
+  border: 1px solid rgb(12,27,84);
+  border-radius: 100px;
+  background-color: rgb(12,27,84);
+  color: white;
+  display: inline;
+  padding: 3px;
+  margin: 10px;
+  font-size: 10px;
+}
+
+.carrito__agregar{
+  background-color: rgb(247,247,247);
+  padding: 3px;
+  margin-top: 15px;
+  font-size: 16px;
+  border:1px solid rgb(12,27,84);
+  color: rgb(12,27,84);
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.carrito__agregar:hover{
+  background-color: rgb(247,247,247);
+  color: rgb(12,27,84);
+}
+
+.carrito__talles{
+  font-size: 12px;
+  color: black;
+}
+
+.envios__titulo{
+  margin: 20px 0;
+  color: rgb(12,27,84);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.envios__codigo{
+  background-color: rgb(247,247,247);
+  padding: 3px;
+  font-size: 14px;
+  border:1px solid rgb(12,27,84);
+  color: rgb(12,27,84);
+  border-radius: 100px;
+}
+
+.envios__boton{
+  background-color: rgb(12,27,84);
+  padding: 3px;
+  font-size: 14px;
+  border:1px solid rgb(247,247,247);
+  color: rgb(247,247,247);
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.envios__boton:hover{
+  background-color: rgb(12,27,84);
+  color: rgb(247,247,247);
+}
+
+.envios__buscarCodigo{
+  font-size: 12px;
+  color: black;
+}
+
+.envios{
+  padding: 3px;
+  margin: 5px 0;
+}
+
+.envios__domicilio{
+  margin: 3px 0;
+  font-weight: 600;
+}
+
+.envios__opcion1{
+  font-style: italic;
+}
+
+.envios__direc{
+  font-style: italic;
+}
+
+.fa-heart{
+  color: rgb(12,27,84);
+}
+
+.envios__precio{
+  color: rgb(12,27,84);
+}
+
+.comentario__cantidad{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(202,162,130);
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(12,27,84);
+  padding-top: 20px;
+}
+
+.comentario__area{
+  width: 100%;
+}
+
+footer{
+  padding: 10px;
+  background-color: rgb(12,27,84);
+  text-align: center;
+}
+
+.footer__img{
   
-  body {
-    background-color: #f7f7f7;
-    font-size: 12px;
+  width: 20%;
+}
+
+@media (361px <= width <= 769px){
+  .producto{
+      display: flex;
+      justify-content: space-around;
+      
   }
-  
-  /* Estilos del header */
-  .header__1 {
-    text-align: center;
-    background-color: #0c1b54;
-    margin-bottom: 5px;
-    color: #fff;
+
+  .fotoPrincipal{
+      width: 100%;
   }
-  
-  .header__2 {
-    display: flex;
-    padding: 3px;
+
+  .producto__general{
+      width: 300%;
   }
-  
-  .header__categorias {
-    padding: 3px;
-    font-size: 12px;
-    background-color: #caa282;
-    color: white;
-    width: 100%;
+}
+
+@media (min-width: 770px){
+  .producto{
+      display: flex;
+      justify-content: space-around;
+      
   }
-  
-  .header__img {
-    width: 5%;
+
+  .fotoPrincipal{
+      width: 100%;
   }
-  
-  .fa-shopping-bag {
-    padding: 3px;
-    font-size: 10px;
-    background-color: #caa282;
-    color: white;
+
+  .producto__general{
+      width: 150%;
   }
-  
-  /* Estilos de los productos */
-  .product-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0.5em;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 0.5em;
-    width: calc(25% - 1em);
-  }
-  
-  .product-card:hover {
-    box-shadow: 0 2px 4px darkgray;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-details {
-    padding: 20px;
-  }
-  
-  .product-name {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .product-price {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .product-description {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  /* Estilos del footer */
-  footer {
-    padding: 10px;
-    background-color: #0c1b54;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .footer__img {
-    width: 20%;
-  }
+}
