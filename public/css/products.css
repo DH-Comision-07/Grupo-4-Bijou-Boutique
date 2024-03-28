@@ -6,6 +6,10 @@
     align-items: flex-start;
     background-color: #f4f4f4;
   }
+
+  a {
+    text-decoration: none;
+  }
   
   /* Estilos del card del producto */
   .product-card {
