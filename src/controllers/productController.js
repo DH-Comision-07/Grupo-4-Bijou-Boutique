@@ -10,6 +10,9 @@ const productController = {
   formulary: (req, res) => {
     res.render("formulary");
   },
+  products: (req, res) => {
+    res.render("products", { products: productService.getAll() });
+  },
   productCard: (req, res) => {
     res.render("productCard", { products: productService.getAll() });
   },
