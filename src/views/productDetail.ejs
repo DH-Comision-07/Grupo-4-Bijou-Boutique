@@ -23,14 +23,14 @@
         <section>
             <div class="producto">
                 <section class="producto__img">
-                    <img class="fotoPrincipal" src="/images/16245456686072.jpg" alt="foto-producto">
+                    <img class="fotoPrincipal" src="/images/<%= products.image %>" alt="foto-producto">
                 </section>
     
                 <section class="producto__general">
     
                     <article class="info">
-                        <p class="info__nombre">Anillo Mariposa></p>
-                        <p class="info__precio"> $8.900</p>
+                        <p class="info__nombre"><%= products.name %></p>
+                        <p class="info__precio">$<%= products.price %></p>
                     </article>
     
                     <article class="pago">
@@ -68,7 +68,7 @@
                     </article>
     
                     <article class="carrito"> 
-                        <p class="carrito__descrip">Anillo Mariposa, plata 925</p>
+                        <p class="carrito__descrip"><%= products.description %></p>
                         <p class="carrito__stock">En stock</p>
                         <!-- Hay que configurar lo del stock si o no -->
                         <br>
@@ -84,37 +84,12 @@
                         <button class="envios__boton" type="submit">Calcular</button>
                         <br>
                         <a class="envios__buscarCodigo" href="https://www.correoargentino.com.ar/formularios/cpa">No sé mi código postal</a>
-                        
-                        <!-- !!!!!!!!esto solo pasa cuando ya se pone el código -->
-                        <!-- <h4 class="envios__domicilio">ENVÍO A DOMICILIO</h4>
-    
-                       
-                        <label> 
-                            <input type="radio" name="envio-domicilio">
-                            <p class="envios__opcion1">Correo Argentino Clásico-Envío a domicilio</p>
-                            <p class="envios__fecha">Llega entre el viernes 23/02 y el miércoles 28/02</p>
-                            <p class="envios__precio">$3.900</p>
-    
-                            <input type="radio" name="envio-domicilio" id="">
-                            <p class="envios__opcion2">Correo Argentino Express-Envío a domicilio</p>
-                            <p class="envios__fecha">Llega entre el viernes 23/02 y el miércoles 28/02</p>
-                            <p class="envios__precio">$3.900</p>
-                        </label> -->
-    <!-- 
-                        <h4 class="envios__domicilio">RETIRAR POR</h4>
-    
-                        <label>
-                            <input type="radio" name="envio-domicilio">
-                            <p class="envios__opcion1">Nuestro Local</p>
-                            <p class="envios__fecha">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="envios__precio">Gratis</p>
-                        </label> -->
     
                         <section class="envios"></section>
                             <h4 class="envios__domicilio">RETIRAR POR</h4>
                             
                             <p class="envios__opcion1">Nuestro Local</p>
-                            <p class="envios__direc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="envios__direc">Avenida Siempre Viva 743</p>
                             <p class="envios__precio"><i class="fa-regular fa-heart"></i>Gratis</p>
                         </article>
     

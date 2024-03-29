@@ -1,8 +1,11 @@
 const fs = require("fs");
-const product = require("../models/products.json");
+const path = require("path");
+
+const productsFilePath = path.join(__dirname, "../models/products.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const productService = {
-  products: product,
+  products: products,
   getAll: function () {
     return this.products;
   },

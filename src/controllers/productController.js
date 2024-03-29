@@ -18,6 +18,9 @@ const productController = {
       products: productService.getOne(req.params.id),
     });
   },
+  editForm: (req, res) => {
+    res.render("edit-form");
+  },
 };
 
 module.exports = productController;
