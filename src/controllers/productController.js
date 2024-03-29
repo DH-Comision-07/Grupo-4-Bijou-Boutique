@@ -1,13 +1,39 @@
+const productService = require("../models/productService");
+
 const productController = {
-  productDetail: (req, res) => {
-    return res.render("productDetail");
+  cart: (req, res) => {
+    res.render("cart");
   },
-  carrito: (req, res) => {
-    return res.render("carrito");
+  formulary: (req, res) => {
+    res.render("formulary");
   },
-  formulario: (req, res) => {
-    return res.render("formulario");
+  products: (req, res) => {
+    res.render("products", { products: productService.getAll() });
   },
+  productCard: (req, res) => {
+    res.render("productCard", { products: productService.getAll() });
+  },
+  detail: (req, res) => {
+    res.render("productDetail", {
+      products: productService.getOne(req.params.id),
+    });
+  },
+  editForm: (req, res) => {
+    res.render("edit-form");
+  },
+    // Update - Method to update
+    update: (req, res) => {
+      const { id } = req.params;
+      const updatedData = req.body;
+      productService.editarProducto(id, updatedData);
+      res.redirect(`/products/${id}`);
+    },
+  
+    // Delete - Delete one product from DB
+    destroy: (req, res) => {
+      productService.eliminarProducto(req.params.id);
+      res.redirect(`/products`);
+    },
 };
 
 module.exports = productController;

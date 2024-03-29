@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</Details></title>
-    <link rel="stylesheet" href="css/productDetail.css">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -15,118 +16,106 @@
 <body>
     <%- include("partials/header.ejs") %>
         
-        <div class="header__2">
-            <p class="header__categorias"> Home  >  Anillos Plata  >  Anillo Mariposa</p>
-            <i class="fa-solid fa-bag-shopping"></i>
-        </div>
     </header>
     
     <main>
-        <div class="producto">
-            <section class="producto__img">
-                <img class="fotoPrincipal" src="/images/16245456686072.jpg" alt="foto-producto">
-            </section>
 
-            <section class="producto__general">
-
-                <article class="info">
-                    <p class="info__nombre">Anillo Mariposa</p>
-                    <p class="info__precio"> $8.900</p>
-                </article>
-
-                <article class="pago">
-                    <p class="pago__1"> <i class="fa-regular fa-credit-card"></i>3 cuotas sin interés de 2.966,67</p>
-                    <p class="pago__2"> <i class="fa-solid fa-tag"></i>>20% de descuento con efectivo o transferencia</p>
-                    <p class="pago__3"> <i class="fa-solid fa-truck"></i>Envío gratis superando los $45.000</p>
-                </article>
-
-                <article class="elegir">
-                    <label>
-                        <select class="talle" name="talle">
-                            <option disabled hidden selected>Talle</option>
-                            <option value="1"> 16 </option>
-                            <option value="2"> 17 </option>
-                            <option value="3"> 18 </option>
-                            <option value="4"> 19 </option>
-                            <option value="5"> 20 </option>
-                        </select>
-                    </label>
-                    
-                    <br>
-
-                    <label>
-                        <select class="cantidad" name="cantidad">
-                            <option disabled hidden selected>Cantidad</option>
-                            <option value="1"> 1 </option>
-                            <option value="2"> 2 </option>
-                            <option value="3"> 3 </option>
-                            <option value="4"> 4 </option>
-                            <option value="5"> 5 </option>
-                            <option value="5"> 6 </option>
-                            <option value="5"> 7 </option>
-                        </select>
-                    </label>
-                </article>
-
-                <article class="carrito"> 
-                    <p class="carrito__descrip">Anillo Mariposa, plata 925</p>
-                    <p class="carrito__stock">En stock</p>
-                    <!-- Hay que configurar lo del stock si o no -->
-                    <br>
-                    <button class="carrito__agregar" type="submit">AGREGAR AL CARRITO</button>
-                    <br>
-                    <a class="carrito__talles" href="https://www.google.com/search?q=guia+de+talles+para+anillos&oq=guia+de+talles+para+anillos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTYwMDlqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8#vhid=9pnvqabTVmzojM&vssid=l">Guía de talles</a>
-                </article>
-
-                <article class="envios">
-
-                    <h3 class="envios__titulo">ENVÍOS</h3>
-                    <input class="envios__codigo" type="text" placeholder="Tu código postal">
-                    <button class="envios__boton" type="submit">Calcular</button>
-                    <br>
-                    <a class="envios__buscarCodigo" href="https://www.correoargentino.com.ar/formularios/cpa">No sé mi código postal</a>
-                    
-                    <!-- !!!!!!!!esto solo pasa cuando ya se pone el código -->
-                    <!-- <h4 class="envios__domicilio">ENVÍO A DOMICILIO</h4>
-
-                   
-                    <label> 
-                        <input type="radio" name="envio-domicilio">
-                        <p class="envios__opcion1">Correo Argentino Clásico-Envío a domicilio</p>
-                        <p class="envios__fecha">Llega entre el viernes 23/02 y el miércoles 28/02</p>
-                        <p class="envios__precio">$3.900</p>
-
-                        <input type="radio" name="envio-domicilio" id="">
-                        <p class="envios__opcion2">Correo Argentino Express-Envío a domicilio</p>
-                        <p class="envios__fecha">Llega entre el viernes 23/02 y el miércoles 28/02</p>
-                        <p class="envios__precio">$3.900</p>
-                    </label> -->
-<!-- 
-                    <h4 class="envios__domicilio">RETIRAR POR</h4>
-
-                    <label>
-                        <input type="radio" name="envio-domicilio">
-                        <p class="envios__opcion1">Nuestro Local</p>
-                        <p class="envios__fecha">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="envios__precio">Gratis</p>
-                    </label> -->
-
-                    <section class="envios"></section>
-                        <h4 class="envios__domicilio">RETIRAR POR</h4>
-                        
-                        <p class="envios__opcion1">Nuestro Local</p>
-                        <p class="envios__direc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="envios__precio"><i class="fa-regular fa-heart"></i>Gratis</p>
+        <section>
+            <div class="producto">
+                <section class="producto__img">
+                    <img class="fotoPrincipal" src="/images/<%= products.image %>" alt="foto-producto">
+                </section>
+    
+                <section class="producto__general">
+    
+                    <article class="info">
+                        <p class="info__nombre"><%= products.name %></p>
+                        <p class="info__precio">$<%= products.price %></p>
                     </article>
-
-                </article>
-
-                <article class="comentario">
-                    <p class="comentario__cantidad">Comentarios</p>
-                    <textarea class="comentario__area" name="textarea" placeholder="Dejanos tu comentario <3"></textarea>
-                </article>
-            </section>
-        </div>
+    
+                    <article class="pago">
+                        <p class="pago__1"> <i class="fa-regular fa-credit-card"></i>3 cuotas sin interés de 2.966,67</p>
+                        <p class="pago__2"> <i class="fa-solid fa-tag"></i>>20% de descuento con efectivo o transferencia</p>
+                        <p class="pago__3"> <i class="fa-solid fa-truck"></i>Envío gratis superando los $45.000</p>
+                    </article>
+    
+                    <article class="elegir">
+                        <label>
+                            <select class="talle" name="talle">
+                                <option disabled hidden selected>Talle</option>
+                                <option value="1"> 16 </option>
+                                <option value="2"> 17 </option>
+                                <option value="3"> 18 </option>
+                                <option value="4"> 19 </option>
+                                <option value="5"> 20 </option>
+                            </select>
+                        </label>
+                        
+                        <br>
+    
+                        <label>
+                            <select class="cantidad" name="cantidad">
+                                <option disabled hidden selected>Cantidad</option>
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="5"> 6 </option>
+                                <option value="5"> 7 </option>
+                            </select>
+                        </label>
+                    </article>
+    
+                    <article class="carrito"> 
+                        <p class="carrito__descrip"><%= products.description %></p>
+                        <p class="carrito__stock">En stock</p>
+                        <!-- Hay que configurar lo del stock si o no -->
+                        <br>
+                        <button class="carrito__agregar" type="submit">AGREGAR AL CARRITO</button>
+                        <br>
+                        <a class="carrito__talles" href="https://www.google.com/search?q=guia+de+talles+para+anillos&oq=guia+de+talles+para+anillos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTYwMDlqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8#vhid=9pnvqabTVmzojM&vssid=l">Guía de talles</a>
+                    </article>
+    
+                    <article class="envios">
+    
+                        <h3 class="envios__titulo">ENVÍOS</h3>
+                        <input class="envios__codigo" type="text" placeholder="Tu código postal">
+                        <button class="envios__boton" type="submit">Calcular</button>
+                        <br>
+                        <a class="envios__buscarCodigo" href="https://www.correoargentino.com.ar/formularios/cpa">No sé mi código postal</a>
+    
+                        <section class="envios"></section>
+                            <h4 class="envios__domicilio">RETIRAR POR</h4>
+                            
+                            <p class="envios__opcion1">Nuestro Local</p>
+                            <p class="envios__direc">Avenida Siempre Viva 743</p>
+                            <p class="envios__precio"><i class="fa-regular fa-heart"></i>Gratis</p>
+                        </article>
+    
+                    </article>
+    
+                    <article class="comentario">
+                        <p class="comentario__cantidad">Comentarios</p>
+                        <textarea class="comentario__area" name="textarea" placeholder="Dejanos tu comentario"></textarea>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <a
+        href="/products/<%= products.id %>/edit"
+        class="action-button edit"
+        >EDITAR PRODUCTO</a
+      >
+      <form
+        action="/products/delete/<%= products.id %>/?_method=DELETE"
+        method="POST"
+        style="display: inline-flex"
+      >
+        <button type="submit" class="action-button delete">
+          ELIMINAR
+        </button>
+      </form>
     </main>
 
     <%- include("partials/footer.ejs") %>
