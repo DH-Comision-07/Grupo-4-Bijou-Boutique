@@ -12,7 +12,7 @@ router.get("/products/:id/", productController.detail);
 
 /*** CREATE PRODUCT ***/
 router.get("/formulary", productController.formulary);
-
+/* router.post("/create-product", upload.single('imagen'), productController.create); */
 
 /*** NUESTRO ***/
 router.get("/productCard", productController.productCard);
@@ -20,18 +20,10 @@ router.get("/productCard", productController.productCard);
 /*** UPDATE ONE PRODUCT ***/
 
 /*** EDIT ONE PRODUCT ***/
-router.put("/:id", productController.update);
-router.get("/:id/edit", productController.editForm);
+router.get("/edit-form/:id/", productController.editForm);
+router.put("/products/:id", productController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', productController.destroy);
-
-
-
-
-
-
-//  GET ONE PRODUCT
-// router.get("/:id/", productController.detail);
 
 module.exports = router;
