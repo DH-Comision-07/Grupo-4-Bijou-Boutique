@@ -19,21 +19,23 @@ const productController = {
     });
   },
   editForm: (req, res) => {
-    res.render("edit-form");
+    res.render("edit-form", {
+      products: productService.getOne(req.params.id),
+    });
   },
-    // Update - Method to update
-    update: (req, res) => {
-      const { id } = req.params;
-      const updatedData = req.body;
-      productService.editarProducto(id, updatedData);
-      res.redirect(`/products/${id}`);
-    },
-  
-    // Delete - Delete one product from DB
-    destroy: (req, res) => {
-      productService.eliminarProducto(req.params.id);
-      res.redirect(`/products`);
-    },
+  // Update - Method to update
+  update: (req, res) => {
+    const { id } = req.params;
+    const updatedData = req.body;
+    productService.editarProducto(id, updatedData);
+    res.redirect(`/products/${id}`);
+  },
+
+  // Delete - Delete one product from DB
+  destroy: (req, res) => {
+    productService.eliminarProducto(req.params.id);
+    res.redirect(`/products`);
+  },
 };
 
 module.exports = productController;

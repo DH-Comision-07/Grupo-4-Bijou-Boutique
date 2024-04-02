@@ -1,76 +1,74 @@
 .product-section {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background-color: #f4f4f4;
-  }
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  a {
-    text-decoration: none;
-  }
-  
-  /* Estilos del card del producto */
+a {
+  text-decoration: none;
+}
+
+/* Estilos del card del producto */
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0.5em;
+  width: calc(25% - 1em); /* Para mostrar hasta 4 elementos por fila */
+}
+
+.product-card:hover{
+  box-shadow: 0 2px 4px darkgray;
+}
+
+/* Estilos de la imagen del producto */
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos de los detalles del producto */
+.product-details {
+  padding: 20px;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 15px;
+  color: #777;
+}
+
+.product-description {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
   .product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 0.5em;
-    width: calc(25% - 1em);
+    width: calc(33.33% - 1em);
   }
-  
-  .product-card:hover{
-    box-shadow: 0 2px 4px darkgray;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 1em);
   }
-  
-  /* Estilos de la imagen del producto */
-  .product-image {
-    width: 100%;
-    height: auto;
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(100% - 1em); 
   }
-  
-  /* Estilos de los detalles del producto */
-  .product-details {
-    padding: 20px;
-  }
-  
-  .product-name {
-    margin: 0;
-    font-size: 16px;
-    text-decoration: none;
-  }
-  
-  .product-price {
-    margin: 0;
-    font-size: 15px;
-    color: #777;
-  }
-  
-  .product-description {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  @media (max-width: 1024px) {
-    .product-section {
-      justify-content: flex-start;
-    }
-    
-    .product-card {
-      width: calc(25% - 1em);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .product-card {
-      width: calc(33.33% - 1em);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .product-card {
-      width: calc(50% - 1em); 
-    }
-  }
+}
