@@ -103,14 +103,19 @@
             </div>
         </section>
         <a
-        href="/products/<%= products.id %>/edit"
+        href="/edit-form"
         class="action-button edit"
-        >EDITAR PRODUCTO</a>
-
-        <form action="/delete/<%= products.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
-        </form>
-          
+        >EDITAR PRODUCTO</a
+      >
+      <form
+        action="/products/delete/<%= products.id %>/?_method=DELETE"
+        method="POST"
+        style="display: inline-flex"
+      >
+        <button type="submit" class="action-button delete">
+          ELIMINAR
+        </button>
+      </form>
     </main>
 
     <%- include("partials/footer.ejs") %>

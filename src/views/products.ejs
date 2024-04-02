@@ -13,22 +13,22 @@
 
     <section class="product-section">
       <% products.forEach(product => { %>
-      <a href="/products/<%= product.id %>">
-        <article class="product-card">
+      <article class="product-card">
+        <a href="/products/<%= product.id %>">
           <img
             src="/images/<%= product.image %>"
             alt="Producto"
             class="product-image"
           />
-          <div class="product-details">
-            <h2 class="product-name"><%= product.name %></h2>
-            <div class="product-text">
-              <p class="product-price"><%= product.price %></p>
-              <p class="product-description"><%= product.description %></p>
-            </div>
+        </a>
+        <div class="product-details">
+          <h2 class="product-name"><%= product.name %></h2>
+          <div class="product-text">
+            <p class="product-price"><%= product.price %></p>
+            <p class="product-description"><%= product.description %></p>
           </div>
-        </article>
-      </a>
+        </div>
+      </article>
       <% }) %>
     </section>
 

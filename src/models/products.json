@@ -16,6 +16,14 @@
     "image": "collar-perlas.png"
   },
   {
+    "id": 3,
+    "name": "Pulsera de Zafiros",
+    "description": "Pulsera con piedras preciosas de zafiros",
+    "color": "Azul",
+    "price": "$38.000",
+    "image": "pulsera-zafiros.jpg"
+  },
+  {
     "id": 4,
     "name": "Aros de Oro Rosa",
     "description": "Elegantes aros de oro rosa con detalles en filigrana",

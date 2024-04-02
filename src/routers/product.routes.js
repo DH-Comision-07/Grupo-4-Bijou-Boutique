@@ -20,7 +20,7 @@ router.get("/productCard", productController.productCard);
 
 /*** EDIT ONE PRODUCT ***/
 router.put("/:id", productController.update);
-router.get("/:id/edit", productController.editForm);
+router.get("/edit-form", productController.editForm);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productController.destroy);
