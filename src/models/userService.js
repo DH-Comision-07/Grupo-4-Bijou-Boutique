@@ -15,3 +15,5 @@ const userService = {
     fs.writeFileSync(path.resolve(__dirname,'../models/users.json'),JSON.stringify(users));
  },
 }
+
+module.exports = userService;

@@ -1,3 +1,4 @@
+const userService = require("../models/userService");
 const userController = {
   login: (req, res) => {
     res.render("login");
