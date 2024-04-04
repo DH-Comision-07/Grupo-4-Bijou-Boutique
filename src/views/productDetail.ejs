@@ -15,30 +15,23 @@
 </head>
 <body>
     <%- include("partials/header.ejs") %>
-        
     </header>
-    
     <main>
-
         <section>
             <div class="producto">
                 <section class="producto__img">
                     <img class="fotoPrincipal" src="/images/<%= products.image %>" alt="foto-producto">
                 </section>
-    
                 <section class="producto__general">
-    
                     <article class="info">
                         <p class="info__nombre"><%= products.name %></p>
                         <p class="info__precio">$<%= products.price %></p>
                     </article>
-    
                     <article class="pago">
                         <p class="pago__1"> <i class="fa-regular fa-credit-card"></i>3 cuotas sin interés de 2.966,67</p>
                         <p class="pago__2"> <i class="fa-solid fa-tag"></i>>20% de descuento con efectivo o transferencia</p>
                         <p class="pago__3"> <i class="fa-solid fa-truck"></i>Envío gratis superando los $45.000</p>
                     </article>
-    
                     <article class="elegir">
                         <label>
                             <select class="talle" name="talle">
@@ -50,9 +43,7 @@
                                 <option value="5"> 20 </option>
                             </select>
                         </label>
-                        
-                        <br>
-    
+                        <br>  
                         <label>
                             <select class="cantidad" name="cantidad">
                                 <option disabled hidden selected>Cantidad</option>
@@ -65,8 +56,7 @@
                                 <option value="5"> 7 </option>
                             </select>
                         </label>
-                    </article>
-    
+                    </article>   
                     <article class="carrito"> 
                         <p class="carrito__descrip"><%= products.description %></p>
                         <p class="carrito__stock">En stock</p>
@@ -75,26 +65,22 @@
                         <button class="carrito__agregar" type="submit">AGREGAR AL CARRITO</button>
                         <br>
                         <a class="carrito__talles" href="https://www.google.com/search?q=guia+de+talles+para+anillos&oq=guia+de+talles+para+anillos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTYwMDlqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8#vhid=9pnvqabTVmzojM&vssid=l">Guía de talles</a>
-                    </article>
-    
-                    <article class="envios">
-    
+                    </article>    
+                    <article class="envios">    
                         <h3 class="envios__titulo">ENVÍOS</h3>
                         <input class="envios__codigo" type="text" placeholder="Tu código postal">
                         <button class="envios__boton" type="submit">Calcular</button>
                         <br>
                         <a class="envios__buscarCodigo" href="https://www.correoargentino.com.ar/formularios/cpa">No sé mi código postal</a>
-    
+
                         <section class="envios"></section>
                             <h4 class="envios__domicilio">RETIRAR POR</h4>
                             
                             <p class="envios__opcion1">Nuestro Local</p>
                             <p class="envios__direc">Avenida Siempre Viva 743</p>
                             <p class="envios__precio"><i class="fa-regular fa-heart"></i>Gratis</p>
-                        </article>
-    
-                    </article>
-    
+                        </article>  
+                    </article>   
                     <article class="comentario">
                         <p class="comentario__cantidad">Comentarios</p>
                         <textarea class="comentario__area" name="textarea" placeholder="Dejanos tu comentario"></textarea>
@@ -103,7 +89,6 @@
             </div>
         </section>
     </main>
-
     <%- include("partials/footer.ejs") %>
 </body>
 </html>
