@@ -25,16 +25,21 @@ const productController = {
   },
   // Update - Method to update
   update: (req, res) => {
-    const { id } = req.params;
-    const updatedData = req.body;
-    productService.editProduct(id, updatedData);
-    res.redirect(`/products/${id}`);
+    productService.editProduct(req.params.id, req.body);
+    const updatedProduct = {
+      name: req.body.name,
+      description: req.body.description,
+      color: req.body.color,
+      price: req.body.price,
+      image: req.body.image,
+    };
+    res.redirect(`/products/${req.params.id}`);
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
     productService.deleteProduct(req.params.id);
-    res.redirect(`/products`);
+    res.redirect(`/productCard`);
   },
 };
 

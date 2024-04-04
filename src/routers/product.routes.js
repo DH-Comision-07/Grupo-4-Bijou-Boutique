@@ -16,11 +16,9 @@ router.get("/create", productController.formulary);
 /*** NUESTRO ***/
 router.get("/productCard", productController.productCard);
 
-/*** UPDATE ONE PRODUCT ***/
-
 /*** EDIT ONE PRODUCT ***/
-router.put("/:id", productController.update);
 router.get("/products/:id/edit", productController.editForm);
+router.put("/:id", productController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productController.destroy);
