@@ -1,5 +1,4 @@
 const productService = require("../models/productService");
-
 const productController = {
   cart: (req, res) => {
     res.render("cart");
