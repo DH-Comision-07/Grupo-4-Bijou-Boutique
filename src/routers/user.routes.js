@@ -1,13 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userController");
-
-router.get("/login", userController.login);
-router.get("/register", userController.register);
-
-module.exports = router;
-const express = require("express");
-const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const userController = require("../controllers/userController");
