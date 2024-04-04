@@ -22,13 +22,13 @@
                 <p class="product-description"> <%= product.description %> </p>
               </div>
             </div>
-            <a href="/edit-form/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+            <a href="/products/<%= product.id %>/edit" class="action-button edit">Editar producto</a>
 
 
-          <form action="/productCard/delete/<%= products.id %>" method="POST" style="display: inline-flex">
+          <form action="/delete/<%= product.id %>" method="POST" style="display: inline-flex">
             <button type="submit" class="action-button delete">
-              ELIMINAR
-            </button>
+              Eliminar
+            </button>                      
           </form>
           </article>
           <% }) %>

@@ -12,14 +12,18 @@ const productService = {
   getOne: function (id) {
     return this.products.find((product) => product.id == id);
   },
-  editarProducto: function (id, updatedData) {
-    let index = this.products.findIndex(product => product.id == id);
-    this.products[index] = {...this.products[index], ...updatedData};
+  editProduct: function (id, updatedData) {
+    let index = this.products.findIndex((product) => product.id == id);
+    this.products[index] = { ...this.products[index], ...updatedData };
     fs.writeFileSync(productsFilePath, JSON.stringify(this.products), "utf-8");
   },
-  eliminarProducto: function (id) {
+  deleteProduct: function (id) {
     let filteredElements = this.products.filter((product) => product.id != id);
-    fs.writeFileSync(productsFilePath, JSON.stringify(filteredElements), "utf-8");
+    fs.writeFileSync(
+      productsFilePath,
+      JSON.stringify(filteredElements),
+      "utf-8"
+    );
   },
 };
 

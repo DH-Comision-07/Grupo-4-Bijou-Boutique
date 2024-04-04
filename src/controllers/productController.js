@@ -27,13 +27,13 @@ const productController = {
   update: (req, res) => {
     const { id } = req.params;
     const updatedData = req.body;
-    productService.editarProducto(id, updatedData);
+    productService.editProduct(id, updatedData);
     res.redirect(`/products/${id}`);
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    productService.eliminarProducto(req.params.id);
+    productService.deleteProduct(req.params.id);
     res.redirect(`/products`);
   },
 };

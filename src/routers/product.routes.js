@@ -11,7 +11,7 @@ router.get("/products", productController.products);
 router.get("/products/:id/", productController.detail);
 
 /*** CREATE PRODUCT ***/
-router.get("/formulary", productController.formulary);
+router.get("/create", productController.formulary);
 
 /*** NUESTRO ***/
 router.get("/productCard", productController.productCard);
@@ -20,7 +20,7 @@ router.get("/productCard", productController.productCard);
 
 /*** EDIT ONE PRODUCT ***/
 router.put("/:id", productController.update);
-router.get("/edit-form", productController.editForm);
+router.get("/products/:id/edit", productController.editForm);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productController.destroy);

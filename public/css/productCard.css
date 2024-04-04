@@ -66,6 +66,10 @@
   transition: background-color 0.3s ease;
 }
 
+.action-button.delete {
+  width: 300px;
+}
+
 
 
 .action-button.edit {
