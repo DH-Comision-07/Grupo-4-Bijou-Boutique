@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
@@ -8,7 +9,6 @@
   </head>
   <body>
     <%- include("partials/header.ejs") %>
-
     <main class="container-register">
       <div class="form">
         <form>
@@ -25,16 +25,13 @@
             type="password"
             placeholder="Contraseña"
           />
-
           <a href="/register" class="register-link"
             ><h5 class="title">¿No tienes cuenta aún? Click aquí!</h5></a
           >
-
           <input class="submit" type="submit" />
         </form>
       </div>
     </main>
-
     <%- include("partials/footer.ejs") %>
   </body>
 </html>

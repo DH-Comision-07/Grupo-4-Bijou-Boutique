@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productCard.css" />
@@ -8,19 +9,27 @@
 </head>
 <body>
   <%- include("partials/header.ejs") %>
-
   <section class="product-section">
-    <% joyeria.forEach((joyas) =>{ %> 
+  <% products.forEach(product => { %> 
+          <article class="product-card">
+            <img src= "/images/<%= product.image %>" alt="Producto" class="product-image">
+            <div class="product-details">
+              <h2 class="product-name"> <%= product.name %></h2>
+              <div class="product-text">
+                <p class="product-price">$ <%= product.price %> </p>
+                <p class="product-description"> <%= product.description %> </p>
+              </div>
+            </div>
+            <a href="/products/<%= product.id %>/edit" class="action-button edit">Editar producto</a>
 
-    <article class="product-card">
-      <img src= <%= joyeria.image %> alt="Producto" class="product-image">
-      <div class="product-details">
-        <h2 class="product-name"> <%= joyeria.name %></h2>
-        <p class="product-price"> <%= joyeria.price %> </p>
-        <p class="product-description"> <%= joyeria.description %> </p>
-      </div>
-    </article>
-    <% }) %>
-  </section>
-  <%- include("partials/footer.ejs") %>
+
+          <form action="/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <button type="submit" class="action-button delete">
+              Eliminar
+            </button>                      
+          </form>
+          </article>
+          <% }) %>
+        </section>
+        <%- include("partials/footer.ejs") %>
 </html>
