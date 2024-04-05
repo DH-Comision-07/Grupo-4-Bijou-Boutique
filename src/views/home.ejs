@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bijou Boutique</title>
@@ -26,34 +25,16 @@
     />
   </head>
   <body>
-    <header>
-      <div class="logo-container">
-        <a href="/"
-          ><img src="/images/bijou-boutique.png" alt="Logo de la tienda"
-        /></a>
-      </div>
-
-      <div class="icons-container">
-        <a href="/login"><i class="fas fa-user"></i></a>
-        <!-- Icono de Login -->
-        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-        <!-- Icono de Carrito -->
-        <i class="fas fa-heart"></i>
-        <!-- Icono de Artículos Favoritos -->
-      </div>
-    </header>
-
+    <%- include("partials/header.ejs") %>
     <nav>
       <ul>
-        <li><a href="#">Anillos</a></li>
-        <li><a href="#">Pulseras</a></li>
-        <li><a href="#">Colgantes</a></li>
-        <li><a href="#">Dijes</a></li>
-        <li><a href="#">Relojes</a></li>
-        <li><a href="#">Acero Quirúrgico</a></li>
+        <li><a href="/products">Nuestros productos</a></li>
+        <li><a href="/productCard">Product Card (Solo nosotros)</a></li>
+        <li><a href="/aboutUs">Acerca de nosotros</a></li>
+        <li><a href="#">Nuestras sucursales</a></li>
+        <li><a href="#">Contactanos</a></li>
       </ul>
     </nav>
-
     <main>
       <section class="main-section">
         <img src="/images/joyas.jpg" alt="Imagen grande" />
@@ -64,7 +45,6 @@
           </p>
         </div>
       </section>
-
       <h2 class="explorer-title">Explora Nuestros Productos Destacados</h2>
       <section class="carousel-section">
         <div class="slick-carousel">
@@ -75,9 +55,7 @@
           <div><img src="/images/joyas.jpg" alt="Producto 5" /></div>
         </div>
       </section>
-
       <h2 class="ultimas-novedades">Últimas Novedades</h2>
-
       <section class="news-section">
         <article class="news-item">
           <img src="/images/novedades1.png" alt="Novedad 1" />
@@ -88,7 +66,6 @@
           </p>
           <a href="#">Leer más</a>
         </article>
-
         <article class="news-item">
           <img src="/images/novedades2.png" alt="Novedad 2" />
           <h3>Nuevas Colecciones Disponibles</h3>
@@ -99,7 +76,6 @@
           <a href="#">Leer más</a>
         </article>
       </section>
-
       <section class="item-especial">
         <div class="flexible">
           <div class="itemFlex1">
@@ -119,10 +95,8 @@
           </div>
         </div>
       </section>
-
       <section class="products-section">
         <h2>Productos Destacados</h2>
-
         <div class="product-container">
           <div class="product">
             <img src="/images/anillo1.png" alt="Producto 1" />
@@ -130,21 +104,18 @@
             <p>Descripción breve del Producto 1.</p>
             <a href="#">Ver Detalles</a>
           </div>
-
           <div class="product">
             <img src="/images/anillo1.png" alt="Producto 2" />
             <h3>Nombre del Producto 2</h3>
             <p>Descripción breve del Producto 2.</p>
             <a href="#">Ver Detalles</a>
           </div>
-
           <div class="product">
             <img src="/images/anillo1.png" alt="Producto 3" />
             <h3>Nombre del Producto 3</h3>
             <p>Descripción breve del Producto 3.</p>
             <a href="#">Ver Detalles</a>
           </div>
-
           <div class="product">
             <img src="/images/anillo1.png" alt="Producto 4" />
             <h3>Nombre del Producto 4</h3>
@@ -154,36 +125,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__section">
-        <i class="fas fa-credit-card"></i>
-        <h4>Pagá con tarjeta o en efectivo</h4>
-        <p>
-          Con Bijou Boutique Cash, tenés cuotas sin interés con tarjeta o
-          efectivo en puntos de pago. ¡Y siempre es seguro!
-        </p>
-      </div>
-      <div class="footer__section">
-        <i class="fas fa-gift"></i>
-        <h4>Envío gratis desde $30.000</h4>
-        <p>
-          Solo por estar registrad@ en Bijou Boutique tenés envíos gratis en
-          miles de productos. Es un beneficio de Mercado Puntos.
-        </p>
-      </div>
-      <div class="footer__section">
-        <i class="fas fa-user-shield"></i>
-        <h4>Seguridad, de principio a fin</h4>
-        <p>
-          ¿No te gusta? ¡Devolvelo! En Bijou Boutique, no hay nada que no puedas
-          hacer, porque estás siempre protegid@.
-        </p>
-      </div>
-      <div class="footer__section">
-        <i class="fas fa-copyright"></i>
-        <p>Copyright © 1999-2024 Bijou Boutique S.R.L.</p>
-      </div>
-    </footer>
+    <%- include("partials/footer.ejs") %>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
@@ -193,7 +135,7 @@
           dots: true,
           arrows: true,
           infinite: true,
-          slidesToShow: 1, // Cambia a 1 para mostrar solo una imagen
+          slidesToShow: 1, 
           slidesToScroll: 1,
         });
       });

@@ -8,11 +8,11 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Para asegurar que el footer siempre esté en la parte inferior */
+  min-height: 100vh;
 }
 
 main {
-  flex-grow: 1; /* Para que el contenido principal ocupe todo el espacio disponible */
+  flex-grow: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +43,10 @@ nav .logo {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Para centrar el formulario */
-  margin-top: 50px; /* Ajusta este valor según sea necesario */
-  margin-bottom: 50px; /* Ajusta este valor según sea necesario */
-  width: 400px; /* Ajusta el ancho del formulario según sea necesario */
+  align-items: center;
+  margin-top: 50px; 
+  margin-bottom: 50px;
+  width: 400px;
 }
 
 .controls {
@@ -69,7 +69,7 @@ nav .logo {
   border: none;
   padding: 10px;
   border-radius: 5px;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  cursor: pointer;
 }
 
 .submit:hover {

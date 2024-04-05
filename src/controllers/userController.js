@@ -1,10 +1,19 @@
+const userService = require("../models/userService");
 const userController = {
   login: (req, res) => {
-    return res.render("login");
+    res.render("login");
   },
   register: (req, res) => {
-    return res.render("register");
+    res.render("register");
   },
+  create:  (req, res) => {
+		res.render('register/create');
+	},
+  store: (req, res) => {
+		userService.save(req.body);
+	//	res.send(req.body);
+    res.redirect('/login');
+	},
 };
 
 module.exports = userController;

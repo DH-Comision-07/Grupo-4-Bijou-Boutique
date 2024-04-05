@@ -2,8 +2,19 @@ const express = require("express");
 const router = express.Router();
 const productController = require("../controllers/productController");
 
-router.get("/carrito", productController.carrito);
-router.get("/productDetail", productController.productDetail);
-router.get("/formulario", productController.formulario);
+router.get("/cart", productController.cart);
+
+router.get("/products", productController.products);
+
+router.get("/products/:id/", productController.detail);
+
+router.get("/create", productController.formulary);
+
+router.get("/productCard", productController.productCard);
+
+router.get("/products/:id/edit", productController.editForm);
+router.put("/products/:id", productController.update);
+
+router.delete("/delete/:id", productController.destroy);
 
 module.exports = router;
