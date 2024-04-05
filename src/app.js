@@ -9,10 +9,11 @@ const methodOverride = require("method-override");
 const app = express();
 
 app.use(express.static(path.join(__dirname, "..", "public")));
+app.use(express.urlencoded({ extended: false }));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./public/images/products");
+    cb(null, "./images/products");
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + "-" + file.originalname);
