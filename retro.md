@@ -97,3 +97,29 @@ Hacer menos:
 Dejar de hacer:
 
 - Ha pasado en el sprint 3, que alguno realizaba algún cambio en su repositorio local, y al ser un cambio minusculo, quiza no lo avisaba o no lo informaba. Si bien manejamos una excelente comunicación en el equipo, esto nos paso y queremos mejorarlo.
+
+Retrospectiva SPRINT 5
+
+Comenzar a hacer:
+
+- Revisar y seguir paso a paso las correciones que recibimos via Discord de parte de los profesores.
+
+- Ir dia a dia con las clases y poder aplicar todo el contenido en nuestro proyecto para intentar no atrasarnos con la informacion.
+
+Hacer mas:
+
+- Intentar realizar las tareas asignadas a cada integrante con mayor tiempo para evitar postergarlas hasta final de entrega.
+
+Continuar haciendo:
+
+- Mantener la comunicacion mediante todos los medios para estar todos en el grupo al tanto de los cambios que se realizan en el proyecto.
+
+- Seguir ayudanos entre todos a la hora de resolver conflictos de nuestro proyecto.
+
+Hacer menos:
+
+- Desviarnos con tareas que no sean parte del sprint con la idea de mejorar cosas del proyecto. O por lo menos hasta que no tengamos dicho Sprint terminado.
+
+Dejar de hacer:
+
+- Mezclar el tipo de nomenclatura que usamos a la hora de la declaracion de variables, creacion de componentes, metodos, etc.
