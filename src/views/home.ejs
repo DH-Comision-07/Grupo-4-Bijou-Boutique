@@ -70,8 +70,8 @@
           <img src="/images/novedades2.png" alt="Novedad 2" />
           <h3>Nuevas Colecciones Disponibles</h3>
           <p>
-            Explora nuestras nuevas colecciones de anillos, pulseras y
-            colgantes. ¡Descubre el estilo que te define!
+            Explora nuestras nuevas colecciones de anillos, pulseras, colgantes
+            y mucho mas! ¡Descubre el estilo que te define!
           </p>
           <a href="#">Leer más</a>
         </article>
@@ -98,30 +98,14 @@
       <section class="products-section">
         <h2>Productos Destacados</h2>
         <div class="product-container">
+          <% products.forEach((product) => { %>
           <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 1" />
-            <h3>Nombre del Producto 1</h3>
-            <p>Descripción breve del Producto 1.</p>
-            <a href="#">Ver Detalles</a>
+            <img src="/images/<%= product.image %>" alt="Producto 1" />
+            <h3 class="product-name"><%= product.name %></h3>
+            <p class="product-description"><%= product.description %></p>
+            <a href="/products/<%= product.id %>">Ver Detalles</a>
           </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 2" />
-            <h3>Nombre del Producto 2</h3>
-            <p>Descripción breve del Producto 2.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 3" />
-            <h3>Nombre del Producto 3</h3>
-            <p>Descripción breve del Producto 3.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 4" />
-            <h3>Nombre del Producto 4</h3>
-            <p>Descripción breve del Producto 4.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
+          <% })%>
         </div>
       </section>
     </main>
@@ -135,7 +119,7 @@
           dots: true,
           arrows: true,
           infinite: true,
-          slidesToShow: 1, 
+          slidesToShow: 1,
           slidesToScroll: 1,
         });
       });
