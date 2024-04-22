@@ -15,6 +15,6 @@ router.get("/productCard", productController.productCard);
 router.get("/products/:id/edit", productController.editForm);
 router.put("/products/:id", productController.update);
 
-router.delete("/delete/:id", productController.destroy);
+router.delete("/:id", productController.destroy);
 
 module.exports = router;
