@@ -35,14 +35,21 @@ const productController = {
       price: req.body.price,
       image: imagen.image,
     };
-    res.redirect(`/productCard`);
+    res.redirect('/productCard');
   },
+
+
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
     productService.deleteProduct(req.params.id);
-    res.redirect(`/productCard`);
+    res.redirect('/productCard');
   },
+
+  store: (req, res) => {
+    productService.save(req.body);
+    res.send(req.body)
+}
 };
 
 module.exports = productController;

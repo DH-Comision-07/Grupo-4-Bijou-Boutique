@@ -23,6 +23,12 @@ const productService = {
       "utf-8"
     );
   },
+  save:function (product){
+    this.products.push(product);
+        fs.writeFileSync(path.resolve(__dirname,'../models/products.json'),JSON.stringify(products));
+        return "OK"
+  }
 };
 
 module.exports = productService;
+
