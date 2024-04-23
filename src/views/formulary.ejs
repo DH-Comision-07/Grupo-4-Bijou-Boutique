@@ -13,7 +13,7 @@
   </head>
   <body>
     <%- include("partials/header.ejs") %>
-    <form>
+    <form action="/" method="POST" enctype="multipart/form-data">
       <div class="form-container">
         <div class="form-group">
           <label for="nombre">Nombre del producto:</label>
@@ -43,7 +43,7 @@
           <input
             type="file"
             class="form-control-file"
-            id="imagen"
+            id="Imagen"
             name="imagen"
           />
         </div>
