@@ -58,6 +58,13 @@ form {
   cursor: pointer;
 }
 
+.fotoPrincipal {
+  width: 40%;
+  border: 1px solid rgb(212, 203, 203);
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
 .buy-now-button:hover {
   background-color: #555;
 }
