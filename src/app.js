@@ -26,7 +26,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(methodOverride("_method"));
 
 app.use("/", indexRoutes);
-app.use("/", productRoutes);
+app.use("/products", productRoutes);
 app.use("/", userRoutes);
 
 const port = 3030;
