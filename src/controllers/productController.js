@@ -35,11 +35,14 @@ const productController = {
     };
     res.redirect("/products/productCard");
   },
-
   // Delete - Delete one product from DB
   destroy: (req, res) => {
     productService.deleteProduct(req.params.id);
     res.redirect("/products/productCard");
+  },
+  store: (req, res) => {
+    productService.save(req.body);
+    res.send(req.body);
   },
 };
 

@@ -32,6 +32,7 @@
         <li>
           <a href="/products/productCard">Product Card (Solo nosotros)</a>
         </li>
+        <li><a href="/create">Product Create (Solo nosotros)</a></li>
         <li><a href="/aboutUs">Acerca de nosotros</a></li>
         <li><a href="#">Nuestras sucursales</a></li>
         <li><a href="#">Contactanos</a></li>
@@ -48,15 +49,6 @@
         </div>
       </section>
       <h2 class="explorer-title">Explora Nuestros Productos Destacados</h2>
-      <section class="carousel-section">
-        <div class="slick-carousel">
-          <div><img src="/images/joyas.jpg" alt="Producto 1" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 2" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 3" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 4" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 5" /></div>
-        </div>
-      </section>
       <h2 class="ultimas-novedades">Últimas Novedades</h2>
       <section class="news-section">
         <article class="news-item">
@@ -112,19 +104,5 @@
       </section>
     </main>
     <%- include("partials/footer.ejs") %>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".slick-carousel").slick({
-          autoplay: true,
-          dots: true,
-          arrows: true,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        });
-      });
-    </script>
   </body>
 </html>

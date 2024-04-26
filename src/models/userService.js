@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const users = require("../models/data/users.json");
+const bcrypt = require("bcryptjs");
 
 const userService = {
   users: users,
@@ -11,7 +12,12 @@ const userService = {
     return this.users.find((user) => user.id == id);
   },
   save: function (user) {
-    this.users.push(user);
+    let contraseñaEncriptada = bcrypt.hashSync(user.password, 10);
+    let usuarioContraseñaEncriptada = {
+      ...user,
+      password: contraseñaEncriptada,
+    };
+    users.push(usuarioContraseñaEncriptada);
     fs.writeFileSync(
       path.resolve(__dirname, "../models/data/users.json"),
       JSON.stringify(users)

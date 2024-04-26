@@ -7,6 +7,6 @@ router.get("/login", userController.login);
 router.get("/register", userController.register);
 
 router.get("/create/", userController.create);
-router.post("/", upload.single("users-image"), userController.store);
+router.post("/", upload.single("image"), userController.store);
 
 module.exports = router;
