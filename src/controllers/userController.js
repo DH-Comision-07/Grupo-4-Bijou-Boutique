@@ -14,6 +14,9 @@ const userController = {
 	//	res.send(req.body);
     res.redirect('/login');
 	},
+  contact: (req, res) => {
+    res.render("contact_us")
+  },
 };
 
 module.exports = userController;
