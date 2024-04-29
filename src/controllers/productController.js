@@ -33,17 +33,6 @@ const productController = {
       price: req.body.price,
       image: productToUpdate.image,
     };
-<<<<<<< HEAD
-    res.redirect('/productCard');
-  },
-
-
-
-  // Delete - Delete one product from DB
-  destroy: (req, res) => {
-    productService.deleteProduct(req.params.id);
-    res.redirect('/productCard');
-=======
     res.redirect("/products/productCard");
   },
   // Delete - Delete one product from DB
@@ -54,13 +43,12 @@ const productController = {
   store: (req, res) => {
     productService.save(req.body);
     res.send(req.body);
->>>>>>> mejoras-home
   },
 
   store: (req, res) => {
     productService.save(req.body);
-    res.send(req.body)
-}
+    res.send(req.body);
+  },
 };
 
 module.exports = productController;

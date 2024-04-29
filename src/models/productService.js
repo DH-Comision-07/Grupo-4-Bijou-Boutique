@@ -22,13 +22,14 @@ const productService = {
       "utf-8"
     );
   },
-<<<<<<< HEAD
-  save:function (product){
+  save: function (product) {
     this.products.push(product);
-        fs.writeFileSync(path.resolve(__dirname,'../models/products.json'),JSON.stringify(products));
-        return "OK"
-  }
-=======
+    fs.writeFileSync(
+      path.resolve(__dirname, "../models/products.json"),
+      JSON.stringify(products)
+    );
+    return "OK";
+  },
   save: function (product) {
     this.getAll().push(product);
     fs.writeFileSync(
@@ -37,8 +38,6 @@ const productService = {
     );
     return "OK";
   },
->>>>>>> mejoras-home
 };
 
 module.exports = productService;
-
