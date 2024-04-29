@@ -6,13 +6,16 @@ const userController = {
   register: (req, res) => {
     res.render("register");
   },
-  create: (req, res) => {
-    res.render("formulary");
-  },
+  create:  (req, res) => {
+		res.render('register/create');
+	},
   store: (req, res) => {
-    userService.save(req.body);
-    //	res.send(req.body);
-    res.redirect("/login");
+		userService.save(req.body);
+	//	res.send(req.body);
+    res.redirect('/login');
+	},
+  contact: (req, res) => {
+    res.render("contact_us")
   },
 };
 
