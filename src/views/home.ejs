@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  
     <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,8 +29,10 @@
     <nav>
       <ul>
         <li><a href="/products">Nuestros productos</a></li>
-        <li><a href="/productCard">Product Card (Solo nosotros)</a></li>
-        <li><a href="/create">Product Create (Solo nosotros)</a></li>
+        <li>
+          <a href="/products/productCard">Product Card (Solo nosotros)</a>
+        </li>
+        <li><a href="/products/create">Product Create (Solo nosotros)</a></li>
         <li><a href="/aboutUs">Acerca de nosotros</a></li>
         <li><a href="#">Nuestras sucursales</a></li>
         <li><a href="/contact_us">Contactanos</a></li>
@@ -42,40 +43,29 @@
         <img src="/images/joyas.jpg" alt="Imagen grande" />
         <div class="image-info">
           <p>
-            Información sobre el producto...
-            <a href="#" class="read-more-link">Leer más</a>
+            Mira todo nuestro catalogo
+            <a href="/products" class="read-more-link">aqui</a>
           </p>
-        </div>
-      </section>
-      <h2 class="explorer-title">Explora Nuestros Productos Destacados</h2>
-      <section class="carousel-section">
-        <div class="slick-carousel">
-          <div><img src="/images/joyas.jpg" alt="Producto 1" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 2" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 3" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 4" /></div>
-          <div><img src="/images/joyas.jpg" alt="Producto 5" /></div>
         </div>
       </section>
       <h2 class="ultimas-novedades">Últimas Novedades</h2>
       <section class="news-section">
         <article class="news-item">
           <img src="/images/novedades1.png" alt="Novedad 1" />
-          <h3>Gran Apertura de la Tienda</h3>
+          <h3>Te gustaria conocer sobre nuestra historia?</h3>
           <p>
-            Estamos emocionados de anunciar la gran apertura de nuestra nueva
-            tienda. ¡Descubre las últimas tendencias en joyería!
+            Aqui encontraras el como nacio Bijou Boutique y todo su recorrido!
           </p>
-          <a href="#">Leer más</a>
+          <a href="/aboutUs">Leer más</a>
         </article>
         <article class="news-item">
           <img src="/images/novedades2.png" alt="Novedad 2" />
-          <h3>Nuevas Colecciones Disponibles</h3>
+          <h3>Queres ser parte de Bijou Boutique?</h3>
           <p>
-            Explora nuestras nuevas colecciones de anillos, pulseras y
-            colgantes. ¡Descubre el estilo que te define!
+            Contactanos y podras quedar seleccionado para ser parte de nuestro
+            equipo!
           </p>
-          <a href="#">Leer más</a>
+          <a href="/contact_us">Leer más</a>
         </article>
       </section>
       <section class="item-especial">
@@ -100,47 +90,20 @@
       <section class="products-section">
         <h2>Productos Destacados</h2>
         <div class="product-container">
+          <% for (let i = 0; i < 4; i++) { %> <% const product = products[i]; %>
           <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 1" />
-            <h3>Nombre del Producto 1</h3>
-            <p>Descripción breve del Producto 1.</p>
-            <a href="#">Ver Detalles</a>
+            <img
+              src="/images/<%= product.image %>"
+              alt="Producto <%= i + 1 %>"
+            />
+            <h3 class="product-name"><%= product.name %></h3>
+            <p class="product-description"><%= product.description %></p>
+            <a href="/products/<%= product.id %>">Ver Detalles</a>
           </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 2" />
-            <h3>Nombre del Producto 2</h3>
-            <p>Descripción breve del Producto 2.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 3" />
-            <h3>Nombre del Producto 3</h3>
-            <p>Descripción breve del Producto 3.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
-          <div class="product">
-            <img src="/images/anillo1.png" alt="Producto 4" />
-            <h3>Nombre del Producto 4</h3>
-            <p>Descripción breve del Producto 4.</p>
-            <a href="#">Ver Detalles</a>
-          </div>
+          <% } %>
         </div>
       </section>
     </main>
     <%- include("partials/footer.ejs") %>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".slick-carousel").slick({
-          autoplay: true,
-          dots: true,
-          arrows: true,
-          infinite: true,
-          slidesToShow: 1, 
-          slidesToScroll: 1,
-        });
-      });
-    </script>
   </body>
 </html>

@@ -6,7 +6,8 @@
 }
 
 .product-card {
-  width: 300px;
+  width: calc(24% - 20px); 
+  margin: 0 10px 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -67,7 +68,7 @@
 }
 
 .action-button.delete {
-  width: 300px;
+  width: 415px;
 }
 
 
