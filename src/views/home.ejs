@@ -43,31 +43,31 @@
         <img src="/images/joyas.jpg" alt="Imagen grande" />
         <div class="image-info">
           <p>
-            Información sobre el producto...
-            <a href="#" class="read-more-link">Leer más</a>
+            Información sobre nuestros productos...
+            <a href="/products" class="read-more-link">Leer más</a>
           </p>
         </div>
       </section>
-      <h2 class="explorer-title">Explora Nuestros Productos Destacados</h2>
       <h2 class="ultimas-novedades">Últimas Novedades</h2>
       <section class="news-section">
         <article class="news-item">
           <img src="/images/novedades1.png" alt="Novedad 1" />
-          <h3>Gran Apertura de la Tienda</h3>
+          <h3>Te gustaria conocer un poco mas sobre nuestra historia?</h3>
           <p>
-            Estamos emocionados de anunciar la gran apertura de nuestra nueva
-            tienda. ¡Descubre las últimas tendencias en joyería!
+            Te contamos un poco sobre nuestros inicios, nuestro dia a dia, y el
+            esfuerzo que dedicamos para que vivan la mejor experiencia en
+            nuestra web!
           </p>
-          <a href="#">Leer más</a>
+          <a href="/aboutUs">Leer más</a>
         </article>
         <article class="news-item">
           <img src="/images/novedades2.png" alt="Novedad 2" />
-          <h3>Nuevas Colecciones Disponibles</h3>
+          <h3>Te gustaria ser parte de nuestro equipo?</h3>
           <p>
-            Explora nuestras nuevas colecciones de anillos, pulseras, colgantes
-            y mucho mas! ¡Descubre el estilo que te define!
+            Ponete en contacto con nosotros y se parte del proceso de seleccion
+            para ser un integrante de nuestro excelente grupo.
           </p>
-          <a href="#">Leer más</a>
+          <a href="/contactanos">Leer más</a>
         </article>
       </section>
       <section class="item-especial">
@@ -92,14 +92,17 @@
       <section class="products-section">
         <h2>Productos Destacados</h2>
         <div class="product-container">
-          <% products.forEach((product) => { %>
+          <% for (let i = 0; i < 4; i++) { %> <% const product = products[i]; %>
           <div class="product">
-            <img src="/images/<%= product.image %>" alt="Producto 1" />
+            <img
+              src="/images/<%= product.image %>"
+              alt="Producto <%= i + 1 %>"
+            />
             <h3 class="product-name"><%= product.name %></h3>
             <p class="product-description"><%= product.description %></p>
             <a href="/products/<%= product.id %>">Ver Detalles</a>
           </div>
-          <% })%>
+          <% } %>
         </div>
       </section>
     </main>
