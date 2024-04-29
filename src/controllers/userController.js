@@ -3,6 +3,26 @@ const userController = {
   login: (req, res) => {
     res.render("login");
   },
+  processLogin: (req, res) => {
+    const { email, password } = req.body;
+
+    const user = userService.getUserByEmail(email);
+    if (!user || user.password !== password) {
+      return res.redirect("/login"); 
+    }
+    else {
+    req.session.user = user;
+    res.render("/");
+    }
+  },
+  perfil: (req, res) => {
+    const user = req.session.user;
+    if (!user) {
+      return res.redirect("/login");
+    }
+    
+    res.render("home", { user });
+  },
   register: (req, res) => {
     res.render("register");
   },

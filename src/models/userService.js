@@ -23,6 +23,9 @@ const userService = {
       JSON.stringify(users)
     );
   },
+  getUserByEmail: function (email) {
+    return this.users.find((user) => user.email === email);
+  },
 };
 
 module.exports = userService;
