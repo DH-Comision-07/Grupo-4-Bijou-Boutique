@@ -1,41 +1,76 @@
 const userService = require("../models/userService");
+const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
+const fs = require("fs");
+
 const userController = {
   login: (req, res) => {
-    res.render("login");
+    return res.render("login");
   },
   processLogin: (req, res) => {
-    const { email, password } = req.body;
+    let errors = validationResult(req);
 
-    const user = userService.getUserByEmail(email);
-    if (!user || !bcrypt.compareSync(password, user.password)) {
-      return res.render("login", { error: "Usuario o contraseña incorrectos" });
+    if (errors.isEmpty()) {
+      let usersJSON = fs.readFileSync("src/models/data/users.json", {
+        encoding: "utf-8",
+      });
+      let users;
+      if (usersJSON == "") {
+        users = [];
+      } else {
+        users = JSON.parse(usersJSON);
+      }
+
+      let usuarioALoguearse;
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email == req.body.email) {
+          if (bcrypt.compareSync(req.body.password, users[i].password)) {
+            usuarioALoguearse = users[i];
+            break;
+          }
+        }
+      }
+
+      if (usuarioALoguearse == undefined) {
+        return res.render("login", {
+          errors: [{ msg: "Credenciales inválidas!" }],
+        });
+      }
+
+      req.session.usuarioLogueado = usuarioALoguearse;
+
+      if (req.body.recordame === "recordar") {
+        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 86400000 });
+      }
+
+      return res.redirect("/success");
     } else {
-      req.session.user = user;
-      return res.render("perfil");
+      return res.render("login", { errors: errors.errors });
     }
   },
   perfil: (req, res) => {
-    const user = req.session.user;
+    const user = req.session.usuarioLogueado;
     if (!user) {
       return res.redirect("/login");
     }
 
-    res.render("home", { user });
+    return res.render("home", { user });
+  },
+  success: function (req, res) {
+    res.render("success");
   },
   register: (req, res) => {
-    res.render("register");
+    return res.render("register");
   },
   create: (req, res) => {
-    res.render("register/create");
+    return res.render("register/create");
   },
   store: (req, res) => {
     userService.save(req.body);
-    //	res.send(req.body);
-    res.redirect("/login");
+    return res.redirect("/login");
   },
   contact: (req, res) => {
-    res.render("contactUs");
+    return res.render("contactUs");
   },
 };
 

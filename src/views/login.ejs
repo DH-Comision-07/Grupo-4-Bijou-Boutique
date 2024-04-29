@@ -13,6 +13,14 @@
       <div class="form">
         <form action="/login" method="POST">
           <h2 class="title">Iniciar sesión</h2>
+          <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+          <div class="errors">
+            <% errors.forEach(error => { %>
+            <p><%= error.msg %></p>
+            <% }); %>
+          </div>
+          <% } %>
+          <br />
           <input
             class="controls"
             id="user"
@@ -27,10 +35,14 @@
             name="password"
             placeholder="Contraseña"
           />
+          <label for="">Recordame</label>
+          <input type="checkbox" name="recordame" value="recordar" />
+          <br />
+          <br />
           <a href="/register" class="register-link"
             ><h5 class="title">¿No tienes cuenta aún? Click aquí!</h5></a
           >
-          <a href="/perfil"><input class="submit" type="submit" /></a>
+          <input class="submit" type="submit" />
         </form>
       </div>
     </main>

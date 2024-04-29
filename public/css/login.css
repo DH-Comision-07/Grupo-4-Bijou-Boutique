@@ -23,6 +23,11 @@ h2 {
   color: #666;
 }
 
+.errors {
+  color: red;
+  font-size: 18px;
+}
+
 header {
   background-color: var(--yellow);
 }
