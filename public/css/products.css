@@ -1,12 +1,12 @@
 .product-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
 .product-card {
-  width: 300px;
+  flex-basis: calc(25% - 20px);
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;

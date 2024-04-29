@@ -74,9 +74,9 @@
 
 
 .action-button.edit {
-  background-color: #28a745;
+  background-color: #001a3f;
 }
 
 .action-button.delete {
-  background-color: #dc3545;
+  background-color: rgb(67, 19, 19);
 }
