@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,24 +11,26 @@
     <%- include("partials/header.ejs") %>
     <main class="container-register">
       <div class="form">
-        <form>
+        <form action="/login" method="POST">
           <h2 class="title">Iniciar sesión</h2>
           <input
             class="controls"
             id="user"
             type="text"
-            placeholder="Nombre de usuario"
+            name="email"
+            placeholder="Correo electrónico"
           />
           <input
             class="controls"
             id="pass"
             type="password"
+            name="password"
             placeholder="Contraseña"
           />
           <a href="/register" class="register-link"
             ><h5 class="title">¿No tienes cuenta aún? Click aquí!</h5></a
           >
-          <input class="submit" type="submit" />
+          <a href="/perfil"><input class="submit" type="submit" /></a>
         </form>
       </div>
     </main>

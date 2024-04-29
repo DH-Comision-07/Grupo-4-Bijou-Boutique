@@ -44,11 +44,6 @@ const productController = {
     productService.save(req.body);
     res.send(req.body);
   },
-
-  store: (req, res) => {
-    productService.save(req.body);
-    res.send(req.body);
-  },
 };
 
 module.exports = productController;

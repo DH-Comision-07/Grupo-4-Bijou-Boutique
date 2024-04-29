@@ -1,1 +1,8 @@
-[{"name":"Danilo","surname":"Palermo","password":"$2a$10$.Tc.s.Y/g4e2sOLcBa/IkuW/tSc/8GGuLpZVBieNJvUGiLovvq8oq","email":"palermodanilo01@gmail.com"}]
+[
+  {
+    "name": "Danilo",
+    "surname": "Palermo",
+    "password": "$2a$10$0j9wLXoHptBBrCn/Cx6LzeJMWX7nKOpKBKHuwHC70CBU73wVq3wnu",
+    "email": "palermodanilo01@gmail.com"
+  }
+]

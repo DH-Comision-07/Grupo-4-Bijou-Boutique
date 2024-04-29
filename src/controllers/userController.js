@@ -1,4 +1,5 @@
 const userService = require("../models/userService");
+const bcrypt = require("bcryptjs");
 const userController = {
   login: (req, res) => {
     res.render("login");
@@ -8,10 +9,10 @@ const userController = {
 
     const user = userService.getUserByEmail(email);
     if (!user || !bcrypt.compareSync(password, user.password)) {
-      return res.redirect("/login");
+      return res.render("login", { error: "Usuario o contraseña incorrectos" });
     } else {
       req.session.user = user;
-      res.redirect("/");
+      return res.render("perfil");
     }
   },
   perfil: (req, res) => {
