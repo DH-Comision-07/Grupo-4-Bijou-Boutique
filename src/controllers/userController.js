@@ -7,12 +7,11 @@ const userController = {
     const { email, password } = req.body;
 
     const user = userService.getUserByEmail(email);
-    if (!user || user.password !== password) {
-      return res.redirect("/login"); 
-    }
-    else {
-    req.session.user = user;
-    res.render("/");
+    if (!user || !bcrypt.compareSync(password, user.password)) {
+      return res.redirect("/login");
+    } else {
+      req.session.user = user;
+      res.redirect("/");
     }
   },
   perfil: (req, res) => {
@@ -20,22 +19,22 @@ const userController = {
     if (!user) {
       return res.redirect("/login");
     }
-    
+
     res.render("home", { user });
   },
   register: (req, res) => {
     res.render("register");
   },
-  create:  (req, res) => {
-		res.render('register/create');
-	},
+  create: (req, res) => {
+    res.render("register/create");
+  },
   store: (req, res) => {
-		userService.save(req.body);
-	//	res.send(req.body);
-    res.redirect('/login');
-	},
+    userService.save(req.body);
+    //	res.send(req.body);
+    res.redirect("/login");
+  },
   contact: (req, res) => {
-    res.render("contact_us")
+    res.render("contactUs");
   },
 };
 
