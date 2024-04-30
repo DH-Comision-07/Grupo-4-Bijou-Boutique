@@ -1,14 +1,1 @@
-[
-  {
-    "name": "Danilo",
-    "surname": "Palermo",
-    "password": "$2a$10$0j9wLXoHptBBrCn/Cx6LzeJMWX7nKOpKBKHuwHC70CBU73wVq3wnu",
-    "email": "palermodanilo01@gmail.com"
-  },
-  {
-    "name": "Gaston",
-    "surname": "Peralta",
-    "password": "$2a$10$r6rVPI7DDjrcJCg.99SjWeIRdk8AnWtv.tCPh1Her6apbt0EcXKyu",
-    "email": "gastonperalta10@gmail.com"
-  }
-]
+[{"name":"Danilo","surname":"Palermo","password":"$2a$10$0j9wLXoHptBBrCn/Cx6LzeJMWX7nKOpKBKHuwHC70CBU73wVq3wnu","email":"palermodanilo01@gmail.com"},{"name":"Gaston","surname":"Peralta","password":"$2a$10$r6rVPI7DDjrcJCg.99SjWeIRdk8AnWtv.tCPh1Her6apbt0EcXKyu","email":"gastonperalta10@gmail.com"},{"name":"Nicolas","surname":"Gruger","password":"$2a$10$m/cMXlAYfHCvq.QIlWluLOvpWXT2S4QeQUPnAppuo36jwgX80wffm","email":"nicolas.gruger@hotmail.com"}]

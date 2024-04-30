@@ -5,7 +5,7 @@ const userController = require("../controllers/userController");
 const upload = require("../middlewares/productMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 
-router.get("/login", userController.login);
+router.get("/login", guestMiddleware, userController.login);
 router.get("/success", userController.success);
 router.post(
   "/login",
@@ -24,9 +24,12 @@ router.get("/check", function (req, res) {
     res.send("El usuario logueado es " + req.session.usuarioLogueado.email);
   }
 });
-router.get("/register", userController.register);
-router.get("/contactUs", userController.contact);
-router.get("/create/", userController.create);
-router.post("/", upload.single("users-image"), userController.store);
+
+// Rutas accesibles solo sin loguear
+router.post('/', upload.single('users-image'), userController.store);
+router.get("/register", guestMiddleware, userController.register);
+
+router.get("/contact_us", userController.contact)
+router.get('/create/', userController.create); 
 
 module.exports = router;
