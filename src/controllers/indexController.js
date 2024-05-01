@@ -8,5 +8,4 @@ const indexController = {
     res.render("aboutUs");
   },
 };
-
 module.exports = indexController;
