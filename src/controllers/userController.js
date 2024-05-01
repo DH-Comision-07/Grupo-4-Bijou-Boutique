@@ -40,7 +40,7 @@ const userController = {
       req.session.usuarioLogueado = usuarioALoguearse;
 
       if (req.body.recordame === "recordar") {
-        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 86400000 });
+        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
       }
 
       return res.redirect("/success");

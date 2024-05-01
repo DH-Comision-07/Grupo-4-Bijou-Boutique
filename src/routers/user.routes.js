@@ -26,10 +26,10 @@ router.get("/check", function (req, res) {
 });
 
 // Rutas accesibles solo sin loguear
-router.post('/', upload.single('users-image'), userController.store);
+router.post("/", upload.single("users-image"), userController.store);
 router.get("/register", guestMiddleware, userController.register);
 
-router.get("/contact_us", userController.contact)
-router.get('/create/', userController.create); 
+router.get("/contactUs", userController.contact);
+router.get("/create/", userController.create);
 
 module.exports = router;
