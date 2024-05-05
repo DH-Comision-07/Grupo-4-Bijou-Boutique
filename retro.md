@@ -123,3 +123,25 @@ Hacer menos:
 Dejar de hacer:
 
 - Mezclar el tipo de nomenclatura que usamos a la hora de la declaracion de variables, creacion de componentes, metodos, etc.
+
+Retrospectiva SPRINT 6
+
+Comenzar a hacer:
+
+- Tener un poco mas de reuniones semanales ya que ahora, al ser un poco menos de integrantes, estamos trabajando un poco mas individuales posterior a separar los puntos del sprint.
+
+Hacer mas:
+
+- Intentar llegar con mas tiempo en la entrega de los sprints ya que estamos terminando muy justos.
+
+Continuar haciendo:
+
+- Seguir buscando las soluciones a todos los puntos de sprints y ayudarnos mutuamente entre todos para poder llegar con todos los puntos resueltos de la mejor manera
+
+Hacer menos:
+
+- Intentar agregar cosas a nuestro proyecto sin haber terminado antes lo que se nos requiere en los sprints, con la idea de no perder tiempo en cosas que no tenemos que hacer.
+
+Dejar de hacer:
+
+- Intentar abarcar tantos temas en las reuniones y centrarnos en un punto para poder finalizar las partes correctamente.
