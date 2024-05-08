@@ -12,6 +12,7 @@ const app = express();
 require("dotenv").config();
 
 console.log(process.env.DB_USER);
+console.log(process.env.DB_PASSWORD);
 
 app.use((req, res, next) => {
   console.log("Solicitud recibida:", req.method, req.url);
