@@ -10,7 +10,7 @@ const recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 const app = express();
 require("dotenv").config();
-
+console.log(process.env.DB_PASSWORD);
 console.log(process.env.DB_USER);
 
 app.use((req, res, next) => {
