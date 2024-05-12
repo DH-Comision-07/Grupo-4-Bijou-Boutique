@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Album';
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -45,11 +45,11 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config); 
 
     Product.associate = function (models) {
-        Product.belongsTo(models.Users, { // models.Genre -> Genres es el valor de alias en genres.js
-            as: "artista",
-            foreignKey: "id_artista"
+        Product.belongsTo(models.User, {
+            as: "venta",
+            foreignKey: "id_nolasabemosaun"
         })
     }
 
-    return Album
+    return Product;
 };
