@@ -3,7 +3,6 @@ const router = express.Router();
 const productController = require("../controllers/productController");
 const upload = require("../middlewares/productMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
-const guestMiddleware = require("../middlewares/guestMiddleware");
 
 // Rutas accesibles solo sin loguear
 router.get("/cart", productController.cart);
