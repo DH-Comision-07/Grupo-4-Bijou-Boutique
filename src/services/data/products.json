@@ -1,5 +1,25 @@
 [
   {
+    "id": 1,
+    "name": "Anillo de Diamantes",
+    "description": "Hermoso anillo de diamantes",
+    "color": "Blanco",
+    "price": "20.000",
+    "image": "anillo-oro.jpg",
+    "discount": "",
+    "category": ""
+  },
+  {
+    "id": 2,
+    "name": "Collar de Perlas",
+    "description": "Collar perlado de excelente calidad",
+    "color": "Perlas",
+    "price": "40.000",
+    "image": "collar-perlas.png",
+    "discount": "",
+    "category": ""
+  },
+  {
     "id": 3,
     "name": "Pulsera de Zafiros",
     "description": "Pulsera con piedras preciosas de zafiros",
@@ -8,14 +28,28 @@
     "image": "pulsera-zafiros.jpg"
   },
   {
+    "id": 4,
+    "name": "Aros de Oro Rosa",
+    "description": "Elegantes aros de oro rosa con detalles en filigrana",
+    "color": "Oro Rosa",
+    "price": "20.000",
+    "image": "aros-oro-rosa.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Collar de Rubíes",
+    "description": "Collar brillante con rubíes intensos",
+    "color": "Rojo",
+    "price": "50.000",
+    "image": "collar-rubies.jpg"
+  },
+  {
     "id": 6,
     "name": "Aros de Esmeraldas",
     "description": "Aros colgantes con esmeraldas de calidad",
     "color": "Verde",
-    "price": "38.000",
-    "image": "aros-esmeralda.jpg",
-    "discount": "",
-    "category": "in-sale"
+    "price": "15.000",
+    "image": "aros-esmeralda.jpg"
   },
   {
     "id": 7,
@@ -74,14 +108,6 @@
     "image": "anillo-blanco.jpg"
   },
   {
-    "id": 14,
-    "name": "Pulsera de amatista",
-    "description": "Pulsera de amatistas pulidas",
-    "color": "Violeta",
-    "price": "42.000",
-    "image": "pulsera-amatista.jpeg"
-  },
-  {
     "id": 15,
     "name": "Anillo de Rubí Birmano",
     "description": "Anillo exclusivo con rubí birmano auténtico",
@@ -96,5 +122,13 @@
     "color": "Oro Rosa y Transparente",
     "price": "70.000",
     "image": "collar-rosa-diamantes.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Anillo de Diamante Negro",
+    "description": "Anillo elegante con diamante negro central",
+    "color": "Negro",
+    "price": "38.000",
+    "image": "anillo-diamante-negro.jpg"
   }
 ]

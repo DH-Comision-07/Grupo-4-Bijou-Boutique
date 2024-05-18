@@ -14,6 +14,6 @@ router.get("/:id/edit", authMiddleware, productController.editForm);
 router.put("/:id", authMiddleware, productController.update);
 router.get("/productCard", authMiddleware, productController.productCard);
 router.delete("/:id", authMiddleware, productController.destroy);
-router.get("/:id", guestMiddleware, productController.detail);
+router.get("/:id", productController.detail);
 
 module.exports = router;

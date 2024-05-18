@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const users = require("../models/data/users.json");
+const users = require("../services/data/users.json");
 const bcrypt = require("bcryptjs");
 
 const userService = {

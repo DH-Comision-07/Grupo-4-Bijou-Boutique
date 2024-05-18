@@ -1,4 +1,4 @@
-const userService = require("../models/userService");
+const userService = require("../services/userService");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
@@ -11,7 +11,7 @@ const userController = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let usersJSON = fs.readFileSync("src/models/data/users.json", {
+      let usersJSON = fs.readFileSync("src/services/data/users.json", {
         encoding: "utf-8",
       });
       let users;

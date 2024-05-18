@@ -1,4 +1,4 @@
-const productService = require("../models/productService");
+const productService = require("../services/productService");
 
 const indexController = {
   index: (req, res) => {
