@@ -30,3 +30,11 @@ CREATE TABLE orders (
     FOREIGN KEY (id_user) REFERENCES users(id),
     FOREIGN KEY (id_product) REFERENCES products(id)
 );
+CREATE TABLE carts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_user) REFERENCES users(id)
+);
