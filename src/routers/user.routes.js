@@ -31,5 +31,6 @@ router.get("/register", guestMiddleware, userController.register);
 
 router.get("/contactUs", userController.contact);
 router.get("/create/", userController.create);
+router.get("/maps",userController.maps)
 
 module.exports = router;

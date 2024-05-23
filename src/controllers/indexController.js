@@ -7,5 +7,6 @@ const indexController = {
   aboutUs: (req, res) => {
     res.render("aboutUs");
   },
+  
 };
 module.exports = indexController;

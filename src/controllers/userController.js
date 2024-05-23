@@ -72,6 +72,9 @@ const userController = {
   contact: (req, res) => {
     return res.render("contactUs");
   },
+  maps: (req, res) => {
+    return res.render("maps");
+  },
 };
 
 module.exports = userController;
