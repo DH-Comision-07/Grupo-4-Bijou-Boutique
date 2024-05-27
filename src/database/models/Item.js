@@ -1,33 +1,33 @@
-module.exports = (sequelize, dataTypes) => {
-  let alias = "CartItems";
+module.exports = (sequelize, DataTypes) => {
+  let alias = "CartItem";
   let cols = {
     id: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     cart_id: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "carts",
+        model: "Cart",
         key: "id",
       },
     },
     product_id: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "products",
+        model: "Product",
         key: "id",
       },
     },
     quantity: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     price: {
-      type: dataTypes.DECIMAL(10, 2),
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
   };
@@ -38,11 +38,11 @@ module.exports = (sequelize, dataTypes) => {
   const CartItem = sequelize.define(alias, cols, config);
 
   CartItem.associate = function (models) {
-    CartItem.belongsTo(models.Carts, {
+    CartItem.belongsTo(models.Cart, {
       as: "cart",
       foreignKey: "cart_id",
     });
-    CartItem.belongsTo(models.Products, {
+    CartItem.belongsTo(models.Product, {
       as: "product",
       foreignKey: "product_id",
     });

@@ -1,30 +1,30 @@
-module.exports = (sequelize, dataTypes) => {
-  let alias = "Carts";
+module.exports = (sequelize, DataTypes) => {
+  let alias = "Cart";
   let cols = {
     id: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     id_user: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "users",
+        model: "User",
         key: "id",
       },
     },
     total_price: {
-      type: dataTypes.DECIMAL(10, 2),
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
     created_at: {
-      type: dataTypes.DATE,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
     },
     updated_at: {
-      type: dataTypes.DATE,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
     },
@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
       as: "user",
       foreignKey: "id_user",
     });
-    Cart.hasMany(models.CartItems, {
+    Cart.hasMany(models.CartItem, {
       as: "items",
       foreignKey: "cart_id",
     });

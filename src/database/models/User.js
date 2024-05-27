@@ -1,25 +1,25 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   let alias = "User";
   let cols = {
     id: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     name: {
-      type: dataTypes.STRING(95),
+      type: DataTypes.STRING(95),
       allowNull: false,
     },
     surname: {
-      type: dataTypes.STRING(95),
+      type: DataTypes.STRING(95),
       allowNull: false,
     },
     password: {
-      type: dataTypes.STRING(95),
+      type: DataTypes.STRING(95),
       allowNull: false,
     },
     email: {
-      type: dataTypes.STRING(95),
+      type: DataTypes.STRING(95),
       allowNull: false,
     },
   };
@@ -30,11 +30,11 @@ module.exports = (sequelize, dataTypes) => {
   const User = sequelize.define(alias, cols, config);
 
   User.associate = function (models) {
-    User.hasMany(models.Orders, {
+    User.hasMany(models.Order, {
       as: "orders",
       foreignKey: "id_user",
     });
-    User.hasMany(models.Carts, {
+    User.hasMany(models.Cart, {
       as: "carts",
       foreignKey: "id_user",
     });
