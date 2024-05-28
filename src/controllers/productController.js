@@ -1,3 +1,5 @@
+const db = require("../database/models");
+
 const productService = require("../services/productService");
 const productController = {
   cart: (req, res) => {
@@ -7,7 +9,9 @@ const productController = {
     res.render("formulary");
   },
   products: (req, res) => {
-    res.render("products", { products: productService.getAll() });
+    db.Product.findAll().then(function (products) {
+      res.render("products", { products: products });
+    });
   },
   productCard: (req, res) => {
     res.render("productCard", { products: productService.getAll() });
