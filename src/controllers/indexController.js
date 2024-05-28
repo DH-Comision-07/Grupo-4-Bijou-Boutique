@@ -1,12 +1,14 @@
+const db = require("../database/models");
 const productService = require("../services/productService");
 
 const indexController = {
   index: (req, res) => {
-    res.render("home", { products: productService.getAll() });
+    db.Product.findAll().then(function (products) {
+      res.render("home", { products: products });
+    });
   },
   aboutUs: (req, res) => {
     res.render("aboutUs");
   },
-  
 };
 module.exports = indexController;

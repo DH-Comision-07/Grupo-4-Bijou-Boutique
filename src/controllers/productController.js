@@ -14,7 +14,9 @@ const productController = {
     });
   },
   productCard: (req, res) => {
-    res.render("productCard", { products: productService.getAll() });
+    db.Product.findAll().then(function (products) {
+      res.render("productCard", { products: products });
+    });
   },
   detail: (req, res) => {
     res.render("productDetail", {
@@ -39,7 +41,11 @@ const productController = {
     res.redirect("/products/productCard");
   },
   destroy: (req, res) => {
-    productService.deleteProduct(req.params.id);
+    db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
     res.redirect("/products/productCard");
   },
   store: (req, res) => {
