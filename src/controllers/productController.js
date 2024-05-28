@@ -1,4 +1,6 @@
-const productService = require("../models/productService");
+const productService = require("../services/productService");
+const db = require("../database/models");
+
 const productController = {
   cart: (req, res) => {
     res.render("cart");
@@ -7,35 +9,84 @@ const productController = {
     res.render("formulary");
   },
   products: (req, res) => {
-    res.render("products", { products: productService.getAll() });
+    db.Product.findAll()
+    .then(function (products) {
+      res.render("products", { products: products });
+    }) .catch(function(error){
+      console.log(error);
+      res.status(500).send("Ocurrio un error al cargar la pagina");
+
+    })
   },
   productCard: (req, res) => {
-    res.render("productCard", { products: productService.getAll() });
+    db.Product.findAll().then(function (products) {
+      res.render("productCard", { products: products });
+    }).catch(function(error){
+      console.log(error);
+      res.status(500).send("Ocurrio un error al cargar la pagina");
+
+    })
   },
-  detail: (req, res) => {
-    res.render("productDetail", {
-      products: productService.getOne(req.params.id),
-    });
-  },
-  editForm: (req, res) => {
-    res.render("edit-form", {
-      products: productService.getOne(req.params.id),
-    });
-  },
-  update: (req, res) => {
-    productService.editProduct(req.params.id, req.body);
-    const productToUpdate = productService.getOne(req.params.id);
-    const updatedProduct = {
+  create: (req, res) => {
+    db.Product.create({
       name: req.body.name,
       description: req.body.description,
       color: req.body.color,
       price: req.body.price,
-      image: productToUpdate.image,
+      image: req.file.filename,
+    })
+      .then(() => {
+        res.redirect("/products");
+      })
+      .catch((err) => {
+        res.status(500).send({ error: err.message });
+      });
+  },
+  detail: (req, res) => {
+    db.Product.findByPk(req.params.id).then(function (products) {
+      res.render("productDetail", { products: products });
+    })
+    .catch((err) => {
+      res.status(500).send({ error: err.message });
+    });;
+  },
+  edit: (req, res) => {
+    db.Product.findByPk(req.params.id).then(function (products) {
+      res.render("edit-form", { products: products });
+    }).catch(function(error){
+      console.log(error);
+      res.status(500).send("Ocurrio un error al cargar la pagina");
+
+    })
+  },
+  update: (req, res) => {
+    const updatedData = {
+      name: req.body.name,
+      description: req.body.description,
+      color: req.body.color,
+      price: req.body.price,
     };
-    res.redirect("/products/productCard");
+
+    if (req.file) {
+      updatedData.image = req.file.filename;
+    }
+
+    db.Product.update(updatedData, {
+      where: { id: req.params.id },
+    })
+      .then(() => {
+        res.redirect("/products/productCard");
+      })
+      .catch((err) => {
+        res.status(500).send({ error: err.message });
+      });
   },
   destroy: (req, res) => {
-    productService.deleteProduct(req.params.id);
+    db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
     res.redirect("/products/productCard");
   },
   store: (req, res) => {
