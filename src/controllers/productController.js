@@ -21,7 +21,11 @@ const productController = {
   productCard: (req, res) => {
     db.Product.findAll().then(function (products) {
       res.render("productCard", { products: products });
-    });
+    }).catch(function(error){
+      console.log(error);
+      res.status(500).send("Ocurrio un error al cargar la pagina");
+
+    })
   },
   create: (req, res) => {
     db.Product.create({
@@ -49,7 +53,11 @@ const productController = {
   edit: (req, res) => {
     db.Product.findByPk(req.params.id).then(function (products) {
       res.render("edit-form", { products: products });
-    });
+    }).catch(function(error){
+      console.log(error);
+      res.status(500).send("Ocurrio un error al cargar la pagina");
+
+    })
   },
   update: (req, res) => {
     const updatedData = {
