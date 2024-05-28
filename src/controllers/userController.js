@@ -1,49 +1,30 @@
 const userService = require("../services/userService");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
-const fs = require("fs");
 
 const userController = {
   login: (req, res) => {
     return res.render("login");
   },
-  processLogin: (req, res) => {
+  processLogin: async (req, res) => {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let usersJSON = fs.readFileSync("src/services/data/users.json", {
-        encoding: "utf-8",
-      });
-      let users;
-      if (usersJSON == "") {
-        users = [];
-      } else {
-        users = JSON.parse(usersJSON);
-      }
+      let user = await userService.getUserByEmail(req.body.email);
 
-      let usuarioALoguearse;
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password)) {
-            usuarioALoguearse = users[i];
-            break;
-          }
+      if (user && bcrypt.compareSync(req.body.password, user.password)) {
+        req.session.usuarioLogueado = user;
+
+        if (req.body.recordame === "recordar") {
+          res.cookie("recordame", user.email, { maxAge: 600000 });
         }
-      }
 
-      if (usuarioALoguearse == undefined) {
+        return res.redirect("/success");
+      } else {
         return res.render("login", {
           errors: [{ msg: "Credenciales inválidas!" }],
         });
       }
-
-      req.session.usuarioLogueado = usuarioALoguearse;
-
-      if (req.body.recordame === "recordar") {
-        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 600000 });
-      }
-
-      return res.redirect("/success");
     } else {
       return res.render("login", { errors: errors.errors });
     }
@@ -62,12 +43,25 @@ const userController = {
   register: (req, res) => {
     return res.render("register");
   },
-  create: (req, res) => {
-    return res.render("register/create");
-  },
-  store: (req, res) => {
-    userService.save(req.body);
-    return res.redirect("/login");
+  create: async (req, res) => {
+    try {
+      let imageName = req.file ? req.file.filename : null;
+
+      await userService.save({
+        name: req.body.name,
+        surname: req.body.surname,
+        password: req.body.password,
+        email: req.body.email,
+        image: imageName,
+      });
+
+      res.redirect("/login");
+    } catch (error) {
+      console.error(error);
+      res.render("register", {
+        errors: [{ msg: "Error al crear el usuario" }],
+      });
+    }
   },
   contact: (req, res) => {
     return res.render("contactUs");

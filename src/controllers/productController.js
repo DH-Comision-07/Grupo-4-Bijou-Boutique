@@ -1,6 +1,6 @@
+const productService = require("../services/productService");
 const db = require("../database/models");
 
-const productService = require("../services/productService");
 const productController = {
   cart: (req, res) => {
     res.render("cart");

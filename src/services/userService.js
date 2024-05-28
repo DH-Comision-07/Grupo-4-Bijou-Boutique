@@ -1,30 +1,23 @@
-const fs = require("fs");
-const path = require("path");
-const users = require("../services/data/users.json");
+const db = require("../database/models");
 const bcrypt = require("bcryptjs");
 
 const userService = {
-  users: users,
-  getAll: function () {
-    return this.users;
+  getAll: async function () {
+    return await db.User.findAll();
   },
-  getOne: function (id) {
-    return this.users.find((user) => user.id == id);
+  getOne: async function (id) {
+    return await db.User.findByPk(id);
   },
-  save: function (user) {
+  save: async function (user) {
     let contraseñaEncriptada = bcrypt.hashSync(user.password, 10);
     let usuarioContraseñaEncriptada = {
       ...user,
       password: contraseñaEncriptada,
     };
-    users.push(usuarioContraseñaEncriptada);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../models/data/users.json"),
-      JSON.stringify(users)
-    );
+    return await db.User.create(usuarioContraseñaEncriptada);
   },
-  getUserByEmail: function (email) {
-    return this.users.find((user) => user.email === email);
+  getUserByEmail: async function (email) {
+    return await db.User.findOne({ where: { email: email } });
   },
 };
 
