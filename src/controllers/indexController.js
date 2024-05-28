@@ -1,5 +1,4 @@
 const db = require("../database/models");
-const productService = require("../services/productService");
 
 const indexController = {
   index: (req, res) => {
