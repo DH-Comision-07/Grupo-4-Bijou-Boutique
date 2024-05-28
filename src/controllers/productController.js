@@ -24,7 +24,7 @@ const productController = {
       description: req.body.description,
       color: req.body.color,
       price: req.body.price,
-      image: req.body.image,
+      image: req.file.filename,
     })
       .then(() => {
         res.redirect("/products");
@@ -34,8 +34,8 @@ const productController = {
       });
   },
   detail: (req, res) => {
-    res.render("productDetail", {
-      products: productService.getOne(req.params.id),
+    db.Product.findByPk(req.params.id).then(function (products) {
+      res.render("productDetail", { products: products });
     });
   },
   edit: (req, res) => {
