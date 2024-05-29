@@ -28,7 +28,7 @@
                         <p class="info__precio">$<%= products.price %></p>
                     </article>
                     <article class="pago">
-                        <p class="pago__1"> <i class="fa-regular fa-credit-card"></i>3 cuotas sin interés de 2.966,67</p>
+                        <p class="pago__1"> <i class="fa-regular fa-credit-card"></i>3 cuotas sin interés de <strong>$<%= Math.round(products.price / 3) %></strong></p>
                         <p class="pago__2"> <i class="fa-solid fa-tag"></i>>20% de descuento con efectivo o transferencia</p>
                         <p class="pago__3"> <i class="fa-solid fa-truck"></i>Envío gratis superando los $45.000</p>
                     </article>

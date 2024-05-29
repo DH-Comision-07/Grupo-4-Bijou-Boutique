@@ -10,22 +10,23 @@ const productController = {
   },
   products: (req, res) => {
     db.Product.findAll()
-    .then(function (products) {
-      res.render("products", { products: products });
-    }) .catch(function(error){
-      console.log(error);
-      res.status(500).send("Ocurrio un error al cargar la pagina");
-
-    })
+      .then(function (products) {
+        res.render("products", { products: products });
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.status(500).send("Ocurrio un error al cargar la pagina");
+      });
   },
   productCard: (req, res) => {
-    db.Product.findAll().then(function (products) {
-      res.render("productCard", { products: products });
-    }).catch(function(error){
-      console.log(error);
-      res.status(500).send("Ocurrio un error al cargar la pagina");
-
-    })
+    db.Product.findAll()
+      .then(function (products) {
+        res.render("productCard", { products: products });
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.status(500).send("Ocurrio un error al cargar la pagina");
+      });
   },
   create: (req, res) => {
     db.Product.create({
@@ -43,21 +44,23 @@ const productController = {
       });
   },
   detail: (req, res) => {
-    db.Product.findByPk(req.params.id).then(function (products) {
-      res.render("productDetail", { products: products });
-    })
-    .catch((err) => {
-      res.status(500).send({ error: err.message });
-    });;
+    db.Product.findByPk(req.params.id)
+      .then(function (products) {
+        res.render("productDetail", { products: products });
+      })
+      .catch((err) => {
+        res.status(500).send({ error: err.message });
+      });
   },
   edit: (req, res) => {
-    db.Product.findByPk(req.params.id).then(function (products) {
-      res.render("edit-form", { products: products });
-    }).catch(function(error){
-      console.log(error);
-      res.status(500).send("Ocurrio un error al cargar la pagina");
-
-    })
+    db.Product.findByPk(req.params.id)
+      .then(function (products) {
+        res.render("edit-form", { products: products });
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.status(500).send("Ocurrio un error al cargar la pagina");
+      });
   },
   update: (req, res) => {
     const updatedData = {

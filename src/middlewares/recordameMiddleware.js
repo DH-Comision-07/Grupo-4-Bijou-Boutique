@@ -5,7 +5,7 @@ function recordameMiddleware(req, res, next) {
   if (req.cookies.recordame != undefined && req.session.user == undefined) {
     let users = [];
     try {
-      const usersFilePath = path.join(__dirname, "../models/data/users.json");
+      const usersFilePath = path.join(__dirname, "../images/users");
       const usersJSON = fs.readFileSync(usersFilePath, {
         encoding: "utf-8",
       });
