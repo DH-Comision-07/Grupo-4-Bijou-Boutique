@@ -9,7 +9,6 @@ const cookieParser = require("cookie-parser");
 const recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 const app = express();
-require("dotenv").config();
 
 app.use((req, res, next) => {
   console.log("Solicitud recibida:", req.method, req.url);
