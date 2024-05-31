@@ -24,3 +24,10 @@ body {
     display: block;
     margin-bottom: 5px;
 }
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(0,26,63);
+    box-sizing: border-box;
+}
