@@ -69,6 +69,12 @@ const userController = {
   maps: (req, res) => {
     return res.render("maps");
   },
+  profile: function (req, res) {
+    res.render("profile");
+  },
+  updatePass: function (req, res) {
+    res.render("updatePass");
+  },
 };
 
 module.exports = userController;

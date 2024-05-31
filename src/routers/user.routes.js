@@ -10,6 +10,8 @@ router.get("/login", guestMiddleware, userController.login);
 router.get("/success", userController.success);
 router.post("/login", loginValidation, userController.processLogin);
 router.get("/check", checkLoggedIn);
+router.get("/profile", userController.profile);
+router.get("/updatePass", userController.updatePass);
 
 // Rutas accesibles solo sin loguear
 router.get("/register", guestMiddleware, userController.register);
