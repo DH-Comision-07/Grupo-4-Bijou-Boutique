@@ -31,3 +31,10 @@ body {
     border: 2px solid rgb(0,26,63);
     box-sizing: border-box;
 }
+
+.form-group button {
+    padding: 10px 20px;
+    border: 2px solid rgb(0,26,63);
+    background-color: white;
+    cursor: pointer;
+}
