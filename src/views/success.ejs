@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      a button {
-        background-color: black;
-        color: white;
-        border-radius: 4px;
-      }
-    </style>
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/cart.css" />
   </head>
   <body>
-    <h1>Logueado con exito!!!!</h1>
-    <a href="/"><button>Regresar al inicio</button></a>
+    <%- include("partials/header.ejs") %>
+    <h1>
+      Te has logueado correctamente! Seras redirigido a tu perfil en breve...
+    </h1>
+    <a href="/"><button class="regresar">Regresar manualmente</button></a>
+    <%- include("partials/footer.ejs") %>
   </body>
 </html>
