@@ -39,3 +39,11 @@ body {
     color: blue;
     text-decoration: none;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    text-align: center; 
+    border-radius: 100%;
+}
