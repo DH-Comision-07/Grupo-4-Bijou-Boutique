@@ -55,3 +55,7 @@ button {
     background-color: white;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: #e0e0e0;
+}
