@@ -32,3 +32,10 @@ body {
 .right-box p {
     margin: 5px 0;
 }
+
+.change-password {
+    display: block;
+    margin: 10px 0;
+    color: blue;
+    text-decoration: none;
+}
