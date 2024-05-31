@@ -28,3 +28,7 @@ body {
     width: 300px;
     height: 200px;
 }
+
+.right-box p {
+    margin: 5px 0;
+}
