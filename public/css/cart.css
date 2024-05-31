@@ -15,7 +15,7 @@ footer {
   margin-top: auto;
 }
 
-.regresar {
+.regresar, .loguear {
   margin-top: 20px;
   background-color: #001a3f;
   color: white; 
@@ -27,6 +27,9 @@ footer {
 }
 
 .regresar:hover {
+  background-color: #0056b3; 
+}
+.loguear:hover {
   background-color: #0056b3; 
 }
 

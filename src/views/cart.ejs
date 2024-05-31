@@ -8,15 +8,18 @@
   </head>
   <body>
     <%- include("partials/header.ejs") %>
-    <h1>En mantenimiento! En breve todo estara solucionado!</h1>
+    <h1>Aun no tienes articulos en tu carrito!</h1>
     <div class="img-container">
       <img
-        src="../../images/mantenimiento.jpg"
+        src="../../images/carrito.jpg"
         alt="mantenimiento"
         class="mantenimiento"
       />
     </div>
-    <a href="/"><button class="regresar">Regresar al inicio</button></a>
+    <div>
+      <a href="/login"><button class="loguear">Iniciar sesion</button></a>
+      <a href="/"><button class="regresar">Regresar al inicio</button></a>
+    </div>
     <%- include("partials/footer.ejs") %>
   </body>
 </html>
