@@ -6,3 +6,12 @@ body {
     flex-direction: column; 
     justify-content: center;
 }
+
+.form-container {
+    border: 2px solid rgb(0,26,63);
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 5%;
+}
