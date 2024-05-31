@@ -4,13 +4,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column; 
-    justify-content: center;
 }
+
 
 .form-container {
     border: 2px solid rgb(0,26,63);
     padding: 20px;
-    width: 300px;
+    width: 340px;
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 5%;
@@ -22,7 +22,7 @@ body {
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
 }
 
 .form-group input {
@@ -38,3 +38,4 @@ body {
     background-color: white;
     cursor: pointer;
 }
+
