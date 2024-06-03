@@ -55,7 +55,7 @@ const productController = {
   edit: (req, res) => {
     db.Product.findByPk(req.params.id)
       .then(function (products) {
-        res.render("edit-form", { products: products });
+        res.render("editForm", { products: products });
       })
       .catch(function (error) {
         console.log(error);
