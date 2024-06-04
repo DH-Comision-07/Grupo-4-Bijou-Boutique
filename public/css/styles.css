@@ -11,7 +11,7 @@ header {
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     position: relative;
 }
 
@@ -361,7 +361,7 @@ nav a:hover {
 
     .logo-container img
 
- {
+{
         max-width: 60%;
     }
 
