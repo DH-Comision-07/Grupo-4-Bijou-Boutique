@@ -41,28 +41,35 @@ const userController = {
     res.render("success");
   },
   register: (req, res) => {
-    return res.render("register");
+    return res.render("register", { errors: validationResult });
   },
-  create: async (req, res) => {
-    try {
-      let imageName = req.file ? req.file.filename : null;
+  processRegister: (req, res) => {
+    const resultValidations = validationResult(req);
 
-      await userService.save({
-        name: req.body.name,
-        surname: req.body.surname,
-        password: req.body.password,
-        email: req.body.email,
-        image: imageName,
-      });
-
-      res.redirect("/login");
-    } catch (error) {
-      console.error(error);
-      res.render("register", {
-        errors: [{ msg: "Error al crear el usuario" }],
-      });
+    if (resultValidations.errors.length > 0) {
+      return res.render("register", { errors: resultValidations.mapped() });
     }
   },
+  // create: async (req, res) => {
+  //   try {
+  //     let imageName = req.file ? req.file.filename : null;
+
+  //     await userService.save({
+  //       name: req.body.name,
+  //       surname: req.body.surname,
+  //       password: req.body.password,
+  //       email: req.body.email,
+  //       image: imageName,
+  //     });
+
+  //     res.redirect("/login");
+  //   } catch (error) {
+  //     console.error(error);
+  //     res.render("register", {
+  //       errors: [{ msg: "Error al crear el usuario" }],
+  //     });
+  //   }
+  // },
   contact: (req, res) => {
     return res.render("contactUs");
   },

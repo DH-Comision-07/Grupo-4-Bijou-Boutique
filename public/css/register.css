@@ -11,6 +11,10 @@ main {
   align-items: center;
 }
 
+.text-danger {
+  color: red
+}
+
 button {
   padding: 10px 20px;
   border: none;
