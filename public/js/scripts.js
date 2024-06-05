@@ -25,3 +25,11 @@ if (!passwordRegex.test(password)) {
     alert('La contraseña debe tener al menos 8 caracteres, un número y un caracter especial.');
     return false;
 }
+
+event.target.submit();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', validateForm);
+});
