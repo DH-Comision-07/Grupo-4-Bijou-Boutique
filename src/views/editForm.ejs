@@ -8,47 +8,50 @@
 </head>
 <body>
   <%- include("partials/header.ejs") %>
-  <div class="row">
-    <div class="col-12">
-      <h2 class="products-title">
-        Estás editando: <%= products.name %>
-      </h2>
-    </div>
-  </div>
-  <div class="col-12">
-    <form action="/products/<%= products.id %>?_method=PUT" method="POST">
-      <div class="row product-detail">
-        <div class="col-12">
-          <label for="name" class="form-label">Nombre del producto:</label>
-          <input type="text" id="name" name="name" value="<%= products.name %>" class="form-input" />
-        </div>
-        <div class="col-12">
-          <label for="price" class="form-label">Precio del producto:</label>
-          <input type="text" id="price" name="price" value="<%= products.price %>" class="form-input" />
-        </div>
-        <div class="col-12">
-          <label for="category" class="form-label">Categoría:</label>
-          <select name="category" id="category" class="form-input">
-            <option value="in-sale" <%= products.category === 'in-sale' ? 'selected' : '' %>>En oferta</option>
-            <option value="visited" <%= products.category === 'visited' ? 'selected' : '' %>>Últimos agregados</option>
-          </select>
-        </div>
-        <div class="col-12">
-            <section class="producto__img">
-                <img class="fotoPrincipal" src="/images/<%= products.image %>" alt="foto-producto">
-            </section>
-          <input type="file" name="image" id="image">
-        </div>
-        <br>
-        <div class="col-12">
-          <label for="description" class="form-label">Descripción:</label>
-          <textarea name="description" id="description" class="form-input"><%= products.description %></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="buy-now-button">Guardar producto</button>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="products-title">
+          Estás editando: <%= products.name %>
+        </h2>
       </div>
-    </form>
+    </div>
+    <div class="col-12">
+      <form action="/products/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="row product-detail">
+          <div class="col-12">
+            <label for="name" class="form-label">Nombre del producto:</label>
+            <input type="text" id="name" name="name" value="<%= products.name %>" class="form-input" required />
+          </div>
+          <div class="col-12">
+            <label for="price" class="form-label">Precio del producto:</label>
+            <input type="number" id="price" name="price" value="<%= products.price %>" class="form-input" required />
+          </div>
+          <div class="col-12">
+            <label for="category" class="form-label">Categoría:</label>
+            <select name="category" id="category" class="form-input" required>
+              <option value="in-sale" <%= products.category === 'in-sale' ? 'selected' : '' %>>En oferta</option>
+              <option value="visited" <%= products.category === 'visited' ? 'selected' : '' %>>Últimos agregados</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <section class="producto__img">
+              <img class="fotoPrincipal" src="/images/<%= products.image %>" alt="foto-producto">
+            </section>
+            <label for="image" class="form-label">Imagen del producto:</label>
+            <input type="file" name="image" id="image" class="form-input">
+          </div>
+          <br>
+          <div class="col-12">
+            <label for="description" class="form-label">Descripción:</label>
+            <textarea name="description" id="description" class="form-input" required><%= products.description %></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="buy-now-button">Guardar producto</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <%- include("partials/footer.ejs") %>
 </body>
