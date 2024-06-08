@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/register.css" />
     <script src="/scripts.js" defer></script>
-    <title>Bijou Boutique</title>
+    <title>Bijou Boutique</title> 
   </head>
   <body>
     <%- include("partials/header.ejs") %>
     <% if (errors) { %>
-    <% for (let oneError in errors) { %>
-    <% } %>
+      <% for (let oneError in errors) { %>
+      <% } %>
     <% } %>
     <main class="container-register">
       <div class="form">
@@ -38,13 +38,17 @@
           <% if (errors && errors.surname) { %>
           <div class="text-danger"><%= errors.surname.msg %></div>
           <% } %>
-          <input
-            class="controls"
-            id="pass"
-            name="password"
-            type="password"
-            placeholder="Contraseña"
-          />
+          <div class="password-container">
+            <input
+              class="controls"
+              id="pass"
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+            />
+            <span class="toggle-password" onclick="togglePasswordVisibility()">👁️
+            </span>
+          </div>
           <% if (errors && errors.password) { %>
           <div class="text-danger"><%= errors.password.msg %></div>
           <% } %>
@@ -71,5 +75,18 @@
     </main>
     <%- include("partials/footer.ejs") %>
     <script src="/js/validate.js"></script>
+    <script>
+      function togglePasswordVisibility() {
+        const passwordField = document.getElementById('pass');
+        const passwordToggle = document.querySelector('.toggle-password');
+        if (passwordField.type === 'password') {
+          passwordField.type = 'text';
+          passwordToggle.textContent = '🙈';
+        } else {
+          passwordField.type = 'password';
+          passwordToggle.textContent = '👁️';
+        }
+      }
+    </script>
   </body>
 </html>
