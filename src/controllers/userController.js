@@ -47,29 +47,13 @@ const userController = {
     const resultValidations = validationResult(req);
 
     if (resultValidations.errors.length > 0) {
-      return res.render("register", { errors: resultValidations.mapped() });
+      return res.render("register", {
+        errors: resultValidations.mapped(),
+        oldData: req.body,
+      });
     }
+    return res.redirect("login");
   },
-  // create: async (req, res) => {
-  //   try {
-  //     let imageName = req.file ? req.file.filename : null;
-
-  //     await userService.save({
-  //       name: req.body.name,
-  //       surname: req.body.surname,
-  //       password: req.body.password,
-  //       email: req.body.email,
-  //       image: imageName,
-  //     });
-
-  //     res.redirect("/login");
-  //   } catch (error) {
-  //     console.error(error);
-  //     res.render("register", {
-  //       errors: [{ msg: "Error al crear el usuario" }],
-  //     });
-  //   }
-  // },
   contact: (req, res) => {
     return res.render("contactUs");
   },

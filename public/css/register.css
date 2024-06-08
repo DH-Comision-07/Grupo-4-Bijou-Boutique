@@ -87,9 +87,9 @@ nav .logo {
   position: absolute;
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-85%);
   cursor: pointer;
-  font-size: 18px; 
+  font-size: 20px; 
 }
 
 .submit {
