@@ -7,13 +7,6 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 const { loginValidation } = require("../middlewares/loginValidMiddleware");
 const { checkLoggedIn } = require("../middlewares/sessionMiddleware");
 
-const validateImage = (req, res, next) => {
-  if (!req.file) {
-    return res.status(400).json({ error: "Debes subir una foto de perfil" });
-  }
-  next();
-};
-
 const validations = [
   body("name").notEmpty().withMessage("Debes escribir tu nombre"),
   body("surname").notEmpty().withMessage("Debes escribir tu apellido"),
@@ -40,7 +33,6 @@ router.get("/register", userController.register);
 router.post(
   "/register",
   upload.single("image"),
-  validateImage, 
   validations,
   userController.processRegister
 );
