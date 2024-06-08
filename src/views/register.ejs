@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/register.css" />
-      <script src="/scripts.js" defer></script> 
+    <script src="/scripts.js" defer></script>
     <title>Bijou Boutique</title>
   </head>
   <body>
@@ -21,54 +21,47 @@
         >
           <h2 class="title">Registrar usuario</h2>
           <input
-            type="text"
-            name="name"
             class="controls"
+            id="name"
+            name="name"
+            type="text"
             placeholder="Nombre"
-            value="<%= locals.oldData ? oldData.name : null %>"
           />
           <% if (errors && errors.name) { %>
           <div class="text-danger"><%= errors.name.msg %></div>
           <% } %>
           <input
-            type="text"
-            name="surname"
             class="controls"
+            id="surname"
+            name="surname"
+            type="text"
             placeholder="Apellido"
-            value="<%= locals.oldData ? oldData.surname : null %>"
           />
           <% if (errors && errors.surname) { %>
           <div class="text-danger"><%= errors.surname.msg %></div>
           <% } %>
-          <div class="password-container">
-            <input
-              type="password"
-              name="password"
-              class="controls"
-              placeholder="Contraseña"
-            />
-            <span class="toggle-password" onclick="togglePasswordVisibility()"
-              >👁️
-            </span>
-          </div>
+          <input
+            class="controls"
+            id="pass"
+            name="password"
+            type="password"
+            placeholder="Contraseña"
+          />
           <% if (errors && errors.password) { %>
           <div class="text-danger"><%= errors.password.msg %></div>
           <% } %>
           <input
-            type="email"
-            name="email"
             class="controls"
+            id="mail"
+            name="email"
+            type="email"
             placeholder="E-mail"
-            value="<%= locals.oldData ? oldData.email : null %>"
           />
           <% if (errors && errors.email) { %>
           <div class="text-danger"><%= errors.email.msg %></div>
           <% } %>
           <br />
           <input type="file" name="image" />
-          <% if (errors && errors.image) { %>
-          <div class="text-danger"><%= errors.image.msg %></div>
-          <% } %>
           <input class="submit" type="submit" />
           <input
             class="submit reset"
@@ -80,18 +73,5 @@
     </main>
     <%- include("partials/footer.ejs") %>
     <script src="/js/validate.js"></script>
-    <script>
-      function togglePasswordVisibility() {
-        const passwordField = document.getElementById("pass");
-        const passwordToggle = document.querySelector(".toggle-password");
-        if (passwordField.type === "password") {
-          passwordField.type = "text";
-          passwordToggle.textContent = "🙈";
-        } else {
-          passwordField.type = "password";
-          passwordToggle.textContent = "👁️";
-        }
-      }
-    </script>
   </body>
 </html>
