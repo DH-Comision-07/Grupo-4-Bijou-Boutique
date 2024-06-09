@@ -12,6 +12,18 @@
 
 }
 
+.controls {
+    width: 100%;
+    color: #666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid rgb(202, 162, 130);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -33,16 +45,6 @@ label {
     color: rgb(39, 38, 38);
 }
 
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
 
 textarea {
     resize: vertical;
