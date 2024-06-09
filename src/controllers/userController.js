@@ -1,6 +1,7 @@
 const userService = require("../services/userService");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
+const db = require("../database/models");
 
 const userController = {
   login: (req, res) => {
@@ -43,7 +44,7 @@ const userController = {
   register: (req, res) => {
     return res.render("register", { errors: validationResult });
   },
-  processRegister: (req, res) => {
+  create: async (req, res) => {
     const resultValidations = validationResult(req);
 
     if (resultValidations.errors.length > 0) {
@@ -52,7 +53,23 @@ const userController = {
         oldData: req.body,
       });
     }
-    return res.redirect("login");
+
+    const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+
+    try {
+      const newUser = await db.User.create({
+        name: req.body.name,
+        surname: req.body.surname,
+        password: hashedPassword,
+        email: req.body.email,
+        image: req.file ? req.file.filename : null,
+      });
+
+      res.redirect("/login");
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ error: error.message });
+    }
   },
   contact: (req, res) => {
     return res.render("contactUs");
