@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/register.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="/js/registerValidation.js" defer></script>
     <title>Bijou Boutique</title>
   </head>
@@ -40,13 +44,16 @@
           <% if (errors && errors.surname) { %>
           <div class="text-danger"><%= errors.surname.msg %></div>
           <% } %>
-          <input
-            class="controls"
-            id="pass"
-            name="password"
-            type="password"
-            placeholder="Contraseña"
-          />
+          <div class="container-password">
+            <input
+              class="controls pass-control"
+              id="pass"
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+            />
+            <i id="bx" class="bx bx-show-alt"></i>
+          </div>
           <% if (errors && errors.password) { %>
           <div class="text-danger"><%= errors.password.msg %></div>
           <% } %>
