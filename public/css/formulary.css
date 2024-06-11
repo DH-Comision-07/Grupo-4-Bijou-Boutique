@@ -68,3 +68,7 @@ textarea {
 .btn-primary:hover {
     background-color: #000710;
 }
+
+.text-danger {
+    color: red;
+}

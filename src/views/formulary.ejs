@@ -20,6 +20,9 @@
           <label for="name">Nombre del producto:</label>
           <br />
           <input type="text" class="controls" id="name" name="name" required />
+          <% if (errors && errors.name) { %>
+          <div class="text-danger"><%= errors.name.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="description">Descripción:</label>
@@ -31,11 +34,17 @@
             rows="3"
             required
           ></textarea>
+          <% if (errors && errors.description) { %>
+          <div class="text-danger"><%= errors.description.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="image">Imagen:</label>
           <br />
           <input type="file" class="form-control" id="image" name="image" />
+          <% if (errors && errors.image) { %>
+          <div class="text-danger"><%= errors.image.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="color">Colores:</label>
@@ -47,6 +56,9 @@
             name="color"
             placeholder="Ejemplo: negro, blanco, rojo"
           />
+          <% if (errors && errors.color) { %>
+          <div class="text-danger"><%= errors.color.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="price">Precio:</label>
@@ -59,6 +71,9 @@
             step="0.01"
             required
           />
+          <% if (errors && errors.price) { %>
+          <div class="text-danger"><%= errors.price.msg %></div>
+          <% } %>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
       </div>
