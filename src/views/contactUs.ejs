@@ -2,15 +2,17 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactanos</title>
+    <title>Contáctanos</title>
     <link rel="stylesheet" href="/css/contactUs.css" />
+    <script src="/contactUs.js" defer></script> 
   </head>
   <body>
     <%- include("partials/header.ejs") %>
     <div class="container">
-      <h1>Contactanos</h1>
-      <form action="/contact_us" method="post">
+      <h1>Contáctanos</h1>
+      <form id="contactForm" action="/contact_us" method="post">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-container {
+    border: 2px solid rgb(0,26,63);
+    padding: 20px;
+    width: 340px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 5%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(0,26,63);
+    box-sizing: border-box;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    border: 2px solid rgb(0,26,63);
+    background-color: white;
+    cursor: pointer;
+}

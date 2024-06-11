@@ -1,26 +1,19 @@
-const fs = require("fs");
-const path = require("path");
+const db = require("../database/models");
 
-function recordameMiddleware(req, res, next) {
+async function recordameMiddleware(req, res, next) {
   if (req.cookies.recordame != undefined && req.session.user == undefined) {
-    let users = [];
     try {
-      const usersFilePath = path.join(__dirname, "../images/users");
-      const usersJSON = fs.readFileSync(usersFilePath, {
-        encoding: "utf-8",
+      const user = await db.User.findOne({
+        where: { email: req.cookies.recordame },
       });
-      if (usersJSON) {
-        users = JSON.parse(usersJSON);
+      if (user) {
+        req.session.user = user;
       }
     } catch (error) {
-      console.error("Error al leer el archivo de usuarios:", error.message);
-    }
-
-    const usuarioALoguearse = users.find(
-      (user) => user.email === req.cookies.recordame
-    );
-    if (usuarioALoguearse) {
-      req.session.user = usuarioALoguearse;
+      console.error(
+        "Error al buscar el usuario en la base de datos:",
+        error.message
+      );
     }
   }
   next();

@@ -1,6 +1,7 @@
 const userService = require("../services/userService");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
+const db = require("../database/models");
 
 const userController = {
   login: (req, res) => {
@@ -41,26 +42,33 @@ const userController = {
     res.render("success");
   },
   register: (req, res) => {
-    return res.render("register");
+    return res.render("register", { errors: validationResult });
   },
   create: async (req, res) => {
-    try {
-      let imageName = req.file ? req.file.filename : null;
+    const resultValidations = validationResult(req);
 
-      await userService.save({
+    if (resultValidations.errors.length > 0) {
+      return res.render("register", {
+        errors: resultValidations.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+
+    try {
+      const newUser = await db.User.create({
         name: req.body.name,
         surname: req.body.surname,
-        password: req.body.password,
+        password: hashedPassword,
         email: req.body.email,
-        image: imageName,
+        image: req.file ? req.file.filename : null,
       });
 
       res.redirect("/login");
     } catch (error) {
-      console.error(error);
-      res.render("register", {
-        errors: [{ msg: "Error al crear el usuario" }],
-      });
+      console.log(error);
+      res.status(500).send({ error: error.message });
     }
   },
   contact: (req, res) => {
@@ -68,6 +76,12 @@ const userController = {
   },
   maps: (req, res) => {
     return res.render("maps");
+  },
+  profile: function (req, res) {
+    res.render("profile");
+  },
+  updatePass: function (req, res) {
+    res.render("updatePass");
   },
 };
 

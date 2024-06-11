@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="../../js/createProduct.js"></script>
   </head>
   <body>
     <%- include("partials/header.ejs") %>
@@ -18,57 +19,61 @@
         <div class="form-group">
           <label for="name">Nombre del producto:</label>
           <br />
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="name"
-            required
-          />
+          <input type="text" class="controls" id="name" name="name" required />
+          <% if (errors && errors.name) { %>
+          <div class="text-danger"><%= errors.name.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="description">Descripción:</label>
           <br />
           <textarea
-            class="form-control"
+            class="controls"
             id="description"
             name="description"
             rows="3"
             required
           ></textarea>
+          <% if (errors && errors.description) { %>
+          <div class="text-danger"><%= errors.description.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="image">Imagen:</label>
           <br />
-          <input
-            type="file"
-            class="form-control-file"
-            id="image"
-            name="image"
-          />
+          <input type="file" class="form-control" id="image" name="image" />
+          <% if (errors && errors.image) { %>
+          <div class="text-danger"><%= errors.image.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="color">Colores:</label>
           <br />
           <input
             type="text"
-            class="form-control"
+            class="controls"
             id="color"
             name="color"
             placeholder="Ejemplo: negro, blanco, rojo"
           />
+          <% if (errors && errors.color) { %>
+          <div class="text-danger"><%= errors.color.msg %></div>
+          <% } %>
         </div>
         <div class="form-group">
           <label for="price">Precio:</label>
           <br />
           <input
             type="number"
-            class="form-control"
+            class="controls"
             id="price"
             name="price"
             step="0.01"
             required
           />
+          <% if (errors && errors.price) { %>
+          <div class="text-danger"><%= errors.price.msg %></div>
+          <% } %>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
       </div>

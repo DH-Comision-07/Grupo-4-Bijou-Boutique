@@ -11,6 +11,10 @@ main {
   align-items: center;
 }
 
+.text-danger {
+  color: red;
+}
+
 button {
   padding: 10px 20px;
   border: none;
@@ -29,11 +33,11 @@ h3 {
   color: #666;
 }
 
-header{
+header {
   background-color: var(--yellow);
 }
 
-nav{
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,17 +63,7 @@ nav .logo {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.comprador-vendedor {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.comprador-vendedor input {
-  margin: 10px 10px 10px 20px;
-
+  position: relative; 
 }
 
 .controls {
@@ -84,12 +78,18 @@ nav .logo {
   border: 1px solid rgb(202, 162, 130);
 }
 
-.intereses input {
-  margin: 10px 0 10px 20px;
+.password-container {
+  position: relative;
+  width: 100%;
 }
 
-.intereses label {
-  margin-left: 2vh;
+.toggle-password {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-85%);
+  cursor: pointer;
+  font-size: 20px; 
 }
 
 .submit {
@@ -104,7 +104,6 @@ nav .logo {
 .reset {
   background-color: #1259c3;
 }
-
 
 .login .submit:hover {
   background-color: #0022AA;
@@ -136,30 +135,38 @@ nav .logo {
 }
 
 .contenedor-btn-file input[type="file"] {
-appearance: none;
-display: none;
-visibility: hidden;
-opacity: 0;
-z-index: -1;
+  appearance: none;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
 }
+
+.bx {
+  position: absolute;
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-170%); 
+  font-size: 30px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 300px) and (max-width: 640px) {
   .container-register {
-      padding: 10px;
+    padding: 10px;
   }
 
-  .form{
-      padding: 10px;
-      margin-top: 0;
+  .form {
+    padding: 10px;
+    margin-top: 0;
   }
 
-  nav{
-      display: flex;
-      justify-content: center;
+  nav {
+    display: flex;
+    justify-content: center;
   }
 
-  nav .logo{
-      display: inline-block;
-      
+  nav .logo {
+    display: inline-block;
   }
-
 }
