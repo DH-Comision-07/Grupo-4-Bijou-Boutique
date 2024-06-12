@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Bijou Boutique</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include("partials/header.ejs") %>
     <main class="container-register">
-        <div class="form">
-            <form action="/login" method="POST" id="loginForm">
-                <h2 class="title">Iniciar sesión</h2>
-                <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
-                <div class="errors">
-                    <% errors.forEach(error => { %>
-                    <p><%= error.msg %></p>
-                    <% }); %>
-                </div>
-                <% } %>
-                <br />
-                <input
-                    class="controls"
-                    id="user"
-                    type="text"
-                    name="email"
-                    placeholder="Correo electrónico"
-                />
-                <div class="container-password">
-                    <input
-                    class="controls pass-control"
-                    id="pass"
-                    type="password"
-                    name="password"
-                    placeholder="Contraseña"
-                    /><i id="bx" class='bx bx-show-alt'></i>
-                </div>
-                <label for="">Recordame</label>
-                <input type="checkbox" name="recordame" value="recordar" />
-                <br />
-                <br />
-                <a href="/register" class="register-link"
-                    ><h5 class="title">¿No tienes cuenta aún? Click aquí!</h5></a
-                >
-                <input class="submit" type="submit" value="Enviar" />
-            </form>
-        </div>
+      <div class="form">
+        <form action="/login" method="POST" id="loginForm">
+          <h2 class="title">Iniciar sesión</h2>
+          <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+          <div class="errors">
+            <% errors.forEach(error => { %>
+            <p><%= error.msg %></p>
+            <% }); %>
+          </div>
+          <% } %>
+          <br />
+          <input
+            class="controls"
+            id="user"
+            type="text"
+            name="email"
+            placeholder="Correo electrónico"
+          />
+          <div class="container-password">
+            <input
+              class="controls pass-control"
+              id="pass"
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+            /><i id="bx" class="bx bx-show-alt"></i>
+          </div>
+          <label for="">Recordame</label>
+          <input type="checkbox" name="recordame" value="recordar" />
+          <br />
+          <br />
+          <a href="/register" class="register-link"
+            ><h5 class="title">¿No tienes cuenta aún? Click aquí!</h5></a
+          >
+          <input class="submit" type="submit" value="Enviar" />
+        </form>
+      </div>
     </main>
     <%- include("partials/footer.ejs") %>
     <script src="js/loginValidation.js"></script>
-</body>
+  </body>
 </html>
