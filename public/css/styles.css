@@ -91,6 +91,19 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+}
+
+.whatsapp-icon img {
+    width: 50px; 
+    height: auto;
+    border-radius: 50%; 
+}
+
 .image-info {
     position: absolute;
     bottom: 0;
@@ -101,6 +114,12 @@ nav a:hover {
     text-align: center;
     box-sizing: border-box;
 }
+
+.whatsapp-icon i {
+    font-size: 3em;
+    color: green;
+}
+
 
 .read-more-link {
     color: #333;
