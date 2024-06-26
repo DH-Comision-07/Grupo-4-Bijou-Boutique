@@ -94,6 +94,7 @@ const productController = {
       description: req.body.description,
       color: req.body.color,
       price: req.body.price,
+      category: req.body.category,
     };
 
     if (req.file) {
