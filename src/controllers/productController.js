@@ -1,4 +1,3 @@
-const productService = require("../services/productService");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
 
@@ -73,6 +72,8 @@ const productController = {
       });
   },
   update: (req, res) => {
+    console.log(req.body);
+    console.log(req.file);
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
