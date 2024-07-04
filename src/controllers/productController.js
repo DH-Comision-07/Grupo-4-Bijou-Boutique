@@ -63,54 +63,64 @@ const productController = {
   },
   edit: (req, res) => {
     db.Product.findByPk(req.params.id)
-      .then(function (products) {
+      .then((products) => {
         res.render("editForm", { products: products, errors: {}, oldData: {} });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
         res.status(500).send("Ocurrió un error al cargar la página");
       });
   },
+
   update: (req, res) => {
-    console.log(req.body);
-    console.log(req.file);
+    console.log("req.body  --", req.body);
+    console.log("req.file  --", req.file);
+    console.log("req.body.image  --", req.body.image);
     const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-      return db.Product.findByPk(req.params.id)
+    if (errors.isEmpty()) {
+      db.Product.findByPk(req.params.id)
         .then((product) => {
-          res.render("editForm", {
+          return res.render("editForm", {
             products: product,
             errors: errors.mapped(),
             oldData: req.body,
           });
         })
         .catch((err) => {
+          return res.status(500).send({ error: err.message });
+        });
+    } else {
+      db.Product.findByPk(req.params.id)
+        .then((product) => {
+          if (!product) {
+            return res.status(404).send("Producto no encontrado");
+          }
+
+          const updatedData = {
+            name: req.body.name,
+            description: req.body.description,
+            color: req.body.color,
+            price: req.body.price,
+            category: req.body.category,
+            image: req.file ? req.file.filename : product.image,
+          };
+
+          if (req.file) {
+            updatedData.image = req.file.filename;
+          }
+
+          return db.Product.update(updatedData, {
+            where: { id: req.params.id },
+          });
+        })
+        .then(() => {
+          res.redirect("/products/productCard");
+        })
+        .catch((err) => {
           res.status(500).send({ error: err.message });
         });
     }
-
-    const updatedData = {
-      name: req.body.name,
-      description: req.body.description,
-      color: req.body.color,
-      price: req.body.price,
-      category: req.body.category,
-    };
-
-    if (req.file) {
-      updatedData.image = req.file.filename;
-    }
-
-    db.Product.update(updatedData, {
-      where: { id: req.params.id },
-    })
-      .then(() => {
-        res.redirect("/products/productCard");
-      })
-      .catch((err) => {
-        res.status(500).send({ error: err.message });
-      });
   },
   destroy: (req, res) => {
     db.Product.destroy({
