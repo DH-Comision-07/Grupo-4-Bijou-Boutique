@@ -24,6 +24,9 @@
           id="registerForm"
         >
           <h2 class="title">Registrar usuario</h2>
+          <% if (errors && errors.name) { %>
+          <div class="text-danger"><%= errors.name.msg %></div>
+          <% } %>
           <input
             class="controls"
             id="name"
@@ -31,8 +34,8 @@
             type="text"
             placeholder="Nombre"
           />
-          <% if (errors && errors.name) { %>
-          <div class="text-danger"><%= errors.name.msg %></div>
+          <% if (errors && errors.surname) { %>
+          <div class="text-danger"><%= errors.surname.msg %></div>
           <% } %>
           <input
             class="controls"
@@ -41,8 +44,8 @@
             type="text"
             placeholder="Apellido"
           />
-          <% if (errors && errors.surname) { %>
-          <div class="text-danger"><%= errors.surname.msg %></div>
+          <% if (errors && errors.password) { %>
+          <div class="text-danger"><%= errors.password.msg %></div>
           <% } %>
           <div class="container-password">
             <input
@@ -54,8 +57,8 @@
             />
             <i id="bx" class="bx bx-show-alt"></i>
           </div>
-          <% if (errors && errors.password) { %>
-          <div class="text-danger"><%= errors.password.msg %></div>
+          <% if (errors && errors.email) { %>
+          <div class="text-danger"><%= errors.email.msg %></div>
           <% } %>
           <input
             class="controls"
@@ -64,9 +67,6 @@
             type="email"
             placeholder="E-mail"
           />
-          <% if (errors && errors.email) { %>
-          <div class="text-danger"><%= errors.email.msg %></div>
-          <% } %>
           <br />
           <input type="file" name="image" />
           <input class="submit" type="submit" />
