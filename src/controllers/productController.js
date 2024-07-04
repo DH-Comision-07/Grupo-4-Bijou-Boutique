@@ -106,10 +106,6 @@ const productController = {
             image: req.file ? req.file.filename : product.image,
           };
 
-          if (req.file) {
-            updatedData.image = req.file.filename;
-          }
-
           return db.Product.update(updatedData, {
             where: { id: req.params.id },
           });
