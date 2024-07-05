@@ -1,39 +1,94 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+}
+
+.logo-container img {
+    width: 300px;
+    height: auto;
+}
+
+.controls {
+    width: 100%;
+    color: #666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid rgb(202, 162, 130);
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 247, 247);
+    padding: 20px;
     height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-.form-container {
-    border: 2px solid rgb(0,26,63);
-    padding: 20px;
-    width: 340px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    border-radius: 5%;
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 50px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid rgb(0,26,63);
+.form-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
     box-sizing: border-box;
+    border-radius: 5%;
+    background-color: white;
 }
 
-.form-group button {
-    padding: 10px 20px;
-    border: 2px solid rgb(0,26,63);
-    background-color: white;
+label {
+    font-weight: bold;
+    color: rgb(39, 38, 38);
+}
+
+textarea {
+    resize: vertical;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #001a3f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #000710;
+}
+
+.text-danger {
+    color: red;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
 }

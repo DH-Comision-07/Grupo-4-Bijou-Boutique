@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="css/profile.css" />
   </head>
   <body>
-    <%- include("partials/header.ejs") %>
+    <%- include("partials/header.ejs", { user: user }) %>
     <div class="container">
       <div class="left-box"></div>
       <div class="right-box">
-        <p>Nombre:</p>
-        <p>Apellido:</p>
-        <p>E-mail:</p>
-        <a href="#" class="change-password">Cambiar contraseña</a>
+        <p>Nombre: <%= user.name %></p>
+        <p>Apellido: <%= user.surname %></p>
+        <p>E-mail: <%= user.email %></p>
+        <a href="/updatePass" class="change-password">Cambiar contraseña</a>
         <div class="buttons">
-          <button>Inicio</button>
-          <button>Cerrar sesión</button>
+          <button onclick="location.href='/'">Inicio</button>
+          <button onclick="location.href='/logout'">Cerrar sesión</button>
+          <button onclick="location.href='/profile/edit'">Editar perfil</button>
         </div>
       </div>
     </div>

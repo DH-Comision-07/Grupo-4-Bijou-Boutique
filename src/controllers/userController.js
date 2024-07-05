@@ -5,7 +5,9 @@ const db = require("../database/models");
 
 const userController = {
   login: (req, res) => {
-    return res.render("login");
+    res.render("login", {
+      user: req.session.usuarioLogueado,
+    });
   },
   processLogin: async (req, res) => {
     let errors = validationResult(req);
@@ -30,6 +32,15 @@ const userController = {
       return res.render("login", { errors: errors.errors });
     }
   },
+  logout: (req, res) => {
+    req.session.destroy((err) => {
+      if (err) {
+        return res.status(500).send("No se pudo cerrar sesión");
+      }
+      res.clearCookie("recordame");
+      return res.redirect("/login");
+    });
+  },
   perfil: (req, res) => {
     const user = req.session.usuarioLogueado;
     if (!user) {
@@ -39,10 +50,12 @@ const userController = {
     return res.render("home", { user });
   },
   success: function (req, res) {
-    res.render("success");
+    res.render("success", {
+      user: req.session.usuarioLogueado,
+    });
   },
   register: (req, res) => {
-    return res.render("register", { errors: validationResult });
+    return res.render("register", { errors: validationResult, user: null });
   },
   create: async (req, res) => {
     const resultValidations = validationResult(req);
@@ -51,6 +64,7 @@ const userController = {
       return res.render("register", {
         errors: resultValidations.mapped(),
         oldData: req.body,
+        user: null,
       });
     }
 
@@ -72,16 +86,52 @@ const userController = {
     }
   },
   contact: (req, res) => {
-    return res.render("contactUs");
+    return res.render("contactUs", { user: req.session.usuarioLogueado });
   },
   maps: (req, res) => {
-    return res.render("maps");
+    return res.render("maps", { user: req.session.usuarioLogueado });
   },
-  profile: function (req, res) {
-    res.render("profile");
+  profile: (req, res) => {
+    const user = req.session.usuarioLogueado;
+    if (!user) {
+      return res.redirect("/login");
+    }
+    return res.render("profile", { user });
+  },
+  editProfile: (req, res) => {
+    const user = req.session.usuarioLogueado;
+    if (!user) {
+      return res.redirect("/login");
+    }
+    return res.render("editProfile", { user });
+  },
+
+  updateProfile: async (req, res) => {
+    const user = req.session.usuarioLogueado;
+    if (!user) {
+      return res.redirect("/login");
+    }
+
+    const { name, surname, email } = req.body;
+
+    try {
+      await db.User.update(
+        { name, surname, email },
+        { where: { id: user.id } }
+      );
+
+      req.session.usuarioLogueado.name = name;
+      req.session.usuarioLogueado.surname = surname;
+      req.session.usuarioLogueado.email = email;
+
+      return res.redirect("/profile");
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ error: error.message });
+    }
   },
   updatePass: function (req, res) {
-    res.render("updatePass");
+    return res.render("updatePass", { user: req.session.usuarioLogueado });
   },
 };
 

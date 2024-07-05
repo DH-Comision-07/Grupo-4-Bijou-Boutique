@@ -8,7 +8,7 @@
     <title>Product Card</title>
 </head>
 <body>
-  <%- include("partials/header.ejs") %>
+  <%- include("partials/header.ejs", { user: user }) %>
   <section class="product-section">
   <% products.forEach(product => { %> 
           <article class="product-card">

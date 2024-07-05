@@ -13,7 +13,7 @@
     <script src="../../js/createProduct.js"></script>
   </head>
   <body>
-    <%- include("partials/header.ejs") %>
+    <%- include("partials/header.ejs", { user: user }) %>
     <form action="/products/create" method="POST" enctype="multipart/form-data">
       <div class="form-container">
         <div class="form-group">

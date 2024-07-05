@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="css/editProfile.css" />
+  </head>
+  <body>
+    <%- include("partials/header.ejs", { user: user }) %>
+    <div class="container">
+      <form action="/profile/edit" method="POST">
+        <div class="right-box">
+          <p>Nombre:</p>
+          <input type="text" name="name" value="<%= user.name %>" />
+          <p>Apellido:</p>
+          <input type="text" name="surname" value="<%= user.surname %>" />
+          <p>E-mail:</p>
+          <input type="email" name="email" value="<%= user.email %>" />
+          <button type="submit">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

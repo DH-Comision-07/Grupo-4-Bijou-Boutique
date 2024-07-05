@@ -13,8 +13,8 @@
     <title>Bijou Boutique</title>
   </head>
   <body>
-    <%- include("partials/header.ejs") %> <% if (errors) { %> <% for (let
-    oneError in errors) { %> <% } %> <% } %>
+    <%- include("partials/header.ejs", { user: user }) %> <% if (errors) { %> <%
+    for (let oneError in errors) { %> <% } %> <% } %>
     <main class="container-register">
       <div class="form">
         <form
