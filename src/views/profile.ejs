@@ -10,7 +10,13 @@
   <body>
     <%- include("partials/header.ejs", { user: user }) %>
     <div class="container">
-      <div class="left-box"></div>
+      <div class="left-box">
+        <img
+          src="<%= user.image %>"
+          alt="Imagen de perfil"
+          class="profile-image"
+        />
+      </div>
       <div class="right-box">
         <p>Nombre: <%= user.name %></p>
         <p>Apellido: <%= user.surname %></p>
