@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <link rel="website icon" type="png" href="images/brandmark@2x-8.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,50 +13,50 @@
       referrerpolicy="no-referrer"
     />
     <title>Products</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="logo-container">
-        <a href="/"
-          ><img src="/images/bijou-boutique.png" alt="Logo de la tienda"
-        /></a>
-      </div>
-
-      <div class="icons-container">
-        <a href="/login"><i class="fas fa-user"></i></a>
-        <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-        <span id="cart-count"></span>
-        <span id="cart-total"></span>
-      </div>
-      <div id="cart-dropdown" class="cart-dropdown">
-        <div id="cart-items"></div>
-        <div class="cart-total">
-          <strong>Total: </strong><span id="cart-total-amount">$0.00</span>
+        <div class="logo-container">
+            <a href="/"><img src="/images/bijou-boutique.png" alt="Logo de la tienda"/></a>
         </div>
-      </div>
+        <div class="icons-container">
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <div class="container-cart-icon">
+                <i class="fas fa-shopping-cart" id="cart-icon"></i>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                        <!-- Aquí se mostrarán los productos del carrito -->
+                    </div>
+                    <div class="cart-total hidden">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$0.00</span>
+                    </div>
+                    <p class="cart-empty">El carrito está vacío</p>
+                </div>
+            </div>
+        </div>
     </header>
     <section class="product-section">
-      <% products.forEach(product => { %>
-      <article class="product-card">
-        <a href="/products/<%= product.id %>">
-          <img
-            src="/images/<%= product.image %>"
-            alt="Producto"
-            class="product-image"
-          />
-        </a>
-        <div class="product-details">
-          <h2 class="product-name"><%= product.name %></h2>
-          <div class="product-text">
-            <p class="product-price">$<%= product.price %></p>
-            <p class="product-description"><%= product.description %></p>
-          </div>
-          <button class="add-to-cart" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>">Añadir al carrito</button>
-        </div>
-      </article>
-      <% }) %>
+        <% products.forEach(product => { %>
+        <article class="product-card">
+            <a href="/products/<%= product.id %>">
+                <img src="/images/<%= product.image %>" alt="Producto" class="product-image"/>
+            </a>
+            <div class="product-details">
+                <h2 class="product-name"><%= product.name %></h2>
+                <div class="product-text">
+                    <p class="product-price">$<%= product.price %></p>
+                    <p class="product-description"><%= product.description %></p>
+                </div>
+                <button class="add-to-cart" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>">Añadir al carrito</button>
+            </div>
+        </article>
+        <% }) %>
     </section>
     <%- include("partials/footer.ejs") %>
     <script src="js/trolley.js"></script>
-  </body>
+</body>
 </html>
