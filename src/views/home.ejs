@@ -39,6 +39,37 @@
       </ul>
     </nav>
     <main>
+      <!-- Slider Section -->
+      <section class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+
+          <div class="slide first">
+            <img src="/images/slider1.jpg" alt="Slider Image 1" />
+          </div>
+          <div class="slide">
+            <img src="/images/slider1.jpg" alt="Slider Image 2" />
+          </div>
+          <div class="slide">
+            <img src="/images/slider1.jpg" alt="Slider Image 3" />
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+      </section>
+
       <section class="main-section">
         <img src="/images/joyas.jpg" alt="Imagen grande" />
         <div class="image-info">
@@ -112,5 +143,6 @@
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
