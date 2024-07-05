@@ -47,7 +47,7 @@
           <% if (errors && errors.password) { %>
           <div class="text-danger"><%= errors.password.msg %></div>
           <% } %>
-          <div class="container-password">
+          <div class="password-container">
             <input
               class="controls pass-control"
               id="pass"
@@ -55,7 +55,7 @@
               type="password"
               placeholder="Contraseña"
             />
-            <i id="bx" class="bx bx-show-alt"></i>
+            <i id="bx" class="bx bx-show-alt toggle-password"></i>
           </div>
           <% if (errors && errors.email) { %>
           <div class="text-danger"><%= errors.email.msg %></div>
