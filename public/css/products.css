@@ -223,3 +223,21 @@
 .hidden {
   display: none;
 }
+
+.add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+  background-color: #033170;
+}
