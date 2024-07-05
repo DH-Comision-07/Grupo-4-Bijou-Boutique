@@ -5,10 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/products.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Products</title>
   </head>
   <body>
-    <%- include("partials/header.ejs") %>
+    <header>
+      <div class="logo-container">
+        <a href="/"
+          ><img src="/images/bijou-boutique.png" alt="Logo de la tienda"
+        /></a>
+      </div>
+
+      <div class="icons-container">
+        <a href="/login"><i class="fas fa-user"></i></a>
+        <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        <span id="cart-count">0</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div id="cart-dropdown" class="cart-dropdown">
+        <div id="cart-items"></div>
+        <div class="cart-total">
+          <strong>Total: </strong><span id="cart-total-amount">$0.00</span>
+        </div>
+      </div>
+    </header>
     <section class="product-section">
       <% products.forEach(product => { %>
       <article class="product-card">
