@@ -19,7 +19,7 @@ body {
 }
 
 .right-box {
-    border: solid 1px #001a3f;
+    border: 1px solid rgb(202, 162, 130);
     border-radius: 10px;
 }
 
@@ -47,8 +47,12 @@ body {
 .change-password {
     display: block;
     margin: 10px 0;
-    color: blue;
+    color: #001a3f;
     text-decoration: none;
+}
+
+.change-password:hover {
+    color: #000307;
 }
 
 .buttons {
@@ -62,8 +66,9 @@ body {
 
 button {
     padding: 5px 10px;
-    border: 1px solid blue;
+    border: 1px solid rgb(202, 162, 130);
     background-color: white;
+    border-radius: 4px;
     cursor: pointer;
 }
 
