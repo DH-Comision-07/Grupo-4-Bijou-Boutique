@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
 const upload = require("../middlewares/productMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const { loginValidation } = require("../middlewares/loginValidMiddleware");
 const { checkLoggedIn } = require("../middlewares/sessionMiddleware");
@@ -15,8 +16,11 @@ router.get(
 );
 router.get("/success", userController.success);
 router.post("/login", loginValidation, userController.processLogin);
+router.get("/profile", authMiddleware, userController.profile);
 router.get("/check", checkLoggedIn);
 router.get("/profile", userController.profile);
+router.get("/profile/edit", authMiddleware, userController.editProfile);
+router.post("/profile/edit", authMiddleware, userController.updateProfile);
 router.get("/updatePass", userController.updatePass);
 
 // Rutas accesibles solo sin loguear

@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contáctanos</title>
     <link rel="stylesheet" href="/css/contactUs.css" />
-    <script src="/contactUs.js" defer></script> 
+    <script src="/contactUs.js" defer></script>
   </head>
   <body>
-    <%- include("partials/header.ejs") %>
+    <%- include("partials/header.ejs", { user: user }) %>
     <div class="container">
       <h1>Contáctanos</h1>
-      <form action="https://formsubmit.co/bijou.boutique.sa@gmail.com" method="POST">
+      <form
+        action="https://formsubmit.co/bijou.boutique.sa@gmail.com"
+        method="POST"
+      >
         <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />

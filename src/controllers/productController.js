@@ -3,15 +3,22 @@ const { validationResult } = require("express-validator");
 
 const productController = {
   cart: (req, res) => {
-    res.render("cart");
+    res.render("cart", { user: req.session.usuarioLogueado });
   },
   formulary: (req, res) => {
-    res.render("formulary", { errors: {}, oldData: {} });
+    res.render("formulary", {
+      errors: {},
+      oldData: {},
+      user: req.session.usuarioLogueado,
+    });
   },
   products: (req, res) => {
     db.Product.findAll()
       .then(function (products) {
-        res.render("products", { products: products });
+        res.render("products", {
+          products: products,
+          user: req.session.usuarioLogueado,
+        });
       })
       .catch(function (error) {
         console.log(error);
@@ -21,7 +28,10 @@ const productController = {
   productCard: (req, res) => {
     db.Product.findAll()
       .then(function (products) {
-        res.render("productCard", { products: products });
+        res.render("productCard", {
+          products: products,
+          user: req.session.usuarioLogueado,
+        });
       })
       .catch(function (error) {
         console.log(error);
@@ -35,6 +45,7 @@ const productController = {
       return res.render("formulary", {
         errors: errors.mapped(),
         oldData: req.body,
+        user: req.session.usuarioLogueado,
       });
     }
 
@@ -55,7 +66,10 @@ const productController = {
   detail: (req, res) => {
     db.Product.findByPk(req.params.id)
       .then(function (products) {
-        res.render("productDetail", { products: products });
+        res.render("productDetail", {
+          products: products,
+          user: req.session.usuarioLogueado,
+        });
       })
       .catch((err) => {
         res.status(500).send({ error: err.message });
@@ -64,7 +78,12 @@ const productController = {
   edit: (req, res) => {
     db.Product.findByPk(req.params.id)
       .then((products) => {
-        res.render("editForm", { products: products, errors: {}, oldData: {} });
+        res.render("editForm", {
+          products: products,
+          errors: {},
+          oldData: {},
+          user: req.session.usuarioLogueado,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -85,6 +104,7 @@ const productController = {
             products: product,
             errors: errors.mapped(),
             oldData: req.body,
+            user: req.session.usuarioLogueado,
           });
         })
         .catch((err) => {

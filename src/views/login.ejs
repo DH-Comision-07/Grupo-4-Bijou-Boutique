@@ -12,7 +12,7 @@
     <title>Bijou Boutique</title>
   </head>
   <body>
-    <%- include("partials/header.ejs") %>
+    <%- include("partials/header.ejs", { user: user }) %>
     <main class="container-register">
       <div class="form">
         <form action="/login" method="POST" id="loginForm">

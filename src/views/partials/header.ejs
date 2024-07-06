@@ -22,8 +22,13 @@
         /></a>
       </div>
       <div class="icons-container">
+        <% if (user) { %>
+        <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+        <a href="/profile"><i class="fa-solid fa-user"></i></a>
+        <% } else { %>
         <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
-        <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+        <% } %>
+        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </header>
   </body>

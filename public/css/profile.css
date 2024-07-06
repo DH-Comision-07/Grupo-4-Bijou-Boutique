@@ -14,15 +14,26 @@ body {
 }
 
 .left-box, .right-box {
-    border: 1px solid blue;
     padding: 20px;
     margin: 10px;
+}
+
+.right-box {
+    border: solid 1px #001a3f;
+    border-radius: 10px;
 }
 
 .left-box {
     width: 300px;
     height: 300px;
 }
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+  }
 
 .right-box {
     width: 300px;
