@@ -435,6 +435,16 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+.textos {
+    color: white;
+    text-decoration: none;
+
+}
+
+.textos:hover {
+    color: #9c7d03;
+}
+
 @media only screen and (max-width: 768px) {
     header {
         padding: 10px;
