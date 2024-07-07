@@ -22,6 +22,6 @@ const fileFilter = (req, file, cb) => {
   cb(new Error("Error: Archivo debe ser una imagen válida"));
 };
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage: storage, fileFilter: fileFilter });
 
 module.exports = upload;

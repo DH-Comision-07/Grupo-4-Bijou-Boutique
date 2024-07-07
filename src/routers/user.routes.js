@@ -17,6 +17,7 @@ router.get(
 router.get("/success", userController.success);
 router.post("/login", loginValidation, userController.processLogin);
 router.get("/profile", authMiddleware, userController.profile);
+router.get("/logout", userController.logout);
 router.get("/check", checkLoggedIn);
 router.get("/profile", userController.profile);
 router.get("/profile/edit", authMiddleware, userController.editProfile);
