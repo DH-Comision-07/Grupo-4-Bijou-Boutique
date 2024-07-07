@@ -142,6 +142,19 @@
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <script src="/js/scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const radioBtns = document.querySelectorAll('input[name="radio-btn"]');
+        let currentSlide = 0;
+
+        function nextSlide() {
+          radioBtns[currentSlide].checked = false;
+          currentSlide = (currentSlide + 1) % radioBtns.length;
+          radioBtns[currentSlide].checked = true;
+        }
+
+        setInterval(nextSlide, 5000);
+      });
+    </script>
   </body>
 </html>
