@@ -8,7 +8,8 @@ CREATE TABLE users (
     name VARCHAR(95) NOT NULL,
     surname VARCHAR(95) NOT NULL,
     password VARCHAR(95) NOT NULL,
-    email VARCHAR(95) NOT NULL
+    email VARCHAR(95) NOT NULL,
+    image VARCHAR(95) NOT NULL
 );
 
 CREATE TABLE products (
