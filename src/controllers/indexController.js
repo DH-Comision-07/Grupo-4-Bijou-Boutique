@@ -14,6 +14,9 @@ const indexController = {
       user: req.session.usuarioLogueado,
     });
   },
+  maps: (req, res) => {
+    return res.render("maps", { user: req.session.usuarioLogueado });
+  },
 };
 
 module.exports = indexController;

@@ -53,5 +53,25 @@
       </div>
     </main>
     <%- include("partials/footer.ejs") %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const passField = document.getElementById("pass");
+        const toggleBtn = document.getElementById("bx");
+
+        toggleBtn.addEventListener("click", function () {
+          const type =
+            passField.getAttribute("type") === "password" ? "text" : "password";
+          passField.setAttribute("type", type);
+
+          if (type === "password") {
+            toggleBtn.classList.remove("bx-hide-alt");
+            toggleBtn.classList.add("bx-show-alt");
+          } else {
+            toggleBtn.classList.remove("bx-show-alt");
+            toggleBtn.classList.add("bx-hide-alt");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

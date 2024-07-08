@@ -88,9 +88,6 @@ const userController = {
   contact: (req, res) => {
     return res.render("contactUs", { user: req.session.usuarioLogueado });
   },
-  maps: (req, res) => {
-    return res.render("maps", { user: req.session.usuarioLogueado });
-  },
   profile: (req, res) => {
     const user = req.session.usuarioLogueado;
     if (!user) {

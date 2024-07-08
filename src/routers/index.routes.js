@@ -4,5 +4,6 @@ const indexController = require("../controllers/indexController");
 
 router.get("/", indexController.index);
 router.get("/aboutUs", indexController.aboutUs);
+router.get("/maps", indexController.maps);
 
 module.exports = router;

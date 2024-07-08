@@ -33,6 +33,5 @@ router.post(
   validations,
   userController.create
 );
-router.get("/maps", userController.maps);
 
 module.exports = router;
