@@ -26,10 +26,11 @@ const userController = {
       } else {
         return res.render("login", {
           errors: [{ msg: "Credenciales inválidas!" }],
+          user: null, // Asegúrate de pasar user
         });
       }
     } else {
-      return res.render("login", { errors: errors.errors });
+      return res.render("login", { errors: errors.errors, user: null }); // Asegúrate de pasar user
     }
   },
   logout: (req, res) => {

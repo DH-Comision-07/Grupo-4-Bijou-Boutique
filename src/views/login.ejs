@@ -13,7 +13,8 @@
     <title>Bijou Boutique</title>
   </head>
   <body>
-    <%- include("partials/header.ejs", { user: user }) %>
+    <%- include("partials/header.ejs", { user: typeof user !== 'undefined' ?
+    user : null }) %>
     <main class="container-register">
       <div class="form">
         <form action="/login" method="POST" id="loginForm">

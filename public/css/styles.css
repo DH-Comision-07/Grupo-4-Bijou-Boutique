@@ -443,6 +443,7 @@ nav a:hover {
 
 .textos:hover {
     color: #9c7d03;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
