@@ -43,6 +43,13 @@
             />
           </div>
           <div class="form-group">
+            <label for="role">Rol:</label>
+            <select id="role" name="role" class="controls">
+              <option value="user" <%= user.role === 'user' ? 'selected' : '' %>>Usuario</option>
+              <option value="admin" <%= user.role === 'admin' ? 'selected' : '' %>>Administrador</option>
+            </select>
+          </div>
+          <div class="form-group">
             <button type="submit" class="btn-primary">Guardar cambios</button>
           </div>
         </form>

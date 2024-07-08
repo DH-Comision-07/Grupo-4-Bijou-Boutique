@@ -77,6 +77,7 @@ const userController = {
         password: hashedPassword,
         email: req.body.email,
         image: req.file ? req.file.filename : null,
+        role: req.body.role,
       });
 
       res.redirect("/login");
@@ -109,17 +110,18 @@ const userController = {
       return res.redirect("/login");
     }
 
-    const { name, surname, email } = req.body;
+    const { name, surname, email, role } = req.body;
 
     try {
       await db.User.update(
-        { name, surname, email },
+        { name, surname, email, role },
         { where: { id: user.id } }
       );
 
       req.session.usuarioLogueado.name = name;
       req.session.usuarioLogueado.surname = surname;
       req.session.usuarioLogueado.email = email;
+      req.session.usuarioLogueado.role = role;
 
       return res.redirect("/profile");
     } catch (error) {

@@ -67,6 +67,15 @@
             type="email"
             placeholder="E-mail"
           />
+
+          <% if (errors && errors.role) { %>
+          <div class="text-danger"><%= errors.role.msg %></div>
+          <% } %>
+          <select class="controls" id="role" name="role">
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+          </select>
+
           <br />
           <input type="file" name="image" />
           <input class="submit" type="submit" />

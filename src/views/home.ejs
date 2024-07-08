@@ -28,12 +28,12 @@
     <%- include("partials/header.ejs", { user: user }) %>
     <nav>
       <ul>
-        <li><a href="/products">Nuestros productos</a></li>
-        <li>
-          <a href="/products/productCard">Product Card</a>
-        </li>
-        <li><a href="/products/create">Product Create</a></li>
         <li><a href="/aboutUs">Acerca de nosotros</a></li>
+        <% if (user && user.role === 'admin') { %>
+        <li><a href="/products/productCard">Product Card</a></li>
+        <li><a href="/products/create">Product Create</a></li>
+        <% } %>
+        <li><a href="/products">Nuestros productos</a></li>
         <li><a href="/maps">Nuestras sucursales</a></li>
         <li><a href="/contactUs">Contactanos</a></li>
       </ul>

@@ -9,6 +9,7 @@ CREATE TABLE users (
     surname VARCHAR(95) NOT NULL,
     password VARCHAR(95) NOT NULL,
     email VARCHAR(95) NOT NULL,
+    role VARCHAR(95) NOT NULL,
     image VARCHAR(95) NOT NULL
 );
 

@@ -1,93 +1,92 @@
-const btnCart = document.querySelector('.container-cart-icon');
-const containerCartProducts = document.querySelector('.container-cart-products');
+const btnCart = document.querySelector(".container-cart-icon");
+const containerCartProducts = document.querySelector(
+  ".container-cart-products"
+);
 
-btnCart.addEventListener('click', () => {
-    containerCartProducts.classList.toggle('hidden-cart');
+btnCart.addEventListener("click", () => {
+  containerCartProducts.classList.toggle("hidden-cart");
 });
 
-/* ========================= */
-const cartInfo = document.querySelector('.cart-product');
-const rowProduct = document.querySelector('.row-product');
+const cartInfo = document.querySelector(".cart-product");
+const rowProduct = document.querySelector(".row-product");
 
-// Lista de todos los contenedores de productos
-const productsList = document.querySelector('.product-section');
+const productsList = document.querySelector(".product-section");
 
-// Variable de arreglos de Productos
 let allProducts = [];
 
-const valorTotal = document.querySelector('.total-pagar');
+const valorTotal = document.querySelector(".total-pagar");
 
-const countProducts = document.querySelector('#contador-productos');
+const countProducts = document.querySelector("#contador-productos");
 
-const cartEmpty = document.querySelector('.cart-empty');
-const cartTotal = document.querySelector('.cart-total');
+const cartEmpty = document.querySelector(".cart-empty");
+const cartTotal = document.querySelector(".cart-total");
 
-productsList.addEventListener('click', e => {
-    if (e.target.classList.contains('add-to-cart')) {
-        const product = e.target.parentElement;
+productsList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    const product = e.target.parentElement;
 
-        const infoProduct = {
-            quantity: 1,
-            title: product.querySelector('.product-name').textContent,
-            price: product.querySelector('.product-price').textContent,
-        };
+    const infoProduct = {
+      quantity: 1,
+      title: product.querySelector(".product-name").textContent,
+      price: product.querySelector(".product-price").textContent,
+    };
 
-        const exists = allProducts.some(product => product.title === infoProduct.title);
+    const exists = allProducts.some(
+      (product) => product.title === infoProduct.title
+    );
 
-        if (exists) {
-            const products = allProducts.map(product => {
-                if (product.title === infoProduct.title) {
-                    product.quantity++;
-                    return product;
-                } else {
-                    return product;
-                }
-            });
-            allProducts = [...products];
+    if (exists) {
+      const products = allProducts.map((product) => {
+        if (product.title === infoProduct.title) {
+          product.quantity++;
+          return product;
         } else {
-            allProducts = [...allProducts, infoProduct];
+          return product;
         }
-
-        showHTML();
-    }
-});
-
-rowProduct.addEventListener('click', e => {
-    if (e.target.classList.contains('icon-close')) {
-        const product = e.target.parentElement;
-        const title = product.querySelector('.titulo-producto-carrito').textContent;
-
-        allProducts = allProducts.filter(product => product.title !== title);
-
-        console.log(allProducts);
-
-        showHTML();
-    }
-});
-
-// Función para mostrar el HTML del carrito
-const showHTML = () => {
-    if (!allProducts.length) {
-        cartEmpty.classList.remove('hidden');
-        rowProduct.classList.add('hidden');
-        cartTotal.classList.add('hidden');
+      });
+      allProducts = [...products];
     } else {
-        cartEmpty.classList.add('hidden');
-        rowProduct.classList.remove('hidden');
-        cartTotal.classList.remove('hidden');
+      allProducts = [...allProducts, infoProduct];
     }
 
-    // Limpiar HTML
-    rowProduct.innerHTML = '';
+    showHTML();
+  }
+});
 
-    let total = 0;
-    let totalOfProducts = 0;
+rowProduct.addEventListener("click", (e) => {
+  if (e.target.classList.contains("icon-close")) {
+    const product = e.target.parentElement;
+    const title = product.querySelector(".titulo-producto-carrito").textContent;
 
-    allProducts.forEach(product => {
-        const containerProduct = document.createElement('div');
-        containerProduct.classList.add('cart-product');
+    allProducts = allProducts.filter((product) => product.title !== title);
 
-        containerProduct.innerHTML = `
+    console.log(allProducts);
+
+    showHTML();
+  }
+});
+
+const showHTML = () => {
+  if (!allProducts.length) {
+    cartEmpty.classList.remove("hidden");
+    rowProduct.classList.add("hidden");
+    cartTotal.classList.add("hidden");
+  } else {
+    cartEmpty.classList.add("hidden");
+    rowProduct.classList.remove("hidden");
+    cartTotal.classList.remove("hidden");
+  }
+
+  rowProduct.innerHTML = "";
+
+  let total = 0;
+  let totalOfProducts = 0;
+
+  allProducts.forEach((product) => {
+    const containerProduct = document.createElement("div");
+    containerProduct.classList.add("cart-product");
+
+    containerProduct.innerHTML = `
             <div class="info-cart-product">
                 <span class="cantidad-producto-carrito">${product.quantity}</span>
                 <p class="titulo-producto-carrito">${product.title}</p>
@@ -109,12 +108,12 @@ const showHTML = () => {
             </svg>
         `;
 
-        rowProduct.append(containerProduct);
+    rowProduct.append(containerProduct);
 
-        total = total + parseInt(product.quantity * product.price.slice(1));
-        totalOfProducts = totalOfProducts + product.quantity;
-    });
+    total = total + parseInt(product.quantity * product.price.slice(1));
+    totalOfProducts = totalOfProducts + product.quantity;
+  });
 
-    valorTotal.innerText = `$${total}`;
-    countProducts.innerText = totalOfProducts;
+  valorTotal.innerText = `$${total}`;
+  countProducts.innerText = totalOfProducts;
 };
