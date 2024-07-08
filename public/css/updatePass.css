@@ -21,7 +21,7 @@ body {
 }
 
 .controls {
-    width: 100%;
+    width: 95%;
     color: #666;
     padding: 15px;
     border-radius: 10px;
@@ -44,12 +44,14 @@ main {
 }
 
 .form-container {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 30px;
-    box-sizing: border-box;
-    border-radius: 5%;
-    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {

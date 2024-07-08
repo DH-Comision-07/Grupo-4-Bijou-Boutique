@@ -16,7 +16,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Ocupa todo el espacio disponible verticalmente */
+    flex: 1; 
 }
 
 .form-container {
