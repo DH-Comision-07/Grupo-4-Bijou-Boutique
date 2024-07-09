@@ -23,12 +23,28 @@
       </div>
       <div class="icons-container">
         <% if (user) { %>
-        <a href="/logout" class="textos"><strong>Log out </strong></a>
-        <a href="/profile"><i class="fa-solid fa-user"></i></a>
+        <div class="tooltip">
+          <a href="/logout" class="textos"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></a>
+          <span class="tooltiptext">Log Out</span>
+        </div>
+        <div class="tooltip">
+          <a href="/profile"><i class="fa-solid fa-user"></i></a>
+          <span class="tooltiptext">Perfil</span>
+        </div>
         <% } else { %>
-        <a href="/login" class="textos"><strong>Log in</strong></a>
+        <div class="tooltip">
+          <a href="/login" class="textos"
+            ><i class="fa-solid fa-right-to-bracket"></i
+          ></a>
+          <span class="tooltiptext">Log In</span>
+        </div>
         <% } %>
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="tooltip">
+          <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="tooltiptext">Carrito </span>
+        </div>
       </div>
     </header>
   </body>
