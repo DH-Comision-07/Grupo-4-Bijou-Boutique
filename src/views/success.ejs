@@ -12,8 +12,15 @@
     <div class="img-container">
       <img src="../../images/chayanne.jpg" alt="meme" class="meme-chayanne" />
     </div>
-    <h1>Te damos la bienvenida, <%= user.name %>!</h1>
-    <a href="/"><button class="regresar">Volver al inicio</button></a>
+    <h1>
+      Bienvenido <%= user.name %>! En breve seras redireccionado al inicio!
+    </h1>
+    <a href="/"><button class="regresar">Ir a Home ahora</button></a>
     <%- include("partials/footer.ejs") %>
+    <script>
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 5000);
+    </script>
   </body>
 </html>
