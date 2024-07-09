@@ -17,8 +17,17 @@
       />
     </div>
     <div>
-      <a href="/login"><button class="loguear">Iniciar sesion</button></a>
-      <a href="/"><button class="regresar">Regresar al inicio</button></a>
+      <% if (user) { %>
+      <a href="/products"
+        ><button class="loguear">Descubrir productos</button></a
+      >
+      <a href="/"><button class="regresar">Volver al inicio</button></a>
+      <% } else { %>
+      <a href="/products"
+        ><button class="loguear">Descubrir productos</button></a
+      >
+      <a href="/login"><button class="regresar">Iniciar sesion</button></a>
+      <% } %>
     </div>
     <%- include("partials/footer.ejs") %>
   </body>
