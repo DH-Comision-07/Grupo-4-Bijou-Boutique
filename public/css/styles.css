@@ -75,6 +75,19 @@ main {
     opacity: 1;
 }
 
+.profile-picture {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    border-color: #9c7d03;
+}
+
 nav {
     background-color: #001a3f;
     color: #fff;

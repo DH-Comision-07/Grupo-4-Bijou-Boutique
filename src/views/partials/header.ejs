@@ -30,7 +30,17 @@
           <span class="tooltiptext">Log Out</span>
         </div>
         <div class="tooltip">
-          <a href="/profile"><i class="fa-solid fa-user"></i></a>
+          <a href="/profile">
+            <% if (user.image) { %>
+            <img
+              src="/images/users/<%= user.image %>"
+              alt="Foto de perfil"
+              class="profile-picture"
+            />
+            <% } else { %>
+            <i class="fa-solid fa-user"></i>
+            <% } %>
+          </a>
           <span class="tooltiptext">Perfil</span>
         </div>
         <% } else { %>
