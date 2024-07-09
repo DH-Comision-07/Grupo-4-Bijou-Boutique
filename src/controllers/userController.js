@@ -130,8 +130,60 @@ const userController = {
       res.status(500).send({ error: error.message });
     }
   },
-  updatePass: function (req, res) {
-    return res.render("updatePass", { user: req.session.usuarioLogueado });
+  updatePass: (req, res) => {
+    return res.render("updatePass", {
+      user: req.session.usuarioLogueado,
+      errors: [],
+    });
+  },
+  updatePassword: async (req, res) => {
+    const { currentPassword, newPassword, confirmPassword } = req.body;
+    const user = req.session.usuarioLogueado;
+
+    if (!user) {
+      return res.redirect("/login");
+    }
+
+    let errors = [];
+
+    if (!bcrypt.compareSync(currentPassword, user.password)) {
+      errors.push({ msg: "La contraseña actual es incorrecta." });
+    }
+
+    if (newPassword !== confirmPassword) {
+      errors.push({ msg: "Las nuevas contraseñas no coinciden." });
+    }
+
+    if (errors.length > 0) {
+      return res.render("updatePass", {
+        errors,
+        user,
+      });
+    }
+
+    try {
+      const hashedPassword = bcrypt.hashSync(newPassword, 10);
+
+      await db.User.update(
+        { password: hashedPassword },
+        { where: { id: user.id } }
+      );
+
+      req.session.destroy((err) => {
+        if (err) {
+          console.log(err);
+          return res
+            .status(500)
+            .send("No se pudo cerrar sesión después de cambiar la contraseña");
+        }
+
+        res.clearCookie("recordame");
+        return res.redirect("/login");
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ error: error.message });
+    }
   },
 };
 

@@ -11,13 +11,13 @@
     <%- include("partials/header.ejs", { user: user }) %>
     <main>
       <div class="form-container">
-        <form>
+        <form action="/updatePass" method="POST">
           <div class="form-group">
             <label for="current-password">Contraseña Actual</label>
             <input
               type="password"
               id="current-password"
-              name="current-password"
+              name="currentPassword"
               class="controls"
             />
           </div>
@@ -26,7 +26,7 @@
             <input
               type="password"
               id="new-password"
-              name="new-password"
+              name="newPassword"
               class="controls"
             />
           </div>
@@ -35,7 +35,7 @@
             <input
               type="password"
               id="confirm-password"
-              name="confirm-password"
+              name="confirmPassword"
               class="controls"
             />
           </div>
@@ -43,6 +43,13 @@
             <button type="submit" class="btn-primary">Guardar</button>
           </div>
         </form>
+        <% if (errors && errors.length > 0) { %>
+        <div class="errors">
+          <% errors.forEach(error => { %>
+          <p><%= error.msg %></p>
+          <% }) %>
+        </div>
+        <% } %>
       </div>
     </main>
     <%- include("partials/footer.ejs") %>
