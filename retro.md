@@ -99,3 +99,4 @@
 # Dejar de hacer:
 
 - Mezclar tipos de nomenclatura en variables, componentes, métodos, etc.
+
